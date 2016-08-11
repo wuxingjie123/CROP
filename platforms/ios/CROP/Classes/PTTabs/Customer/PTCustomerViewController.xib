@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-UA-wdQ">
+                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-UA-wdQ">
                     <rect key="frame" x="-38" y="238" width="600" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="g5v-U1-9qL"/>
@@ -34,25 +34,47 @@
                         </mask>
                     </variation>
                 </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0t-lz-A8x">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="5Bh-UA-wdQ" secondAttribute="trailing" id="1Od-of-IQH"/>
+                <constraint firstAttribute="trailing" secondItem="f0t-lz-A8x" secondAttribute="trailing" id="3gI-rw-heD"/>
                 <constraint firstItem="5Bh-UA-wdQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="93n-yj-E2f"/>
+                <constraint firstAttribute="bottom" secondItem="f0t-lz-A8x" secondAttribute="bottom" id="Wtp-tb-YOv"/>
+                <constraint firstItem="f0t-lz-A8x" firstAttribute="top" secondItem="5Bh-UA-wdQ" secondAttribute="bottom" constant="1" id="lne-BE-xKQ"/>
                 <constraint firstItem="5Bh-UA-wdQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ms7-XG-0gr"/>
+                <constraint firstItem="f0t-lz-A8x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v5a-qp-yo5"/>
             </constraints>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="f0t-lz-A8x"/>
+                </mask>
                 <mask key="constraints">
                     <exclude reference="1Od-of-IQH"/>
                     <exclude reference="93n-yj-E2f"/>
                     <exclude reference="ms7-XG-0gr"/>
+                    <exclude reference="3gI-rw-heD"/>
+                    <exclude reference="Wtp-tb-YOv"/>
+                    <exclude reference="lne-BE-xKQ"/>
+                    <exclude reference="v5a-qp-yo5"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="f0t-lz-A8x"/>
+                </mask>
                 <mask key="constraints">
                     <include reference="1Od-of-IQH"/>
                     <include reference="93n-yj-E2f"/>
                     <include reference="ms7-XG-0gr"/>
+                    <include reference="3gI-rw-heD"/>
+                    <include reference="Wtp-tb-YOv"/>
+                    <include reference="lne-BE-xKQ"/>
+                    <include reference="v5a-qp-yo5"/>
                 </mask>
             </variation>
         </view>

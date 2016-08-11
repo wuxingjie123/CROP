@@ -58,7 +58,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="obn-oi-CjN" firstAttribute="top" secondItem="HOs-PY-k1z" secondAttribute="bottom" id="5gC-Zu-md5"/>
+                <constraint firstItem="obn-oi-CjN" firstAttribute="top" secondItem="HOs-PY-k1z" secondAttribute="bottom" id="5gC-Zu-md5">
+                    <variation key="widthClass=compact" constant="1"/>
+                </constraint>
                 <constraint firstItem="5oE-30-629" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7OK-OG-Thl"/>
                 <constraint firstItem="HOs-PY-k1z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AnD-Na-ZCi"/>
                 <constraint firstItem="HOs-PY-k1z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RUp-bc-m2Q"/>

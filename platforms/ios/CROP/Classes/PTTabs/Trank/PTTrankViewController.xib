@@ -34,26 +34,48 @@
                         </mask>
                     </variation>
                 </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wp3-fJ-FMd">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4xU-gz-HBy" secondAttribute="trailing" id="4Hb-Yo-O7x"/>
                 <constraint firstItem="4xU-gz-HBy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SGV-D8-HyP"/>
                 <constraint firstItem="4xU-gz-HBy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SH6-zV-sEi"/>
+                <constraint firstItem="wp3-fJ-FMd" firstAttribute="top" secondItem="4xU-gz-HBy" secondAttribute="bottom" constant="1" id="YUn-Ub-7Eu"/>
+                <constraint firstAttribute="bottom" secondItem="wp3-fJ-FMd" secondAttribute="bottom" id="hHl-Nd-2m6"/>
+                <constraint firstItem="wp3-fJ-FMd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tYY-Lx-4Wz"/>
+                <constraint firstAttribute="trailing" secondItem="wp3-fJ-FMd" secondAttribute="trailing" id="u5Z-eh-pl0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="wp3-fJ-FMd"/>
+                </mask>
                 <mask key="constraints">
                     <exclude reference="4Hb-Yo-O7x"/>
                     <exclude reference="SGV-D8-HyP"/>
                     <exclude reference="SH6-zV-sEi"/>
+                    <exclude reference="YUn-Ub-7Eu"/>
+                    <exclude reference="hHl-Nd-2m6"/>
+                    <exclude reference="tYY-Lx-4Wz"/>
+                    <exclude reference="u5Z-eh-pl0"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="wp3-fJ-FMd"/>
+                </mask>
                 <mask key="constraints">
                     <include reference="4Hb-Yo-O7x"/>
                     <include reference="SGV-D8-HyP"/>
                     <include reference="SH6-zV-sEi"/>
+                    <include reference="YUn-Ub-7Eu"/>
+                    <include reference="hHl-Nd-2m6"/>
+                    <include reference="tYY-Lx-4Wz"/>
+                    <include reference="u5Z-eh-pl0"/>
                 </mask>
             </variation>
         </view>

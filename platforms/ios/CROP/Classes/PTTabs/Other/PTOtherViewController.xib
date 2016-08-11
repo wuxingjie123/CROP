@@ -44,11 +44,14 @@
                 <constraint firstItem="fWg-s4-YzO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4jA-mC-OnQ"/>
                 <constraint firstAttribute="trailing" secondItem="OrP-32-gKT" secondAttribute="trailing" id="AmR-qs-cm4"/>
                 <constraint firstAttribute="bottom" secondItem="OrP-32-gKT" secondAttribute="bottom" id="Gw5-Ab-WUL"/>
-                <constraint firstItem="OrP-32-gKT" firstAttribute="top" secondItem="fWg-s4-YzO" secondAttribute="bottom" id="IME-IJ-iNP"/>
+                <constraint firstItem="OrP-32-gKT" firstAttribute="top" secondItem="fWg-s4-YzO" secondAttribute="bottom" id="IME-IJ-iNP">
+                    <variation key="widthClass=compact" constant="1"/>
+                </constraint>
                 <constraint firstItem="fWg-s4-YzO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bsm-Wa-iQ1"/>
                 <constraint firstItem="OrP-32-gKT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dnN-cR-WyL"/>
                 <constraint firstAttribute="trailing" secondItem="fWg-s4-YzO" secondAttribute="trailing" id="gEr-LZ-WCL"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="fWg-s4-YzO"/>
