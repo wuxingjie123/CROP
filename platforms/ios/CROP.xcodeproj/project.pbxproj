@@ -60,6 +60,12 @@
 		95B88C931D5C3E8B0012F2D5 /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C871D5C3E8B0012F2D5 /* CALayer+Anim.m */; };
 		95B88C941D5C3E8B0012F2D5 /* PCCircleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C8A1D5C3E8B0012F2D5 /* PCCircleInfoView.m */; };
 		95B88C951D5C3E8B0012F2D5 /* PCLockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C8C1D5C3E8B0012F2D5 /* PCLockLabel.m */; };
+		95B88CD01D5C4E210012F2D5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CC51D5C4E210012F2D5 /* FMDatabase.m */; };
+		95B88CD11D5C4E210012F2D5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CC71D5C4E210012F2D5 /* FMDatabaseAdditions.m */; };
+		95B88CD21D5C4E210012F2D5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CC91D5C4E210012F2D5 /* FMDatabasePool.m */; };
+		95B88CD31D5C4E210012F2D5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CCB1D5C4E210012F2D5 /* FMDatabaseQueue.m */; };
+		95B88CD41D5C4E210012F2D5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CCE1D5C4E210012F2D5 /* FMResultSet.m */; };
+		95B88CD51D5C4E210012F2D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B88CCF1D5C4E210012F2D5 /* Info.plist */; };
 		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
 		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
 		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
@@ -210,6 +216,18 @@
 		95B88C8A1D5C3E8B0012F2D5 /* PCCircleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircleInfoView.m; sourceTree = "<group>"; };
 		95B88C8B1D5C3E8B0012F2D5 /* PCLockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLockLabel.h; sourceTree = "<group>"; };
 		95B88C8C1D5C3E8B0012F2D5 /* PCLockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLockLabel.m; sourceTree = "<group>"; };
+		95B88CC41D5C4E210012F2D5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		95B88CC51D5C4E210012F2D5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		95B88CC61D5C4E210012F2D5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		95B88CC71D5C4E210012F2D5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		95B88CC81D5C4E210012F2D5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		95B88CC91D5C4E210012F2D5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		95B88CCA1D5C4E210012F2D5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		95B88CCB1D5C4E210012F2D5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		95B88CCC1D5C4E210012F2D5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		95B88CCD1D5C4E210012F2D5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		95B88CCE1D5C4E210012F2D5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		95B88CCF1D5C4E210012F2D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTWindowPage.xib; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; };
 		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTUnZipViewController.xib; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; };
@@ -632,6 +650,7 @@
 		95B88C601D5C3B1F0012F2D5 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				95B88CC11D5C4E210012F2D5 /* fmdb-2.6.2 */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -701,6 +720,41 @@
 				95B88C8C1D5C3E8B0012F2D5 /* PCLockLabel.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		95B88CC11D5C4E210012F2D5 /* fmdb-2.6.2 */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CC21D5C4E210012F2D5 /* src */,
+			);
+			path = "fmdb-2.6.2";
+			sourceTree = "<group>";
+		};
+		95B88CC21D5C4E210012F2D5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CC31D5C4E210012F2D5 /* fmdb */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		95B88CC31D5C4E210012F2D5 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CC41D5C4E210012F2D5 /* FMDatabase.h */,
+				95B88CC51D5C4E210012F2D5 /* FMDatabase.m */,
+				95B88CC61D5C4E210012F2D5 /* FMDatabaseAdditions.h */,
+				95B88CC71D5C4E210012F2D5 /* FMDatabaseAdditions.m */,
+				95B88CC81D5C4E210012F2D5 /* FMDatabasePool.h */,
+				95B88CC91D5C4E210012F2D5 /* FMDatabasePool.m */,
+				95B88CCA1D5C4E210012F2D5 /* FMDatabaseQueue.h */,
+				95B88CCB1D5C4E210012F2D5 /* FMDatabaseQueue.m */,
+				95B88CCC1D5C4E210012F2D5 /* FMDB.h */,
+				95B88CCD1D5C4E210012F2D5 /* FMResultSet.h */,
+				95B88CCE1D5C4E210012F2D5 /* FMResultSet.m */,
+				95B88CCF1D5C4E210012F2D5 /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		F53EADAD1CC0C46B0062161C /* PastryFramework */ = {
@@ -808,6 +862,7 @@
 				95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */,
 				F53EADE61CC0C4860062161C /* PastryResources in Resources */,
 				95B88C751D5C3C5B0012F2D5 /* PTOtherViewController.xib in Resources */,
+				95B88CD51D5C4E210012F2D5 /* Info.plist in Resources */,
 				F53EADCD1CC0C46B0062161C /* data.zip in Resources */,
 				F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */,
 				1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */,
@@ -865,11 +920,15 @@
 				953CDD7D1D4AF8190081DE9A /* PTViewControllerBase.m in Sources */,
 				95B88C8E1D5C3E8B0012F2D5 /* GestureViewController.m in Sources */,
 				95379C101D4EEABE002503B7 /* PTComponentManager.m in Sources */,
+				95B88CD01D5C4E210012F2D5 /* FMDatabase.m in Sources */,
 				95379C1A1D4F195D002503B7 /* PTDisplayComponentTableView.m in Sources */,
+				95B88CD41D5C4E210012F2D5 /* FMResultSet.m in Sources */,
 				EB029EEA44A6483F8FB01C0E /* CDVLogger.m in Sources */,
 				95B88C0F1D5C31100012F2D5 /* PTGestureUnlockViewController.m in Sources */,
 				4DC65AAE410E47FA9F5B2FB4 /* PTBrowser.m in Sources */,
 				32A3B1EA28F44EBBBD74EA5B /* PTBrowserContainer.m in Sources */,
+				95B88CD21D5C4E210012F2D5 /* FMDatabasePool.m in Sources */,
+				95B88CD31D5C4E210012F2D5 /* FMDatabaseQueue.m in Sources */,
 				E46814458EA246699C6C9434 /* PTWindowPage.m in Sources */,
 				5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Sources */,
 				84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */,
@@ -883,6 +942,7 @@
 				95B88C921D5C3E8B0012F2D5 /* PCCircleViewConst.m in Sources */,
 				04E3D9A3D5734E108C74F797 /* PTServletRequest.m in Sources */,
 				95B88C5C1D5C3ADB0012F2D5 /* PTMenuComponent.m in Sources */,
+				95B88CD11D5C4E210012F2D5 /* FMDatabaseAdditions.m in Sources */,
 				95B88C6A1D5C3C3C0012F2D5 /* PTCustomerViewController.m in Sources */,
 				95B88C651D5C3BD40012F2D5 /* PTLoginViewController.m in Sources */,
 				EB3F265F0497460E91E461CB /* PTKeyboards.m in Sources */,
