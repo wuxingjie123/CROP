@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PTHomeViewController">
@@ -13,7 +14,91 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOs-PY-k1z">
+                    <rect key="frame" x="104" y="8" width="240" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="dxu-ww-o2h"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="首页" id="iOJ-K6-ct0"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dxu-ww-o2h"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="dxu-ww-o2h"/>
+                        </mask>
+                    </variation>
+                </navigationBar>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obn-oi-CjN" customClass="PTLoopComponent">
+                    <rect key="frame" x="58" y="52" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="jnj-BM-WOP"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jnj-BM-WOP"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="jnj-BM-WOP"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-30-629" customClass="PTMenuComponent">
+                    <rect key="frame" x="0.0" y="168" width="240" height="128"/>
+                    <color key="backgroundColor" red="1" green="0.97764268865858273" blue="0.52976531488134637" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="obn-oi-CjN" firstAttribute="top" secondItem="HOs-PY-k1z" secondAttribute="bottom" id="5gC-Zu-md5"/>
+                <constraint firstItem="5oE-30-629" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7OK-OG-Thl"/>
+                <constraint firstItem="HOs-PY-k1z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AnD-Na-ZCi"/>
+                <constraint firstItem="HOs-PY-k1z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RUp-bc-m2Q"/>
+                <constraint firstAttribute="trailing" secondItem="HOs-PY-k1z" secondAttribute="trailing" id="Ymz-2z-Q6I"/>
+                <constraint firstAttribute="trailing" secondItem="obn-oi-CjN" secondAttribute="trailing" id="c89-2e-HKv"/>
+                <constraint firstAttribute="trailing" secondItem="5oE-30-629" secondAttribute="trailing" id="cIw-RM-gi6"/>
+                <constraint firstItem="obn-oi-CjN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jAj-uo-7fW"/>
+                <constraint firstAttribute="bottom" secondItem="5oE-30-629" secondAttribute="bottom" id="qsH-fN-mL1">
+                    <variation key="widthClass=compact" constant="55"/>
+                </constraint>
+                <constraint firstItem="5oE-30-629" firstAttribute="top" secondItem="obn-oi-CjN" secondAttribute="bottom" id="rB2-vH-FT4"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AnD-Na-ZCi"/>
+                    <exclude reference="RUp-bc-m2Q"/>
+                    <exclude reference="Ymz-2z-Q6I"/>
+                    <exclude reference="5gC-Zu-md5"/>
+                    <exclude reference="c89-2e-HKv"/>
+                    <exclude reference="jAj-uo-7fW"/>
+                    <exclude reference="7OK-OG-Thl"/>
+                    <exclude reference="cIw-RM-gi6"/>
+                    <exclude reference="qsH-fN-mL1"/>
+                    <exclude reference="rB2-vH-FT4"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="AnD-Na-ZCi"/>
+                    <include reference="RUp-bc-m2Q"/>
+                    <include reference="Ymz-2z-Q6I"/>
+                    <include reference="5gC-Zu-md5"/>
+                    <include reference="c89-2e-HKv"/>
+                    <include reference="jAj-uo-7fW"/>
+                    <include reference="7OK-OG-Thl"/>
+                    <include reference="cIw-RM-gi6"/>
+                    <include reference="qsH-fN-mL1"/>
+                    <include reference="rB2-vH-FT4"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

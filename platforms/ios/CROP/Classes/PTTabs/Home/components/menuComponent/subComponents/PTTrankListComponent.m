@@ -1,27 +1,22 @@
 //
-//  PTMenuComponent.m
+//  PTTrankListComponent.m
 //  CROP
 //
 //  Created by 耿远超 on 16/8/11.
 //
 //
 
-#import "PTMenuComponent.h"
+#import "PTTrankListComponent.h"
 
-@interface PTMenuComponent () {
-    PTComponentCallbackBlock _completeBlock;
-}
-@property (weak, nonatomic) IBOutlet UIView *view;
+@implementation PTTrankListComponent
 
-@end
-
-@implementation PTMenuComponent
-
+/*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-//- (void)drawRect:(CGRect)rect {
-//    // Drawing code
-//}
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
@@ -36,18 +31,6 @@
     }
     
     return self;
-}
-
-// button click 方法
-- (IBAction)menuClick:(id)sender {
-    if (_completeBlock) {
-        _completeBlock(sender);
-    }
-}
-
-//
-- (void)completion:(void(^)(id object))completeBlock {
-    _completeBlock = completeBlock;
 }
 
 @end

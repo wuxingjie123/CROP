@@ -10,4 +10,6 @@
 
 @interface PTMenuComponent : UIView
 
+- (void)completion:(void(^)(id object))completeBlock;
+
 @end

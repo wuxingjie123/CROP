@@ -20,6 +20,16 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark - 定义回调方法
+#pragma mark 完成回调
+typedef void(^PTCompleteBlock)(id params);
+
+#pragma mark 自定义组件回调方法
+typedef void(^PTComponentCallbackBlock)(id params);
+
+#pragma mark 自定义 ViewController 回调方法
+typedef void(^PTViewControllerCallbackBlock)(id params);
+
 @interface PTViewControllerBase : UIViewController
 
 -(void)contentSizeDidChange:(NSString*)size;

@@ -10,4 +10,6 @@
 
 @interface PTHomeViewController : UIViewController
 
+//PTViewControllerCallbackBlock callBack;
+
 @end

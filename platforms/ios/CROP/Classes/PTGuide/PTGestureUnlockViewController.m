@@ -45,6 +45,8 @@
 #pragma mark - PTGuideInterface 接口
 - (BOOL)displayView {
     
+    return NO;
+    
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     BOOL isUpDated = ![[def objectForKey:@"currentVersion"] isEqualToString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     

@@ -8,9 +8,12 @@
 
 #import "AppDelegate+TabMain.h"
 
-#import "BrowserViewController.h"
 #import "MoreBrowserViewController.h"
-#import "SecondViewController.h"
+
+#import "PTHomeViewController.h"
+#import "PTCustomerViewController.h"
+#import "PTTrankViewController.h"
+#import "PTOtherViewController.h"
 
 @implementation AppDelegate (TabMain)
 
@@ -22,30 +25,27 @@
     UITabBarController *tabBarController = [[MoreBrowserViewController alloc] init];
     browser.browserManager = tabBarController;
     
-    BrowserViewController *browserController1 = [[BrowserViewController alloc] init];
-    [browserController1 markHome:YES];
-    browserController1.title = NSLocalizedString(@"First", @"First");
-    browserController1.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/first"];
-    id __weak browserContainerTemp = browserController1.BrowserContainer;
-    browserController1.viewDidCompleteCallBack = ^(id param){
-        [browser nativeInitBrowserHome:@"app/index.html" params:nil callbackBlock:nil forBrowserContainer:browserContainerTemp];
-    };
+    // 首页
+    PTHomeViewController *homeViewController = [[PTHomeViewController alloc] initWithNibName:@"PTHomeViewController" bundle:nil];
+    homeViewController.title = NSLocalizedString(@"首页", @"Home");
+    homeViewController.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/second"];
     
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    viewController2.title = NSLocalizedString(@"Second", @"Second");
-    viewController2.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/second"];
+    // 跟踪箱
+    PTTrankViewController *trankViewController = [[PTTrankViewController alloc] initWithNibName:@"PTTrankViewController" bundle:nil];
+    trankViewController.title = NSLocalizedString(@"跟踪箱", @"Trank");
+    trankViewController.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/first"];
     
-    BrowserViewController *browserController2 = [[BrowserViewController alloc] init];
-    [browserController2 markHome:YES];
-    browserController2.title = NSLocalizedString(@"Second", @"Second");
-    browserController2.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/second"];
-    id __weak browserContainerTemp2 = browserController2.BrowserContainer;
-    browserController2.viewDidCompleteCallBack = ^(id param){
-        [browser nativeInitBrowserHome:@"app/index.html" params:nil callbackBlock:nil forBrowserContainer:browserContainerTemp2];
-    };
+    // 客户
+    PTCustomerViewController *customerViewController = [[PTCustomerViewController alloc] initWithNibName:@"PTCustomerViewController" bundle:nil];
+    customerViewController.title = NSLocalizedString(@"客户", @"Customer");
+    customerViewController.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/first"];
     
-    // 初始化正常的首页
-    tabBarController.viewControllers = @[browserController1, viewController2, browserController2];
+    // 其它
+    PTOtherViewController *otherViewController = [[PTOtherViewController alloc] initWithNibName:@"PTOtherViewController" bundle:nil];
+    otherViewController.title = NSLocalizedString(@"其他", @"Other");
+    otherViewController.tabBarItem.image = [UIImage imageNamed:@"browserImages.bundle/Contents/Resources/first"];
+    
+    tabBarController.viewControllers = @[homeViewController, trankViewController, customerViewController, otherViewController];
     
     return tabBarController;
 }
