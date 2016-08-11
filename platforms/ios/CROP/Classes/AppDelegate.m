@@ -68,8 +68,8 @@
  */
 - (id<PTGuideInterface>)getGuideComponent {
     
-    Class guideComponentClass = NSClassFromString(@"PTGuideViewController");
-    NSString *guideNibName = @"PTGuideViewController";
+    Class guideComponentClass = NSClassFromString(@"PTGestureUnlockViewController");
+    NSString *guideNibName = @"PTGestureUnlockViewController";
     id<PTGuideInterface> guideComponent = [[guideComponentClass alloc] initWithNibName:guideNibName bundle:nil];
     if (guideComponent == nil) {
         
