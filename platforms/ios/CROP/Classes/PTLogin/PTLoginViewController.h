@@ -8,6 +8,6 @@
 
 #import "PTViewControllerBase.h"
 
-@interface PTLoginViewController : PTViewControllerBase
+@interface PTLoginViewController : PTViewControllerBase <PTLoginInterface>
 
 @end

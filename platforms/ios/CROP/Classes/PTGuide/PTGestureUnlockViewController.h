@@ -7,8 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GestureViewController.h"
+//#import "GestureViewController.h"
+typedef enum{
+    GestureViewControllerTypeSetting = 1,
+    GestureViewControllerTypeLogin
+}GestureViewControllerType;
 
-@interface PTGestureUnlockViewController : GestureViewController<PTGuideInterface>
+typedef enum{
+    buttonTagReset = 1,
+    buttonTagManager,
+    buttonTagForget
+    
+}buttonTag;
+
+@interface PTGestureUnlockViewController : PTViewControllerBase<PTGuideInterface>
+
+/**
+ *  控制器来源类型
+ */
+@property (nonatomic, assign) GestureViewControllerType type;
 
 @end

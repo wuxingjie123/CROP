@@ -38,8 +38,9 @@
 
 #pragma mark UIApplicationDelegate implementation
 
+#pragma mark 配置 data.zip 解压页面 插件
 /**
- * 1、配置 data.zip 解压页面 插件
+ * 配置 data.zip 解压页面 插件
  */
 - (id<PTUnzipInterface>)getZipComponent {
     
@@ -63,8 +64,9 @@
     return unzipComponent;
 }
 
+#pragma mark 配置 引导页面 插件
 /**
- * 2、配置 引导页面 插件
+ * 配置 引导页面 插件
  */
 - (id<PTGuideInterface>)getGuideComponent {
     
@@ -88,8 +90,35 @@
     return guideComponent;
 }
 
+#pragma mark 配置 引导页面 插件
 /**
- *  3、配置 主页面 插件<br/>
+ * 配置 引导页面 插件
+ */
+- (id<PTLoginInterface>)getLoginComponent {
+    
+    Class loginComponentClass = NSClassFromString(@"PTLoginViewController");
+    NSString *loginNibName = @"PTLoginViewController";
+    id<PTLoginInterface> loginComponent = [[loginComponentClass alloc] initWithNibName:loginNibName bundle:nil];
+    if (loginComponent == nil) {
+        
+        NSString *tipStr =
+        @"\n!!! 没有选择对应的登录页面插件 !!! \n"
+        "可选登录页面插件有 \n"
+        "pastry-plugin-login 更多插件参考: https://pastryteam.github.io/pastry/#!plugins/plugins-cordova.md \n"
+        "使用 pastry bake plugin add 插件名称|插件GitHub地址 \n"
+        "插件安装完成后，运行程序查看结果. \n";
+        
+        NSException *exception = [NSException exceptionWithName:@"配置登录页面插件错误" reason:tipStr userInfo:nil];
+        
+        @throw exception;
+    }
+    
+    return loginComponent;
+}
+
+#pragma mark 配置 主页面 插件
+/**
+ *  配置 主页面 插件<br/>
  *  备注：<br/>
  *      请查看 AppDelegate 的类别 类<br/>
  */
@@ -125,6 +154,8 @@
     
     id<PTGuideInterface> guideComponent = [self getGuideComponent];
     
+    id<PTLoginInterface> loginComponent = [self getLoginComponent];
+    
     [zipComponent completion:^(id object) {
         
         [[PTFramework getInstance] initialization];
@@ -134,11 +165,16 @@
         [self restoreRootViewController:(guideComponent.displayView == YES ? (UIViewController*)guideComponent : self.mainViewController) options:UIViewAnimationOptionTransitionCrossDissolve];
         
         [guideComponent completion:^(id object) {
-            [self restoreRootViewController:self.mainViewController options:UIViewAnimationOptionTransitionCrossDissolve];
+            
+            [self restoreRootViewController:(loginComponent.displayView == YES ? (UIViewController*)loginComponent : self.mainViewController) options:UIViewAnimationOptionTransitionCrossDissolve];
+            
+            [loginComponent completion:^(id object) {
+                [self restoreRootViewController:self.mainViewController options:UIViewAnimationOptionTransitionCrossDissolve];
+            }];
         }];
     }];
     
-    self.window.rootViewController = (zipComponent.displayView == YES ? (UIViewController*)zipComponent : (guideComponent.displayView == YES ? (UIViewController*)guideComponent : self.mainViewController));
+    self.window.rootViewController = (zipComponent.displayView == YES ? (UIViewController*)zipComponent : (guideComponent.displayView == YES ? (UIViewController*)guideComponent : (loginComponent.displayView == YES ? (UIViewController*)loginComponent : self.mainViewController)));
     
     [self.window makeKeyAndVisible];
     

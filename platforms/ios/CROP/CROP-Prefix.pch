@@ -33,6 +33,7 @@
     // 接口
     #import "PTUnzipInterface.h"
     #import "PTGuideInterface.h"
+    #import "PTLoginInterface.h"
 
     // 浏览器插件引用
     #import "PTBrowser.h"

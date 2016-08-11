@@ -8,7 +8,9 @@
 
 #import "PTLoginViewController.h"
 
-@interface PTLoginViewController ()
+@interface PTLoginViewController () {
+    PTViewControllerCallbackBlock _completeBlock;
+}
 
 @end
 
@@ -33,5 +35,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - PTLoginInterface 接口
+- (BOOL)displayView {
+    // 检验是否处于登录状态，登录：直接返回 NO，不显示页面；非登录：直接返回YES，显示页面；
+    return YES;
+}
+
+- (void)completion:(void(^)(id object))completeBlock {
+    _completeBlock = completeBlock;
+    
+    if (self.displayView == NO) {
+        // 不显示 引导页面,直接完成
+        completeBlock(nil);
+    }
+//    else {
+//        // 显示 引导页面
+//    }
+}
 
 @end
