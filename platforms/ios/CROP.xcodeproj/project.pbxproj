@@ -48,6 +48,18 @@
 		95B88C2F1D5C33A30012F2D5 /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C231D5C33A30012F2D5 /* CALayer+Anim.m */; };
 		95B88C301D5C33A30012F2D5 /* PCCircleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C261D5C33A30012F2D5 /* PCCircleInfoView.m */; };
 		95B88C311D5C33A30012F2D5 /* PCLockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C281D5C33A30012F2D5 /* PCLockLabel.m */; };
+		95B88C5B1D5C3ADB0012F2D5 /* PTLoopComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C531D5C3ADB0012F2D5 /* PTLoopComponent.m */; };
+		95B88C5C1D5C3ADB0012F2D5 /* PTMenuComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C561D5C3ADB0012F2D5 /* PTMenuComponent.m */; };
+		95B88C5D1D5C3ADB0012F2D5 /* PTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C591D5C3ADB0012F2D5 /* PTHomeViewController.m */; };
+		95B88C5E1D5C3ADB0012F2D5 /* PTHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88C5A1D5C3ADB0012F2D5 /* PTHomeViewController.xib */; };
+		95B88C651D5C3BD40012F2D5 /* PTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C631D5C3BD40012F2D5 /* PTLoginViewController.m */; };
+		95B88C661D5C3BD40012F2D5 /* PTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88C641D5C3BD40012F2D5 /* PTLoginViewController.xib */; };
+		95B88C6A1D5C3C3C0012F2D5 /* PTCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C681D5C3C3C0012F2D5 /* PTCustomerViewController.m */; };
+		95B88C6B1D5C3C3C0012F2D5 /* PTCustomerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88C691D5C3C3C0012F2D5 /* PTCustomerViewController.xib */; };
+		95B88C6F1D5C3C4C0012F2D5 /* PTTrankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C6D1D5C3C4C0012F2D5 /* PTTrankViewController.m */; };
+		95B88C701D5C3C4C0012F2D5 /* PTTrankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88C6E1D5C3C4C0012F2D5 /* PTTrankViewController.xib */; };
+		95B88C741D5C3C5B0012F2D5 /* PTOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88C721D5C3C5B0012F2D5 /* PTOtherViewController.m */; };
+		95B88C751D5C3C5B0012F2D5 /* PTOtherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88C731D5C3C5B0012F2D5 /* PTOtherViewController.xib */; };
 		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
 		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
 		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
@@ -179,6 +191,25 @@
 		95B88C261D5C33A30012F2D5 /* PCCircleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircleInfoView.m; sourceTree = "<group>"; };
 		95B88C271D5C33A30012F2D5 /* PCLockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLockLabel.h; sourceTree = "<group>"; };
 		95B88C281D5C33A30012F2D5 /* PCLockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLockLabel.m; sourceTree = "<group>"; };
+		95B88C521D5C3ADB0012F2D5 /* PTLoopComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLoopComponent.h; sourceTree = "<group>"; };
+		95B88C531D5C3ADB0012F2D5 /* PTLoopComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLoopComponent.m; sourceTree = "<group>"; };
+		95B88C551D5C3ADB0012F2D5 /* PTMenuComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTMenuComponent.h; sourceTree = "<group>"; };
+		95B88C561D5C3ADB0012F2D5 /* PTMenuComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTMenuComponent.m; sourceTree = "<group>"; };
+		95B88C581D5C3ADB0012F2D5 /* PTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTHomeViewController.h; sourceTree = "<group>"; };
+		95B88C591D5C3ADB0012F2D5 /* PTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTHomeViewController.m; sourceTree = "<group>"; };
+		95B88C5A1D5C3ADB0012F2D5 /* PTHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTHomeViewController.xib; sourceTree = "<group>"; };
+		95B88C621D5C3BD40012F2D5 /* PTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLoginViewController.h; sourceTree = "<group>"; };
+		95B88C631D5C3BD40012F2D5 /* PTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLoginViewController.m; sourceTree = "<group>"; };
+		95B88C641D5C3BD40012F2D5 /* PTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTLoginViewController.xib; sourceTree = "<group>"; };
+		95B88C671D5C3C3C0012F2D5 /* PTCustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCustomerViewController.h; sourceTree = "<group>"; };
+		95B88C681D5C3C3C0012F2D5 /* PTCustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCustomerViewController.m; sourceTree = "<group>"; };
+		95B88C691D5C3C3C0012F2D5 /* PTCustomerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTCustomerViewController.xib; sourceTree = "<group>"; };
+		95B88C6C1D5C3C4C0012F2D5 /* PTTrankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTrankViewController.h; sourceTree = "<group>"; };
+		95B88C6D1D5C3C4C0012F2D5 /* PTTrankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTrankViewController.m; sourceTree = "<group>"; };
+		95B88C6E1D5C3C4C0012F2D5 /* PTTrankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTTrankViewController.xib; sourceTree = "<group>"; };
+		95B88C711D5C3C5B0012F2D5 /* PTOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTOtherViewController.h; sourceTree = "<group>"; };
+		95B88C721D5C3C5B0012F2D5 /* PTOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTOtherViewController.m; sourceTree = "<group>"; };
+		95B88C731D5C3C5B0012F2D5 /* PTOtherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTOtherViewController.xib; sourceTree = "<group>"; };
 		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTWindowPage.xib; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; };
 		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTUnZipViewController.xib; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; };
@@ -287,6 +318,9 @@
 			children = (
 				953CDD761D4AF8190081DE9A /* PTBase */,
 				95B88C0B1D5C30CE0012F2D5 /* PTGuide */,
+				95B88C611D5C3BA40012F2D5 /* PTLogin */,
+				95B88C321D5C38230012F2D5 /* PTTabs */,
+				95B88C5F1D5C3B1F0012F2D5 /* PTDB */,
 				95379C181D4F195D002503B7 /* PTDisplayComponentTableView.h */,
 				95379C191D4F195D002503B7 /* PTDisplayComponentTableView.m */,
 				302D95EE14D2391D003F00A1 /* MainViewController.h */,
@@ -549,6 +583,118 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		95B88C321D5C38230012F2D5 /* PTTabs */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C4F1D5C3ADB0012F2D5 /* Home */,
+				95B88C4E1D5C3AD70012F2D5 /* Customer */,
+				95B88C4D1D5C3AD10012F2D5 /* Trank */,
+				95B88C4C1D5C3ACB0012F2D5 /* Other */,
+			);
+			path = PTTabs;
+			sourceTree = "<group>";
+		};
+		95B88C4C1D5C3ACB0012F2D5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C711D5C3C5B0012F2D5 /* PTOtherViewController.h */,
+				95B88C721D5C3C5B0012F2D5 /* PTOtherViewController.m */,
+				95B88C731D5C3C5B0012F2D5 /* PTOtherViewController.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		95B88C4D1D5C3AD10012F2D5 /* Trank */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C6C1D5C3C4C0012F2D5 /* PTTrankViewController.h */,
+				95B88C6D1D5C3C4C0012F2D5 /* PTTrankViewController.m */,
+				95B88C6E1D5C3C4C0012F2D5 /* PTTrankViewController.xib */,
+			);
+			path = Trank;
+			sourceTree = "<group>";
+		};
+		95B88C4E1D5C3AD70012F2D5 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C671D5C3C3C0012F2D5 /* PTCustomerViewController.h */,
+				95B88C681D5C3C3C0012F2D5 /* PTCustomerViewController.m */,
+				95B88C691D5C3C3C0012F2D5 /* PTCustomerViewController.xib */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		95B88C4F1D5C3ADB0012F2D5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C571D5C3ADB0012F2D5 /* lib */,
+				95B88C501D5C3ADB0012F2D5 /* components */,
+				95B88C581D5C3ADB0012F2D5 /* PTHomeViewController.h */,
+				95B88C591D5C3ADB0012F2D5 /* PTHomeViewController.m */,
+				95B88C5A1D5C3ADB0012F2D5 /* PTHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		95B88C501D5C3ADB0012F2D5 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C511D5C3ADB0012F2D5 /* loopComponent */,
+				95B88C541D5C3ADB0012F2D5 /* menuComponent */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		95B88C511D5C3ADB0012F2D5 /* loopComponent */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C521D5C3ADB0012F2D5 /* PTLoopComponent.h */,
+				95B88C531D5C3ADB0012F2D5 /* PTLoopComponent.m */,
+			);
+			path = loopComponent;
+			sourceTree = "<group>";
+		};
+		95B88C541D5C3ADB0012F2D5 /* menuComponent */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C551D5C3ADB0012F2D5 /* PTMenuComponent.h */,
+				95B88C561D5C3ADB0012F2D5 /* PTMenuComponent.m */,
+			);
+			path = menuComponent;
+			sourceTree = "<group>";
+		};
+		95B88C571D5C3ADB0012F2D5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		95B88C5F1D5C3B1F0012F2D5 /* PTDB */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C601D5C3B1F0012F2D5 /* lib */,
+			);
+			path = PTDB;
+			sourceTree = "<group>";
+		};
+		95B88C601D5C3B1F0012F2D5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		95B88C611D5C3BA40012F2D5 /* PTLogin */ = {
+			isa = PBXGroup;
+			children = (
+				95B88C621D5C3BD40012F2D5 /* PTLoginViewController.h */,
+				95B88C631D5C3BD40012F2D5 /* PTLoginViewController.m */,
+				95B88C641D5C3BD40012F2D5 /* PTLoginViewController.xib */,
+			);
+			path = PTLogin;
+			sourceTree = "<group>";
+		};
 		F53EADAD1CC0C46B0062161C /* PastryFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,15 +792,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B88C661D5C3BD40012F2D5 /* PTLoginViewController.xib in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				95B88C101D5C31100012F2D5 /* PTGestureUnlockViewController.xib in Resources */,
 				F53EADE31CC0C46B0062161C /* PTResources.bundle in Resources */,
+				95B88C5E1D5C3ADB0012F2D5 /* PTHomeViewController.xib in Resources */,
 				95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */,
 				F53EADE61CC0C4860062161C /* PastryResources in Resources */,
+				95B88C751D5C3C5B0012F2D5 /* PTOtherViewController.xib in Resources */,
 				F53EADCD1CC0C46B0062161C /* data.zip in Resources */,
 				F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */,
 				1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */,
+				95B88C6B1D5C3C3C0012F2D5 /* PTCustomerViewController.xib in Resources */,
 				904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */,
+				95B88C701D5C3C4C0012F2D5 /* PTTrankViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +851,7 @@
 				95B88C2D1D5C33A30012F2D5 /* PCCircleView.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				95B88C6F1D5C3C4C0012F2D5 /* PTTrankViewController.m in Sources */,
 				F53EADE11CC0C46B0062161C /* README.md in Sources */,
 				95B88C311D5C33A30012F2D5 /* PCLockLabel.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
@@ -717,6 +869,7 @@
 				5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Sources */,
 				84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */,
 				2E5AA0D0A03E47CC91802AF5 /* MoreBrowserViewController.m in Sources */,
+				95B88C5D1D5C3ADB0012F2D5 /* PTHomeViewController.m in Sources */,
 				6641847C1F8C42ACA54F528A /* SecondViewController.m in Sources */,
 				B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */,
 				2365A846BBB24152A4999549 /* BrowserViewController.m in Sources */,
@@ -724,12 +877,16 @@
 				95B88C2F1D5C33A30012F2D5 /* CALayer+Anim.m in Sources */,
 				95B88C301D5C33A30012F2D5 /* PCCircleInfoView.m in Sources */,
 				04E3D9A3D5734E108C74F797 /* PTServletRequest.m in Sources */,
+				95B88C5C1D5C3ADB0012F2D5 /* PTMenuComponent.m in Sources */,
+				95B88C6A1D5C3C3C0012F2D5 /* PTCustomerViewController.m in Sources */,
+				95B88C651D5C3BD40012F2D5 /* PTLoginViewController.m in Sources */,
 				EB3F265F0497460E91E461CB /* PTKeyboards.m in Sources */,
 				44BD0918DE64493A81CA4E83 /* KeyboardViewController.m in Sources */,
 				AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */,
 				1972C91058E2430CB0060987 /* PTUnZipViewController.m in Sources */,
 				58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Sources */,
 				8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */,
+				95B88C741D5C3C5B0012F2D5 /* PTOtherViewController.m in Sources */,
 				E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Sources */,
 				8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */,
 				52C56CA49C55432896984996 /* StorageViewController.m in Sources */,
@@ -737,6 +894,7 @@
 				723BEB02B49D4DF9905D51B8 /* AppDelegate+TabMain.m in Sources */,
 				95B88C2C1D5C33A30012F2D5 /* PCCircle.m in Sources */,
 				1BD28B26234F4BB5A94C2939 /* MainViewController+TabMain.m in Sources */,
+				95B88C5B1D5C3ADB0012F2D5 /* PTLoopComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
