@@ -40,6 +40,9 @@
     <feature name="PTKeyboards">
         <param name="ios-package" value="PTKeyboards" />
     </feature>
+    <feature name="PTDB">
+        <param name="ios-package" value="PTDB" />
+    </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <name>CROP</name>

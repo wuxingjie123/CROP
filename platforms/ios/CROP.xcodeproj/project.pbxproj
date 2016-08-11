@@ -27,6 +27,7 @@
 		58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
 		5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Sources */ = {isa = PBXBuildFile; fileRef = 97B92A20172A43EBB5682722 /* PTWindowPage.xib */; };
+		641ACC5D512C49D4B70F01C7 /* PTDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAAD1E93948433BA858C79F /* PTDB.m */; };
 		6641847C1F8C42ACA54F528A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A00A4A64974924AC8FC1E0 /* SecondViewController.m */; };
 		723BEB02B49D4DF9905D51B8 /* AppDelegate+TabMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F732FA73F1451EB523BB59 /* AppDelegate+TabMain.m */; };
 		832A99F0608E4777B005758D /* PTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 508385259F2E4F9796A403B8 /* PTRequest.m */; };
@@ -71,6 +72,7 @@
 		95B88CE51D5C50CB0012F2D5 /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CDE1D5C50CB0012F2D5 /* LKDBUtils.m */; };
 		95B88CE61D5C50CB0012F2D5 /* NSObject+LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CE01D5C50CB0012F2D5 /* NSObject+LKDBHelper.m */; };
 		95B88CE71D5C50CC0012F2D5 /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CE21D5C50CB0012F2D5 /* NSObject+LKModel.m */; };
+		95B88CF51D5C59190012F2D5 /* PTCustomersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CF41D5C59190012F2D5 /* PTCustomersModel.m */; };
 		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
 		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
 		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
@@ -162,6 +164,7 @@
 		508385259F2E4F9796A403B8 /* PTRequest.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = PTRequest.m; path = "pastry-plugin-request/PTRequest.m"; sourceTree = "<group>"; };
 		518690E0D5824440B0A2D1E1 /* CDVLogger.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLogger.h; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; };
 		54F732FA73F1451EB523BB59 /* AppDelegate+TabMain.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+TabMain.m"; path = "pastry-plugin-tabMain/AppDelegate+TabMain.m"; sourceTree = "<group>"; };
+		5AAAD1E93948433BA858C79F /* PTDB.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = PTDB.m; path = "pastry-plugin-DB/PTDB.m"; sourceTree = "<group>"; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		6532906406714FED96D93215 /* PTWindowPage+Operation.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "PTWindowPage+Operation.h"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage+Operation.h"; sourceTree = "<group>"; };
 		6E54EA78D2EF43458556CD33 /* browserImages.bundle */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.plug-in"; path = browserImages.bundle; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 		95B88CE01D5C50CB0012F2D5 /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
 		95B88CE11D5C50CB0012F2D5 /* NSObject+LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKModel.h"; sourceTree = "<group>"; };
 		95B88CE21D5C50CB0012F2D5 /* NSObject+LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKModel.m"; sourceTree = "<group>"; };
+		95B88CF31D5C59190012F2D5 /* PTCustomersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCustomersModel.h; sourceTree = "<group>"; };
+		95B88CF41D5C59190012F2D5 /* PTCustomersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCustomersModel.m; sourceTree = "<group>"; };
 		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTWindowPage.xib; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; };
 		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTUnZipViewController.xib; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; };
@@ -257,6 +262,7 @@
 		BFE1330B450C4F4E8ADBFDF8 /* PTServletRequest.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PTServletRequest.h; path = "pastry-plugin-request/PTServletRequest.h"; sourceTree = "<group>"; };
 		C165137472974607A2DB68A6 /* KeyboardViewController.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = KeyboardViewController.m; path = "pastry-plugin-keyboard/KeyboardViewController.m"; sourceTree = "<group>"; };
 		C1738444A7FE4D16A73905C7 /* MainViewController+TabMain.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "MainViewController+TabMain.m"; path = "pastry-plugin-tabMain/MainViewController+TabMain.m"; sourceTree = "<group>"; };
+		CB7D9348A1574E02BFADBB50 /* PTDB.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = PTDB.h; path = "pastry-plugin-DB/PTDB.h"; sourceTree = "<group>"; };
 		DBFBD53159CE46C283B3620C /* StorageViewController.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = StorageViewController.h; path = "pastry-plugin-storageDemo/StorageViewController.h"; sourceTree = "<group>"; };
 		E8A011863F324AE1AA01D684 /* MainViewController+TabMain.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "MainViewController+TabMain.h"; path = "pastry-plugin-tabMain/MainViewController+TabMain.h"; sourceTree = "<group>"; };
 		EE9BB5453F1D48B1942B2947 /* MoreBrowserViewController.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MoreBrowserViewController.h; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/MoreBrowserViewController.h"; sourceTree = "<group>"; };
@@ -350,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				953CDD761D4AF8190081DE9A /* PTBase */,
+				95B88CF21D5C58D00012F2D5 /* PTModels */,
 				95B88C0B1D5C30CE0012F2D5 /* PTGuide */,
 				95B88C611D5C3BA40012F2D5 /* PTLogin */,
 				95B88C321D5C38230012F2D5 /* PTTabs */,
@@ -505,6 +512,8 @@
 				C1738444A7FE4D16A73905C7 /* MainViewController+TabMain.m */,
 				B42394C2E5B54AB9A34405C2 /* AppDelegate+TabMain.h */,
 				E8A011863F324AE1AA01D684 /* MainViewController+TabMain.h */,
+				5AAAD1E93948433BA858C79F /* PTDB.m */,
+				CB7D9348A1574E02BFADBB50 /* PTDB.h */,
 			);
 			name = Plugins;
 			path = CROP/Plugins;
@@ -806,6 +815,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		95B88CF21D5C58D00012F2D5 /* PTModels */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CF31D5C59190012F2D5 /* PTCustomersModel.h */,
+				95B88CF41D5C59190012F2D5 /* PTCustomersModel.m */,
+			);
+			path = PTModels;
+			sourceTree = "<group>";
+		};
 		F53EADAD1CC0C46B0062161C /* PastryFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -986,6 +1004,7 @@
 				84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */,
 				2E5AA0D0A03E47CC91802AF5 /* MoreBrowserViewController.m in Sources */,
 				95B88C5D1D5C3ADB0012F2D5 /* PTHomeViewController.m in Sources */,
+				95B88CF51D5C59190012F2D5 /* PTCustomersModel.m in Sources */,
 				95B88C951D5C3E8B0012F2D5 /* PCLockLabel.m in Sources */,
 				6641847C1F8C42ACA54F528A /* SecondViewController.m in Sources */,
 				B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */,
@@ -1017,6 +1036,7 @@
 				95B88C5B1D5C3ADB0012F2D5 /* PTLoopComponent.m in Sources */,
 				95B88C901D5C3E8B0012F2D5 /* PCCircle.m in Sources */,
 				95B88C941D5C3E8B0012F2D5 /* PCCircleInfoView.m in Sources */,
+				641ACC5D512C49D4B70F01C7 /* PTDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

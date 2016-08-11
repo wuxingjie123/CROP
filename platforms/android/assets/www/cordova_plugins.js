@@ -13,6 +13,14 @@ module.exports = [
         "clobbers": [
             "example"
         ]
+    },
+    {
+        "file": "plugins/pastry-plugin-DB/www/example.js",
+        "id": "pastry-plugin-DB.example",
+        "pluginId": "pastry-plugin-DB",
+        "clobbers": [
+            "example"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -26,7 +34,8 @@ module.exports.metadata =
     "pastry-plugin-unzip": "1.0.0",
     "pastry-plugin-guide": "1.0.0",
     "pastry-plugin-storageDemo": "1.0.0",
-    "pastry-plugin-tabMain": "1.0.0"
+    "pastry-plugin-tabMain": "1.0.0",
+    "pastry-plugin-DB": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

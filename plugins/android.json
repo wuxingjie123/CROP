@@ -33,6 +33,9 @@
         },
         "pastry-plugin-tabMain": {
             "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-DB": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
         }
     },
     "dependent_plugins": {}

@@ -70,5 +70,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "pastry-plugin-DB": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Documents/Github/plugin/pastry-plugin-DB"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"PTKeyboards\"><param name=\"ios-package\" value=\"PTKeyboards\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PTDB\"><param name=\"ios-package\" value=\"PTDB\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -55,6 +59,9 @@
             "PACKAGE_NAME": "com.mobilebank.develop"
         },
         "pastry-plugin-tabMain": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-DB": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         }
     },
