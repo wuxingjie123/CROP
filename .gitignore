@@ -1,0 +1,10 @@
+
+*.xcworkspacedata
+
+*.xcscheme
+
+platforms/ios/CROP.xcodeproj/xcuserdata/gengyuanchao.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.xcuserstate
+
+platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/gengyuanchao.xcuserdatad/xcschemes/xcschememanagement.plist

@@ -172,10 +172,12 @@ PT_REGISTER_COMPONENT(PTComponentType_Native, 引导页面组件集合, 引导�
 #pragma mark - PTGuideInterface 接口
 - (BOOL)displayView {
     
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    BOOL isUpDated = ![[def objectForKey:@"currentVersion"] isEqualToString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    return NO;
     
-    return isUpDated;
+//    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+//    BOOL isUpDated = ![[def objectForKey:@"currentVersion"] isEqualToString:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+//    
+//    return isUpDated;
 }
 
 - (void)completion:(void(^)(id object))completeBlock {

@@ -8,7 +8,7 @@
 
 #import "PTUnZipViewController.h"
 
-const BOOL isDisplayView = YES;
+const BOOL isDisplayView = NO;
 
 @interface PTUnZipViewController () <PTComponentInterface> {
     void(^_completeBlock)(id object);
