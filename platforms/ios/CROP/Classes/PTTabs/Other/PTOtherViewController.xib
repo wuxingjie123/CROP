@@ -21,7 +21,7 @@
                         <constraint firstAttribute="height" constant="60" id="s5t-1z-A9e"/>
                     </constraints>
                     <items>
-                        <navigationItem title="其它" id="ktM-uf-SbU"/>
+                        <navigationItem title="其他" id="ktM-uf-SbU"/>
                     </items>
                     <variation key="default">
                         <mask key="constraints">
