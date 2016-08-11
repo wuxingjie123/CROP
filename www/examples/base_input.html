@@ -1,0 +1,133 @@
+<!--
+name:Input
+platform:all
+group:base
+desc:输入框
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug
+            data-css="E:input"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Input">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2>默认键盘：</h2>
+    <br>
+    number类型：
+    <input type="number" data-component="MyInput"  data-name="_INPUT" maxlength="10"/><br>
+    tel类型：
+    <input type="tel" data-component="MyInput" data-name="_INPUT2" /><br>
+    text类型：
+    <input type="text" data-component="MyInput" data-name="_INPUT3" data-v-required="true"  />
+    <br>
+    <h2>模拟键盘：</h2>
+    <br>
+    <div id="logtest"></div>
+    <BR><BR><BR>
+    框架默认全键盘：
+    <input type="text" data-component="MyInput" data-keyboard-mode="softkeyboard" id="input" placeholder="请输入1"  data-keyboard-type="1" data-name="INPUT" maxlength="10"/><BR><BR><BR>
+    框架默认9宫格：
+    <input type="tel" data-component="MyInput" data-keyboard-mode="softkeyboard" id="input2"  placeholder="请输入2" data-keyboard-type="2" data-name="INPUT2" readonly/><BR><BR><BR>
+    Template.keyboard公共键盘模板：
+    <div type="tel" data-component="MyInput" data-keyboard-mode="softkeyboard" id="input3"  placeholder="请输入3" data-keyboard-type="mykeyboard" data-name="INPUT3"></div><BR><BR><BR>
+    指定模板：
+    <div data-component="MyInput" data-keyboard-mode="softkeyboard" id="input4" placeholder="请输入4" data-keyboard-type="#tp_1" data-name="INPUT4" style="line-height:20px;height: 20px;width: 100px;border: 1px solid #999999"></div>
+    <input class="btn" type="button" data-submit-button value="Submit"/>
+    密码框：
+    <div id="password" style="height: 26px;width:170px;border:1px #ccc solid;"
+         data-mask="true"
+         data-component="Password"
+         data-name="PASSWORD"
+         data-encryptor
+            ></div>
+    <input type="button" data-submit-button class="btn" value="Submit"/>
+</script>
+<script type="text/template" id="tp_1">
+    <div style="background: grey">
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="1">1</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key=".">.</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="0">0</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="switch:#tp_2">切换至#tp_2</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="done">done</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="backspace">backspace</div>
+    </div>
+</script>
+<script type="text/template" id="tp_2">
+    <div style="background: yellow">
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="a">a</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="b">b</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="c">c</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="switch:#tp_1">切换至#tp_1</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="switch:mykeyboard">切换至mykeyboard</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="done">done</div>
+        <div style="text-align:center;border: 1px solid #999999" data-keyboard-key="backspace">backspace</div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Component = this.Component;
+        var Template = this.Template;
+
+        Template.Keyboard = {
+            mykeyboard:{
+                content: '<div style="text-align:center;border: 1px solid #999999" data-keyboard-key="15201579317">15201579317</div>'+
+                        '<div style="text-align:center;border: 1px solid #999999" data-keyboard-key="switch:#tp_1">切换至#tp_1</div>'+
+                        '<div style="text-align:center;border: 1px solid #999999" data-keyboard-key="done">done</div>'+
+                        '<div style="text-align:center;border: 1px solid #999999" data-keyboard-key="backspace">backspace</div>'
+            }
+        }
+
+        Component.MyInput = Component.Input.extend({
+            onInputChange:function(event){
+                console.log("onInputChange---------->"+event.value)
+            },
+            checkInput:function(input,oldvalue,newvalue){
+                console.log("checkInput---------->","input:"+input,"oldvalue:"+oldvalue,"newvalue:"+newvalue);
+
+                /*return /^.{0,4}$/.test(newvalue)*/
+                /*return !/啊啊/.test(newvalue)*/
+                /*return 888*/
+                /*var a = /^[0-9|x|w]{0,3}$/.test(newvalue)
+                if(a){
+                    if(/w/.test(newvalue)){
+                        return newvalue.replace(/wWx/g,"X")
+                    }else{
+                        return a
+                    }
+                }else{
+                    return false;
+                }*/
+                return true;
+            }
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data;
+                alert(JSON.stringify(data,null,'  '));
+            }
+        });
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

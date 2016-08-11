@@ -1,0 +1,82 @@
+<!--
+name:HelloWorld
+platform:all
+group:base
+desc:helloworld
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js" data-debug="mockdata"></script>
+
+
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Hello World ~">
+    Hello World!
+    <input type="button" value="go" data-submit-button/>
+</script>
+
+<script type="text/template" id="tp_SecondPage" data-component="SecondPage" data-title="SecondPage">
+    <span data-component="Label" data-name="TEXT" ></span>
+    SecondPage!
+    <input type="button" value="go" data-submit-button/>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var api = this.api;
+        var Model = this.Model;
+        var Component = this.Component;
+
+        api.setModels({
+            secondPage: new Model.Request({
+
+            }, {
+                url: 'helloworld.do?act=getText'
+            })
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                var option = {
+                    refresh: {
+                        initVal:{}
+                    }
+                };
+                Browser.history_goto("tp_SecondPage", option);
+            }
+        });
+
+        Component.SecondPage = Component.Page.extend({
+            subscribe:{
+                'test': function(){
+                    console.log('11111111')
+                }
+            },
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                this.publish('test')
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

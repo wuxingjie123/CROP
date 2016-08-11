@@ -1,0 +1,74 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/cordova-plugin-console"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-browser": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-browser"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-request": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-request"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-keyboard": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-unzip": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-unzip"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-guide": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-guide"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-sideMain": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-sideMain"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-storageDemo": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-storageDemo"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

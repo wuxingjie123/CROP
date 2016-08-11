@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Examples</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="@simbridge"></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-title="Examples">
+    <h1>Examples:</h1>
+
+    <h2>开始：</h2>
+    <ul>
+        <li>
+            <a data-href="base_helloworld.html">Hello world!</a>
+        </li>
+    </ul>
+    <h2>基础UI组件：</h2>
+    <ul>
+        <li>
+            <a data-href="base_page.html">页面(Page)</a>
+        </li>
+        <li>
+            <a data-href="base_header_footer.html">顶部栏&底部栏(PageHeader&PageFooter)</a>
+        </li>
+        <li>
+            <a data-href="base_form.html">表单(Form)</a>
+        </li>
+        <li>
+            <a data-href="base_button.html">按钮(Button)</a>
+        </li>
+        <li>
+            <a data-href="base_label.html">标签(Label)</a>
+        </li>
+        <li>
+            <a data-href="base_input.html">文本框(Input)</a>
+        </li>
+        <li>
+            <a data-href="base_password.html">密码框(Password)</a>
+        </li>
+        <li>
+            <a data-href="base_amount.html">金额框(Amount)</a>
+        </li>
+        <li>
+            <a data-href="base_select.html">下拉列表(Select)</a>
+        </li>
+        <li>
+            <a data-href="base_list.html">列表(List)</a>
+        </li>
+    </ul>
+    <h2>扩展UI组件</h2>
+    <ul>
+        <li>
+            <a data-href="ex_radio.html">单选框(Radio)</a>
+        </li>
+        <li>
+            <a data-href="ex_checkbox.html">多选框(CheckBox)</a>
+        </li>
+        <li>
+            <a data-href="ex_switch.html">开关按钮(Switch)</a>
+        </li>
+        <li>
+            <a data-href="ex_popupwindow.html">弹出层(PopupWindow)</a>
+        </li>
+        <li>
+            <a data-href="ex_popupselect.html">弹出选择框(PopupSelect)</a>
+        </li>
+        <li>
+            <a data-href="ex_popupmenu.html">弹出菜单(PopupMenu)</a>
+        </li>
+        <li>
+            <a data-href="ex_countdownbtn.html">倒计时按钮(CountdownBtn)</a>
+        </li>
+        <li>
+            <a data-href="ex_scrollview.html">滚动视图(ScrollView)</a>
+        </li>
+        <li>
+            <a data-href="ex_selectlist.html">选择列表(SelectList)</a>
+        </li>
+        <li>
+            <a data-href="ex_tab.html">选项卡(Tab)</a>
+        </li>
+        <li>
+            <a data-href="ex_tree.html">树状图(Tree)</a>
+        </li>
+        <li>
+            展开()
+        </li>
+        <li>
+            轮番()
+        </li>
+    </ul>
+    <h2>数据处理</h2>
+    <ul>
+        <li>
+            <a data-href="data_mapping.html">属性映射(mapping)</a>
+        </li>
+        <li>
+            <a data-href="data_filter.html">数据过滤(filter)</a>
+        </li>
+        <li>
+            <a data-href="data_dispatcher.html">数据分发(dispatcher)</a>
+        </li>
+        <li>
+            <a data-href="data_forwarder.html">连续交易(forwarder)</a>
+        </li>
+    </ul>
+    <h2>高级</h2>
+    <ul>
+        <li>
+            <a data-href="adv_proxy_model.html">模型代理</a>
+        </li>
+		<li>
+            <a data-href="JSBridge.html">JS桥</a>
+        </li>
+    </ul>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+
+        var Browser = this.Browser;
+        var api = this.api;
+        var $ = api.$;
+
+        Browser.history_goto("tp_HomePage");
+        //$('a').attr('target', '_blank');
+        $('a').on('click',function(e){
+            Browser.openUrl($(e.currentTarget).data('href'));
+        });
+        $('a').hover(function(){
+            $('a').css('cursor', 'pointer');
+        });
+    });
+</script>

@@ -1,0 +1,59 @@
+<!--
+name:Amount
+platform:all
+group:base
+desc:金额输入框
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amount</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Amount">
+    <div>
+        <input type="text" data-component="MyInput" id="input" data-v-required="true" data-v-min=100 data-v-max=10000 data-name="INPUT">
+    </div>
+    <div>
+        <span>禁止录入数字以外</span>
+    </div>
+    <div>
+        <input class="btn" type="button" data-dependency="input" data-submit-button value="Submit">
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Component = this.Component;
+
+        Component.MyInput = Component.Amount.extend({
+            checkInput:function(input,oldvalue,newvalue){
+                if(_.isUndefined(newvalue)) return true;
+                return !!newvalue.match('^[0-9]*$')
+            }
+        });
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert(JSON.stringify(data, null, '  '));
+            }
+        });
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

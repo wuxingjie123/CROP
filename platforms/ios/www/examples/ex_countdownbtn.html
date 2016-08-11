@@ -1,0 +1,58 @@
+<!--
+name:CountdownBtn
+platform:all
+group:ex
+desc:复选框
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CountdownBtn</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-components="C:countdownbtn"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="CountdownBtn">
+    第一页
+    <input type="button" class="btn" value="提交" data-submit-button />
+    <input type="button" class="btn" value="提交（冷却）" data-submit-button data-component="CountdownBtn" data-time="5" id="cd"/>
+</script>
+
+<script type="text/template" id="tp_SecondPage" data-component="SecondPage" data-title="CountdownBtn">
+    第二页
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Component = this.Component;
+        var api = this.api;
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                Browser.history_goto('secondPage');
+            }
+        });
+
+        Component.SecondPage = Component.Page.extend({
+        });
+
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

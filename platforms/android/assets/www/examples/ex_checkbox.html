@@ -1,0 +1,75 @@
+<!--
+name:CheckBox
+platform:all
+group:ex
+desc:复选框
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CheckBox</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-components="C:checkbox"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Checkbox">
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-name="data_checkbox" type="checkbox" value="1" checked id="abc"/><br>
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-name="data_checkbox" type="checkbox" /><br>
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-name="data_checkbox" type="checkbox" value="300" checked/><br>
+    <input type="button" class="btn" value="提交" data-submit-button />
+</script>
+
+<script type="text/template" id="tp_textarea">
+    <%=JSON.stringify(data)%>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Component = this.Component;
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data));
+            }
+        });
+
+        this.api.setModels({
+            abc: new this.Model.Request({
+                data_checkbox: 333
+            },{}),
+            HomePage: new this.Model.Request({
+//                data_checkbox: ['4']
+            },{})
+        });
+
+        var option = {
+            refresh:[
+                {
+                id:'abc',
+                initVal:{
+                    data_checkbox:'ok',
+//                    isChecked: false
+                }
+            }
+            ]
+        };
+        Browser.history_goto("tp_HomePage",option);
+    });
+</script>

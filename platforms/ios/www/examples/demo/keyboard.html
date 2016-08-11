@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+         -->
+        <title>keyboard</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=Utf-8"/>
+        <meta http-equiv="Pragma" content="no-cache" />
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi"/>
+        
+        <!-- js引用及调试配置 -->
+        <script type="text/javascript" src="../../pastry/main.js" data-debug></script>
+    </head>
+    <body>
+    </body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="测试键盘">
+    <div class="app">
+            
+        <h1>测试键盘</h1>
+        <table>
+            <tr>
+                <td>
+                    <p class="event listening">密码键盘：</p>
+                </td>
+                <td>
+                    <div id="keyboard" data-component="Password" style="border:1px solid;width:200px;height:40px;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="event listening">普通键盘：</p>
+                </td>
+                <td>
+                    <input type="text" data-component="Input" style="border:1px solid;width:200px;height:40px;"/>
+                </td>
+            </tr>
+        </table>    
+        <div id="deviceready" class="blink">
+            <input type="button" data-submit-button="close" value="关闭键盘测试页面"/>
+            <input type="button" data-submit-button="goto" value="JS页面切换键盘消失"/>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tp_SecondPage" data-component="SecondPage" data-title="测试键盘">
+    <div class="app">
+            
+        <h1>测试键盘是否消失</h1>
+
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(param){
+        console.log('js ___ 1= ' + JSON.stringify(param));
+        var Browser = this.Browser;
+
+        var Component = this.Component;
+
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (data) {
+				var submitId = data.id;
+                if (submitId == "goto") {
+                    console.log('JS页面切换键盘消失');
+                    Browser.history_goto("tp_SecondPage");
+                } else if (submitId == "close"){
+                    console.log('关闭键盘测试页面');
+                    Browser.close();
+                };
+            }
+        });
+
+
+        Component.SecondPage = Component.Page.extend({
+            onSubmit: function (data) {
+                console.log('关闭键盘测试页面');
+                Browser.history_goto();
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+        
+    });
+</script>

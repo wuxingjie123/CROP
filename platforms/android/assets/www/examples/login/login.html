@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+         -->
+		<title>login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=Utf-8"/>
+        <meta http-equiv="Pragma" content="no-cache" />
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi"/>
+        
+        <!-- js引用及调试配置 -->
+        <script type="text/javascript" src="../../pastry/main.js" data-debug></script>
+        
+    </head>
+    <body>
+    </body>
+</html>
+<script type="text/template" id="tp_HomePage" data-component="tp_HomePage" data-title="登录">
+    <div class="app">
+        <h1>A登陆</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">内容一</p>
+            <input type="button" data-submit-button="next" value="关闭登陆页"/>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(param){
+        
+        var Browser = this.Browser;
+        var Component = this.Component;
+
+
+        Component.tp_HomePage = Component.Page.extend({
+            onSubmit: function (data) {
+                 console.log('结束业务1');
+                 Browser.close();
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+        
+    });
+</script>

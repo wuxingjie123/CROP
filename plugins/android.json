@@ -1,0 +1,39 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-browser": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-request": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-keyboard": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-unzip": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-guide": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-sideMain": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-storageDemo": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        }
+    },
+    "dependent_plugins": {}
+}

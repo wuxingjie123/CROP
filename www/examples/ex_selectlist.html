@@ -1,0 +1,83 @@
+<!--
+name:SelectList
+platform:all
+group:ex
+desc:选择列表
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SelectList</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:selectlist"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="home" data-title="SelectList">
+    <div id="test"></div>
+    <div data-component="MyList" id="list" data-name="listValue" data-item-template="#tp_ListItem"></div>
+    <input class="btn" type="button" data-submit-button value="Submit">
+</script>
+
+<script type="text/template" id="tp_ListItem">
+    <td>
+    <%=item.id%>|<span data-list-item="<%=i%>"><%=item.title%></span><br/>
+    </td>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Model = this.Model;
+        var api = this.api;
+        var Browser = this.Browser;
+
+        api.setModels({
+            list:new Model.Request({
+                list:[
+                    {id:'1',title:'itemA'},
+                    {id:'2',title:'itemB'}
+                ],
+                value:0
+            })
+        });
+
+        Component.MyList = Component.SelectList.extend({
+            onListItemClick:function(event){
+                var data = event.data;
+                alert(JSON.stringify(data,null,'  '));
+            }
+        });
+        Component.home = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert(JSON.stringify(api.getComponent('list').getValue()));
+                alert(JSON.stringify(data));
+            }
+        });
+
+        var option={
+            refresh:{
+                id:'list'
+            }
+        };
+
+        Browser.history_goto("tp_HomePage",option);
+
+    });
+</script>

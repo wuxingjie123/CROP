@@ -1,0 +1,79 @@
+<!--
+name:Button
+platform:all
+group:base
+desc:按钮
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-title="Button">
+    <!--<input class="btn" type="button" data-component="MyButton" value="Button">-->
+
+    <div data-component="MyButton">
+        <div data-component="Label" data-name="TEXT"></div>
+        <div data-component="Label" data-name="TEXT"></div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Model = this.Model;
+        var Component = this.Component;
+        var Browser = this.Browser;
+        var api = this.api;
+
+        api.setModels({
+            'homePage': new Model.Request(
+                    {
+                        TEXT: 'Hello World! default'
+                    },
+                    {
+                        url: 'helloworld.do?act=getText'
+                    }
+            )});
+
+        Component.MyButton = Component.Button.extend({
+            //点击事件的回调，参数event为点击时产生的事件对象
+            onClick: function (event) {
+                alert('click');
+            }
+        });
+
+        var option = {
+            refresh: [
+                {
+                    id: 'homePage',
+                    removeVal: 'TEXT'
+                },
+                {
+                    id: 'label',
+                    initVal: {
+                        //TEXT2: 100
+                    }
+                }
+            ]
+        };
+        Browser.history_goto("homePage", option);
+    });
+</script>

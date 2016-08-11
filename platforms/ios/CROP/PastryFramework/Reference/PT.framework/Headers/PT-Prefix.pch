@@ -1,0 +1,71 @@
+//
+//  PT-Prefix.pch
+//  PT
+//
+//  Created by gengych on 16/3/14.
+//  Copyright © 2016年 中信网络科技. All rights reserved.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import "PTPathManager.h"
+    #import "PTNotificationNameManager.h"
+    #import "PTFrameworkConstant.h"
+    #import "PTConfigurationManager.h"
+    #import "PTDeveloperManager.h"
+    #import "PTTools.h"
+    #import "CocoaLumberjack.h"
+    #import "PTLogManager.h"
+    #import "PTLog.h"
+    #import "MKNetworkKit.h"
+    #import "JSONKit.h"
+    #import "AFNetworking.h"
+#endif
+
+#ifdef DEBUG
+
+// DEBUG 编译 使用 开发环境
+/**
+ *  生产包 标识；
+ *      1   :   生产环境
+ *      0   :   开发环境
+ */
+#define PRODUCT_ENVIRONMENT 0
+
+#else
+
+// RELEASE 编译 使用 生产环境
+#define PRODUCT_ENVIRONMENT 1
+
+#endif
+
+/**
+ *  使用系统的DEBUG标记
+ *  该工程使用 debug   编译到的动态库，此工程里的日志将输出到控制台；
+ *  该工程使用 release 编译到的动态库，此工程里的日志将不进行输出；
+ */
+#ifdef DEBUG
+
+#define PTLogInfo(fmt, ...) do {                         \
+NSString *file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
+DDLogInfo((@"%@(%d)" fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \
+} while (0)
+
+#define PTLogWarn(fmt, ...) do{                         \
+NSString *file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
+DDLogWarn((@"%@(%d)" fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \
+} while (0)
+
+#define PTLogError(fmt, ...) do{                         \
+NSString *file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
+DDLogError((@"%@(%d)" fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \
+} while (0)
+
+#else
+
+#define PTLogInfo(...)
+#define PTLogWarn(...)
+#define PTLogError(...)
+
+#endif

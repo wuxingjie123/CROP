@@ -1,0 +1,66 @@
+<!--
+name:PopupMenu
+platform:all
+group:ex
+desc:弹出菜单
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PopupMenu</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:popupmenu"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="PopupMenu">
+    <input type="button" class="btn" value="菜单" data-submit-button/>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Model = this.Model;
+        var Component = this.Component;
+        var api = this.api;
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                new Component.PopupMenu({
+                    menus: [
+                        {
+                            id: "001",
+                            title: "菜单A"
+                        },
+                        {
+                            id: "002",
+                            title: "菜单B"
+                        }
+                    ],
+                    onMenuClick:function(event){
+                        var menu = event.menu,index = event.index;
+                        alert(JSON.stringify(menu,null,'  '));
+                    }
+                }).show();
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

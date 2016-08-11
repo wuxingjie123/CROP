@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		Customize this policy to fit your own app's needs. For more guidance, see:
+			https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+		Some notes:
+			* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+			* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+			* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+				* Enable inline JS: add 'unsafe-inline' to default-src
+		-->
+		<title>request</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=Utf-8"/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi"/>
+        
+        <!-- js引用及调试配置 -->
+        <script type="text/javascript" src="../../pastry/main.js" 
+				data-component="scrollview"
+				data-debug="@simdata,@emulator"></script>
+	</head>
+<body>
+</body>
+</html>
+<script type="text/template" id="tp_HomePage" data-title="网络请求">
+    <div data-component="ScrollView" id="ScrollView"  data-fix-height="55">
+        <div data-component="TrsList" class="padding_top_20 txt_c" id="TrsList" data-item-Template="#tp_ListItem" data-btnTemplate="tp_ButtonItem"
+                ></div>
+    </div>
+</script>
+<script type="text/template" id="tp_ListItem" data-title="理财产品">
+    <div class="item_list">
+        <div class="webkitBox">
+            <%if(item.PSALEFLAG==1){%>
+            <div class="money_isrecommend">您的专属</div>
+            <%}%>
+            <%if(item.RECOMMENDFLAG.substring(0,1)=="1"){%>
+            <div class="money_isrecommend1">推荐</div>
+            <%}%>
+            <%if(item.RECOMMENDFLAG.substring(1,2)=="1"){%>
+            <div class="money_isrecommend2">手机专属</div>
+            <%}%>
+            <%if(item.RECOMMENDFLAG.substring(2,3)=="1"){%>
+            <div class="money_isrecommend3">网银专属</div>
+            <%}%>
+            <%if(item.RECOMMENDFLAG.substring(3,4)=="1"){%>
+            <div class="money_isrecommend4">夜市专属</div>
+            <%}%>
+            <%if(item.RECOMMENDFLAG.substring(4,5)=="1"){%>
+            <div class="money_isrecommend5">早市专属</div>
+            <%}%>
+        </div>
+        <%if(item.PRDATTR=="0" && item.PRINCIPALFLAG=="1"){%>
+        <div class="money_fixed">固定</div>
+        <%}%>
+        <%if(item.PRINCIPALFLAG=="1"){%>
+        <%if(item.PRDATTR!="0"){%>
+        <div class="money_breakeven" style="margin-right:5px">保本</div>
+        <%}else{%>
+        <div class="money_breakeven">保本</div>
+        <%}%>
+        <%}%>
+        <div class="item_list_left">
+            <div class=""  style="width:auto;min-width:300px;"><%=item.PRDNAME%></div>
+            <div class=""  style="width:auto;min-width:300px;">预期年化收益率：<span class="red"><%=item.GUESTRATIO%>%</span></div>
+            <div class="" style="width:auto;min-width:150px;float:left">起购金额：<%=item.STARTAMT%></div><div class="" style="width:auto;min-width:140px;margin-left:160px">期限:<%if(item.PRDDEADLINE=="0"){%>
+            无固定期限
+            <%}else{%>
+            <%=item.PRDDEADLINE%>天
+            <%}%></div>
+        </div>
+        <div class="item_list_middle">
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</script>
+<script type="text/javascript">
+    $(function(){
+        console.log('ready.......');
+        var Browser = this.Browser;
+        var Component = this.Component;
+        var Template = this.Template;
+        var Model = this.Model;
+        var api = this.api;
+        
+        Browser.setResult({
+                          result:"业务request请求完成"
+                          });
+                          
+        api.setModels({
+            "TrsList": new Model.Request(
+                    null,
+                    {
+                        url: "helloworld.do?act=getAllData",
+                        filter: function (data,type) {
+                            console.log("recieve data :"+JSON.stringify(data));
+                            if(data.RETCODE != "AAAAAAA"){
+                                console.log('dddd = ');
+                                alert(JSON.stringify(data));
+                            }else{
+                                var list = this.get("list");
+                                if (_.isArray(list)) {
+                                    if (type === "0") {//第一次查询
+                                        list = data.resultList;
+                                        if(list.length >= 10){ list.textFlag = 0;//正常刷新
+                                        }else if(list.length=== 0){
+                                            data.resultList.push({})
+                                            list.isnull=true;
+                                        }else list.textFlag = 1;//不显示上拉刷新
+                                    } else {//加载list
+                                        if (data.resultList.length) {
+                                            list = list.concat(data.resultList);
+                                            if(data.resultList.length === 10){ list.textFlag = 0;//正常刷新
+                                            }else if(list.length=== 0){
+                                                data.resultList.push({})
+                                                list.isnull=true;
+                                            }
+                                            else list.textFlag = 2;//显示已经显示全部记录，没有找到更多记录
+                                        } else {
+                                            var btns = $("[data-refresh-button]", this.component.$el);
+                                            btns.html("已经显示全部记录，没有找到更多记录")
+                                        }
+                                    }
+                                } else {//第一次查询
+
+                                    list = data.resultList;
+                                    if(list.length === 10){
+                                        list.textFlag = 0;//正常刷新
+                                    }else if(list.length=== 0){
+                                        data.resultList.push({})
+                                        list.isnull=true;
+                                    }else list.textFlag = 1;//不显示上拉刷新
+                                }
+                                return {list:list};
+                            }
+                        },
+                        onError: function (status, data) {
+                            console.log('error = ');
+                            alert(JSON.stringify(data.RETCODE)+" : "+JSON.stringify(data.RETMSG));
+                        }
+                    }
+            )
+        });
+        Template.List = {
+            loading: Template.loading,
+            nodata: Template.nodata,
+            error: Template.error,
+            content: function(mapping, itemTemplate){
+                return _.template(
+                        "<%if(data." + mapping.list + ".isnull){%>"+
+                        "<div>没有数据</div>"+
+                        "<%}else{%>"+
+                        "<%for(var i=0,len=data." + mapping.list + ".length;i<len;i++){%>" +
+                        "<%var item=data." + mapping.list + "[i]%>" +
+                        "<span data-list-item='<%=i%>'>" +
+                        itemTemplate +
+                        "</span>" +
+                        "<%}%>" +
+                        "<%if(data." + mapping.list + ".textFlag === 0){%>" +
+                        "<div data-refresh-button='up'>上拉看更多</div>" +
+                        "<%}else if(data." + mapping.list + ".textFlag === 1){%>" +
+                        "<div>已经显示全部记录，没有找到更多记录</div>" +
+                        "<%}else{%>" +
+                        "<div>已经显示全部记录，没有找到更多记录</div>" +
+                        "<%}%>"+
+                        "<%}%>",
+                        null, {variable: "data"});
+            }
+        };
+        Component.TrsList = Component.List.extend({
+            onDragRefresh: function (direction) {
+                var list = this.model.get("list");
+                var option_TrsList = {
+                    param: {
+                        PRDSTYLE: "1",
+                        ORDERFLAG: "4",
+                        STARTNM: list.length + 1,
+                        QUERYNM: "10"
+                    }
+                };
+                api.getModel("TrsList").refresh(option_TrsList)
+            }
+        });
+        Component.camera = Component.Button.extend({
+            onClick:function(){
+                navigator.camera.getPicture(function(data){
+                    $('#camera').attr('src',data);
+                })
+            }
+        });
+        var option = {
+            refresh:{
+                    id: "TrsList",
+                    param:{
+                        PRDSTYLE:"1",
+                        ORDERFLAG:"4",
+                        STARTNM:"1",
+                        QUERYNM:"10"
+                    }
+                }
+        };
+        Browser.history_goto("tp_HomePage",option);
+
+    });
+</script>

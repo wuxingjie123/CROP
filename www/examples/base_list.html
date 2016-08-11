@@ -1,0 +1,84 @@
+<!--
+name:List
+platform:all
+group:base
+desc:列表
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata,@simbridge"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-title="List">
+    <div id="test"></div>
+    <div data-component="MyList" id="list" data-item-template="#tp_ListItem" >
+        <div class="fw-loading-template" data-render-target>[%= new Date()%]<BR>...List Loading...</div>
+    </div>
+</script>
+
+<script type="text/template" id="tp_ListItem">
+    <td>
+    <%=item.id%>|<span data-list-item="<%=i%>"><%=item.title%></span><br/>
+    </td>
+</script>
+<script type="text/template" id="tp_loading">
+  <%= new Date()%>  ...List Loading...
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Model = this.Model;
+        var Browser = this.Browser;
+        var api = this.api;
+
+        api.setModels({
+            list:new Model.Request({
+                list:[
+                    {id:'1',title:'itemA'},
+                    {id:'2',title:'itemB'}
+                ]
+            },{
+                url:'helloworld.do?act=getList'
+            })
+        });
+
+        Component.MyList = Component.List.extend({
+            onListItemClick:function(event){
+                var data = event.data;
+                alert(JSON.stringify(data,null,'  '));
+            }
+        });
+
+        var option={
+            refresh:{
+                id:'list',
+                removeVal:'list',
+                param:{
+                    page:2
+                }
+            }
+        };
+
+        Browser.history_goto("tp_HomePage",option);
+
+    });
+</script>

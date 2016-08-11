@@ -1,0 +1,1 @@
+console.log 'print by project lib test.'

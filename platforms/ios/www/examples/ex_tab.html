@@ -1,0 +1,66 @@
+﻿<!--
+name:Tab
+platform:all
+group:ex
+desc:选项卡
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-components="C:switch,tab"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="homePage" data-component="HomePage" data-title="Tab">
+    <div id="Tab" data-component="MyTab">
+        <div data-title="登录" data-tab-item="logintabitem" data-active>
+			<font color=red>1113</font>
+		</div>
+        <div data-title="菜单" data-tab-item="menutabitem" >
+			<font color=green>2224</font>
+		</div>
+        <div data-title="调试" data-tab-item="debugtabitem" >
+			<font color=blue>3335</font>
+		</div>
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    $(function (param) {
+    var Component = this.Component;
+    var Browser = this.Browser;
+    var api = this.api;
+
+    Component.HomePage = Component.Page.extend({
+        onSubmit: function (event) {
+            var data = event.data,submitId = event.id;
+		}
+	});
+
+	Component.MyTab = Component.Tab.extend({
+		onTabChange: function (event) {
+            var item = event.data,index=event.index;
+			alert(JSON.stringify(item)+"----->"+index)
+		}
+	});
+    var option = {
+
+    };
+    Browser.history_goto("homePage", option);
+});
+</script>

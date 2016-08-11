@@ -1,0 +1,150 @@
+<!--
+name:Page
+platform:all
+group:base
+desc:页面
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-components="C:checkbox"
+            data-css="E:input"
+            data-debug=""
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Page">
+    首页<br/>
+    <input type="button" class="btn" value="<" data-submit-button="back">
+    <input type="button" class="btn" value=">" data-submit-button="next">
+
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="inHistory" data-text-template="下页入栈" id="inHistory01" value="true" checked>
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="trans" data-text-template="转场动画" id="trans01" value="true" checked>
+
+</script>
+
+<script type="text/template" id="tp_SecondPage" data-component="SecondPage" data-title="SecondPage">
+    第二页<br/>
+    <input type="button" class="btn" value="<" data-submit-button="back">
+    <input type="button" class="btn" value=">" data-submit-button="next">
+
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="inHistory" data-text-template="下页入栈" id="inHistory02" value="true" checked>
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="trans" data-text-template="转场动画" id="trans02" value="true" checked>
+</script>
+
+<script type="text/template" id="tp_ThirdPage" data-component="ThirdPage" data-title="ThirdPage">
+    第三页<br/>
+    <input type="button" class="btn" value="<" data-submit-button="back">
+    <input type="button" class="btn" value=">" data-submit-button="next">
+
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="inHistory" data-text-template="下页入栈" id="inHistory03" value="true" checked>
+    <br/>
+    <input type="checkbox" data-component="CheckBox" data-name="trans" data-text-template="转场动画" id="trans03" value="true" checked>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                if (submitId === 'next') {
+                    //Browser.showMask('skyblue','0.7')
+                    Browser.history_goto("tp_SecondPage",{history:!!data.inHistory});
+                } else if (submitId === 'back') {
+                    Browser.history_back({trans:!!data.trans});
+                }
+            },
+            onOpen: function () {
+                //alert('page open');
+            },
+            onPause: function () {
+                //alert('page pause');
+            },
+            onResume: function () {
+                //alert('page resume');
+            },
+            onClose: function () {
+                //alert('page close');
+            }
+        });
+
+        Component.SecondPage = Component.Page.extend({
+            subscribe: {
+				"testcase": function (event) {
+                    var data = event.data,submitId = event.id;
+                    if (submitId === 'next') {
+                        //Browser.showMask('skyblue','0.7')
+                        Browser.history_goto("tp_ThirdPage",{history:!!data.inHistory});
+                    } else if (submitId === 'back') {
+                        Browser.history_back({trans:!!data.trans});
+                    }
+				}
+			},
+            onSubmit: function (obj) {
+                this.publish('testcase',obj);
+            },
+            onOpen: function () {
+                //alert('page open');
+            },
+            onPause: function () {
+                //alert('page pause');
+            },
+            onResume: function () {
+                //alert('page resume');
+            },
+            onClose: function () {
+                //alert('page close');
+            }/*,
+            afterRender:function(){
+                this._super();
+                Browser.showMask('',0.5);
+            }*/
+        });
+
+        Component.ThirdPage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                if (submitId === 'next') {
+                    //Browser.history_goto("tp_HomePage", {clearHistory: true});
+                    //Browser.history_goto("tp_HomePage");
+                    //Browser.history_goto("tp_HomePage", {clearHistory: 'tp_SecondPage'});
+                    //Browser.history_goto("tp_SecondPage", {clearHistory: -2});
+                    //Browser.history_goto("tp_SecondPage");
+                    //Browser.history_back({id:'HomePage'});
+                    //Browser.history_back({id:'tp_SecondPage'});
+                    //Browser.history_back({id:2});
+                    //Browser.history_back({id:-2});
+                    Browser.loadUrl('base_page.html');
+                } else if (submitId === 'back') {
+                    Browser.history_back({trans:!!data.trans});
+                }
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

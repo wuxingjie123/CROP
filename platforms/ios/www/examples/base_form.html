@@ -1,0 +1,63 @@
+<!--
+name:Form
+platform:all
+group:base
+desc:表单
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="@simbridge"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Form">
+    <input id="33" type="text" data-component="Input" data-name="INPUT" value="test">
+    <input type="text" data-component="Input" data-name="INPUT2" value="test">
+    <input class="btn" type="button" data-submit-button="submit" value="Submit">
+    <input id="11" class="btn" type="button" data-submit-button="cancel" value="Cancel">
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Component = this.Component;
+
+        Component.HomePage = Component.Page.extend({
+            //数据提交预处理
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:'+submitId+'\n'+JSON.stringify(data));
+
+                if(submitId==='submit'){
+                    data.msg='这是预处理添加的数据。';
+                    return data;
+                }else{
+
+                }
+                return undefined;
+            },
+            //数据提交处理
+            doSubmit: function (data) {
+                alert('doSubmitData:'+JSON.stringify(data));
+            }
+        });
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

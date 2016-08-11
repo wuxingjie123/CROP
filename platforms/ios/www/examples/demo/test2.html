@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+         -->
+        <title>test2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=Utf-8"/>
+        <meta http-equiv="Pragma" content="no-cache" />
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi"/>
+        
+        <!-- js引用及调试配置 -->
+        <script type="text/javascript" src="../../pastry/main.js" data-debug></script>
+    </head>
+    <body>
+    </body>
+</html>
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="业务B">
+    <div class="app">
+        <h1>B 步骤一</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">内容一</p>
+            <input type="button" data-submit-button="next" value="进入业务B 步骤二"/>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tp_SecondPage" data-component="SecondPage" data-title="业务B">
+    <div class="app">
+        <h1>B 步骤二</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">内容一</p>
+            <input type="button" data-submit-button="next" value="进入业务B 步骤三"/>
+            <input type="button" data-submit-button="load" value="刷新业务B"/>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="tp_ThirdPage" data-component="ThirdPage" data-title="业务B">
+    <div class="app">
+        <h1>B 步骤三</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">内容一</p>
+            <input type="button" data-submit-button="next" value="进入业务：网络测试"/>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function(param){
+        console.log('js ___ 1= ' + JSON.stringify(param));
+        var Browser = this.Browser;
+        Browser.setResult({
+                          result:"业务B完成"
+                          });
+        var Component = this.Component;
+
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (data) {
+                console.log('Home Next');
+                Browser.history_goto("SecondPage");
+            }
+        });
+
+
+        Component.SecondPage = Component.Page.extend({
+            onSubmit: function (data) {
+				var submitId = data.id;
+                if (submitId == "load") {
+
+                    Browser.loadUrl("test2.html",{param1:"testparams"});
+
+                }else{
+                    console.log('Second Next');
+                    //Browser.history_back();
+                    Browser.history_goto("tp_ThirdPage");
+                }         
+            }
+        });
+
+        Component.ThirdPage = Component.Page.extend({
+            onSubmit: function (data) {
+                console.log('Third Next');
+                Browser.openUrl("request.html",{param1:"testparams"},function(data){
+                    console.log('ddddddddddddddd');
+                    console.log(data);
+                    alert('业务请求 返回结果：' + JSON.stringify(data));
+                });
+            }
+        });
+
+        Browser.history_goto("tp_HomePage");
+        
+    });
+</script>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 
+	<keystore type="JKS"
+	    path="WEB-INF/cbframework/keystore/cbframework.keystore"
+	    pwd="123456" >
+		
+		<privatekey id="CBFrameworkPrivateKey" alias="cbframework_kp" />
+	
+		<publickey id="CBFrameworkPublicKey" alias="cbframework_kp"	/>
+		    
+	</keystore>  
+	--> 
+	
+	<file type="Base64">
+		<privatekey id="CBFrameworkPrivateKey" path="WEB-INF/cbframework/keystore/cbframework.key" />
+	</file> 
+	
+	<string>
+		<encryptkey id="CBFrameworkTemplateKey1"  value="hundsun1" />
+		<encryptkey id="CBFrameworkTemplateKey2"  value="hundsun1" />
+		<encryptkey id="CBFrameworkTemplateKey3"  value="hundsun1" />    
+	</string>
+
+</config>

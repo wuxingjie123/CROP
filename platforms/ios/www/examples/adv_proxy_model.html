@@ -1,0 +1,91 @@
+<!--
+name:Proxy Model
+platform:all
+group:adv
+desc:代理模式
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Proxy Model</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:switch,popupselect"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Proxy Model">
+    <input value="test" data-component="Input" data-name="INPUT"/> <br/>
+    <input type="checkbox" data-component="Switch" data-name="SWITCH"/> <br/>
+    <span data-component="Label" data-name="mylabel"></span>
+    <div data-component="List" data-name="mylist" data-item-template="#tp_ListItem"></div>
+    <select data-component="Select" data-name="myselect"></select>
+    <div data-component="MyPopupSelect" data-name="mypopupselect"></div>
+    <input type="button" class="btn" value="提交" data-submit-button/>
+</script>
+
+<script type="text/template" id="tp_ListItem">
+    <%=item.id%>:<%=item.title%><br/>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Model = this.Model;
+        var Component = this.Component;
+        var api = this.api;
+
+        api.setModels({
+            'homePage': new Model.Request(null, {
+                url: 'helloworld.do?act=getAllData2',
+                filter:function(data){
+                    data.myselect.selected=1;
+                    return data;
+                }
+            })
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                console.log(JSON.stringify(this.model.toJSON(),null,'  '));
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data,null,'  '));
+            }
+        });
+
+        Component.MyPopupSelect = Component.PopupSelect.extend({
+            getValue:function(){
+                var model = this.model;
+                var data = model.getData();
+                if(_.isArray(data) && _.isObject(data[model.getValue()])) {
+                    return data[model.getValue()].id;
+                }
+                return null;
+            }
+        });
+
+        var option = {
+            refresh: {
+                initVal:{
+                   INPUT:'1234'
+                }
+            }
+        };
+
+        Browser.history_goto("tp_HomePage", option);
+    });
+</script>

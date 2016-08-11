@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="pastry-plugin-browser"
+        version="1.0.0">
+
+    <name>pastry-plugin-browser</name>
+    <description> </description>
+    <license>MIT</license>
+    <keywords>browser</keywords>
+    <repo>https://github.com/pastryTeam/pastry-plugin-browser.git</repo>
+    <issue>https://github.com/pastryTeam/pastry-plugin-browser/issues</issue>
+
+    <!-- ios -->
+     <platform name="ios">
+         <config-file target="config.xml" parent="/*">
+             <feature name="PTBrowser">
+                 <param name="ios-package" value="PTBrowser" />
+             </feature>
+         </config-file>
+
+         <header-file src="src/ios/PTBrowser/PTBrowserDelegate.h" target-dir="PTBrowser"/>
+         <header-file src="src/ios/PTBrowser/PTBrowser.h" target-dir="PTBrowser"/>
+         <source-file src="src/ios/PTBrowser/PTBrowser.m" target-dir="PTBrowser"/>
+
+         <header-file src="src/ios/PTBrowser/UI/PTBrowserContainer.h" target-dir="PTBrowser/UI"/>
+         <source-file src="src/ios/PTBrowser/UI/PTBrowserContainer.m" target-dir="PTBrowser/UI"/>
+         <header-file src="src/ios/PTBrowser/UI/PTWindowPage.h" target-dir="PTBrowser/UI"/>
+         <source-file src="src/ios/PTBrowser/UI/PTWindowPage.m" target-dir="PTBrowser/UI"/>
+         <source-file src="src/ios/PTBrowser/UI/PTWindowPage.xib" target-dir="PTBrowser/UI"/>
+         <header-file src="src/ios/PTBrowser/UI/PTWindowPage+Operation.h" target-dir="PTBrowser/UI"/>
+         <source-file src="src/ios/PTBrowser/UI/PTWindowPage+Operation.m" target-dir="PTBrowser/UI"/>
+         <resource-file src="src/ios/PTBrowser/UI/browserImages.bundle" target-dir="PTBrowser/UI"/>
+
+         <header-file src="src/ios/PTBrowser/UI/Demo/MoreBrowser/MoreBrowserViewController.h" target-dir="PTBrowser/UI/Demo/MoreBrowser"/>
+         <source-file src="src/ios/PTBrowser/UI/Demo/MoreBrowser/MoreBrowserViewController.m" target-dir="PTBrowser/UI/Demo/MoreBrowser"/>
+         <header-file src="src/ios/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.h" target-dir="PTBrowser/UI/Demo/MoreBrowser"/>
+         <source-file src="src/ios/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.m" target-dir="PTBrowser/UI/Demo/MoreBrowser"/>
+         <source-file src="src/ios/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.xib" target-dir="PTBrowser/UI/Demo/MoreBrowser"/>
+
+         <header-file src="src/ios/PTBrowser/UI/Demo/SingleBrowser/BrowserViewController.h" target-dir="PTBrowser/UI/Demo/SingleBrowser"/>
+         <source-file src="src/ios/PTBrowser/UI/Demo/SingleBrowser/BrowserViewController.m" target-dir="PTBrowser/UI/Demo/SingleBrowser"/>
+
+        <!-- 添加图片资源的示例 -->
+        <!--<resource-file src="src/ios/icon.png" />-->
+        <!--<resource-file src="src/ios/CDVCapture.bundle" />-->
+        <!--添加framework的示例-->
+        <!--<framework src="ImageIO.framework" weak="true" />-->
+
+     </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PTBrowser">
+                <param name="android-package" value="asp.citic.ptframework.plugin.browser.PTBrowser"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*/application">
+            <activity android:name="asp.citic.ptframework.plugin.browser.PTWebView1" android:theme="@android:style/Theme.Wallpaper.NoTitleBar" android:windowSoftInputMode="adjustResize"/>
+            <activity android:name="asp.citic.ptframework.plugin.browser.PTWebView2" android:theme="@android:style/Theme.Wallpaper.NoTitleBar" android:windowSoftInputMode="adjustResize"/>
+            <activity android:name="asp.citic.ptframework.plugin.browser.PTWebView3" android:theme="@android:style/Theme.Wallpaper.NoTitleBar" android:windowSoftInputMode="adjustResize"/>
+        </config-file>
+
+        <source-file src="src/android/PTBrowser.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+        <source-file src="src/android/PTBrowserContainer.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+        <source-file src="src/android/PTWebView1.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+        <source-file src="src/android/PTWebView2.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+        <source-file src="src/android/PTWebView3.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+        <source-file src="src/android/PTWindowActivity.java" target-dir="src/asp/citic/ptframework/plugin/browser" />
+     </platform>
+
+</plugin>

@@ -1,0 +1,12 @@
+com/icitic/netpay/api/PayService.class
+com/icitic/netpay/api/VerifyCodeService.class
+com/icitic/netpay/api/RegisterService.class
+com/icitic/netpay/api/MessageService.class
+com/icitic/netpay/api/CardService.class
+com/icitic/netpay/api/MemberService.class
+com/icitic/netpay/api/LoginService.class
+com/icitic/netpay/api/SystemService.class
+com/icitic/netpay/api/MemberGroupService.class
+com/icitic/netpay/api/AvatarService.class
+com/icitic/netpay/api/AccountService.class
+com/icitic/netpay/api/AddressService.class

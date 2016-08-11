@@ -1,0 +1,74 @@
+<!--
+name:Dependency
+platform:all
+group:ex
+desc:依赖校验
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependency</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <link rel="stylesheet" type="text/css" href="../cbjs/css/cb.css" title="default"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" title="default"/>
+
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="@titlebar,mockdata,@simbridge,@depinfo"
+            data-components="C:radio,checkbox">
+            </script>
+</head>
+<body>
+<div data-page-content></div>
+</body>
+<script type="text/template" data-component="HomePage" id="HomePage" data-title="input组件">
+    依赖校验：<br>
+    输入框1：<input data-component="Input" data-name="input1" data-tooltip-text="1asdf"
+               data-tooltip-placement="bottom"  data-v-required="true" id="input1" data-v-min-len="5"/><br>
+    输入框2：<input data-component="Input" data-name="input2"  data-v-required="true" data-dependency="input1" id="input2"/><br>
+    单选：<br>
+            <div>
+    <input data-component="Radio" data-text-template="#tp_radio" data-name="data_radio1" type="radio" data-dependency="input2" data-skin="square-blue"  value="1" id="radio1" /><br>
+    <input data-component="Radio" data-text-template="#tp_radio" data-name="data_radio1" type="radio" data-dependency="input2" value="2" id="radio2" /><br>
+    <input data-component="Radio" data-text-template="#tp_radio" data-name="data_radio1" type="radio" data-dependency="input2" value="3" id="radio3" /><br>
+            </div>
+                多选：<br>
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-v-required="true" data-name="data_checkbox" data-dependency="input2" type="checkbox" value="1" id="checkbox1"/><br>
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-v-required="true" data-name="data_checkbox" type="checkbox" value="2" id="checkbox2"/><br>
+    <input data-component="CheckBox" data-text-template="#tp_textarea" data-v-required="true" data-name="data_checkbox" type="checkbox" value="3" id="checkbox3"/><br>
+    <input data-component="Input" data-name="input2"  data-v-required="true" data-dependency="checkbox1" id="input3"/><br>
+    <input data-component="Radio" data-text-template="#tp_radio" data-name="data_radio2" type="radio" value="1" id="radio4"/><br>
+    <input data-component="Radio" data-text-template="#tp_radio" data-v-required="true" data-name="data_radio2" type="radio" value="2" id="radio5"/><br>
+    <input data-component="Radio" data-text-template="#tp_radio" data-name="data_radio2" type="radio" value="3" id="radio6"/><br>
+    <input data-component="Input" data-name="input2"  data-v-required="true" data-dependency="radio5" id="input4"/><br>
+    <input type="button" data-component="Button" class="btn" data-submit-button="subID" value="submit" id="asdfasdf" data-tooltip-text="点我">
+
+</script>
+
+<script type="text/template" id="tp_radio">
+    <%=JSON.stringify(data)%>
+</script>
+<script type="text/template" id="tp_textarea">
+    <%=JSON.stringify(data)%>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data));
+            }
+        });
+
+        Browser.history_goto("HomePage")
+    });
+</script>
+</html>

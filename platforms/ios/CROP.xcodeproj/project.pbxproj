@@ -1,0 +1,945 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
+		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
+		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
+		95379C101D4EEABE002503B7 /* PTComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95379C0F1D4EEABE002503B7 /* PTComponentManager.m */; };
+		95379C1A1D4F195D002503B7 /* PTDisplayComponentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95379C191D4F195D002503B7 /* PTDisplayComponentTableView.m */; };
+		953CDD7D1D4AF8190081DE9A /* PTViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CDD7C1D4AF8190081DE9A /* PTViewControllerBase.m */; };
+		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
+		F53EADCD1CC0C46B0062161C /* data.zip in Resources */ = {isa = PBXBuildFile; fileRef = F53EADAE1CC0C46B0062161C /* data.zip */; };
+		F53EADE11CC0C46B0062161C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F53EADC81CC0C46B0062161C /* README.md */; };
+		F53EADE21CC0C46B0062161C /* PT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F53EADCA1CC0C46B0062161C /* PT.framework */; };
+		F53EADE31CC0C46B0062161C /* PTResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F53EADCB1CC0C46B0062161C /* PTResources.bundle */; };
+		F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F53EADCC1CC0C46B0062161C /* Settings.bundle */; };
+		F53EADE61CC0C4860062161C /* PastryResources in Resources */ = {isa = PBXBuildFile; fileRef = F53EADE51CC0C4860062161C /* PastryResources */; };
+		F56C8CEF1C9251A4007B6180 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CEE1C9251A4007B6180 /* AdSupport.framework */; };
+		F56C8CF11C9251AD007B6180 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CF01C9251AD007B6180 /* CoreMedia.framework */; };
+		F56C8CF31C9251B4007B6180 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CF21C9251B4007B6180 /* CoreMotion.framework */; };
+		F56C8CF51C9251BB007B6180 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CF41C9251BB007B6180 /* AddressBook.framework */; };
+		F56C8CF71C9251C5007B6180 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CF61C9251C5007B6180 /* Accelerate.framework */; };
+		F56C8CF91C9251D0007B6180 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CF81C9251D0007B6180 /* CoreText.framework */; };
+		F56C8CFB1C9251D8007B6180 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CFA1C9251D8007B6180 /* QuartzCore.framework */; };
+		F56C8CFD1C9251DF007B6180 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CFC1C9251DF007B6180 /* OpenGLES.framework */; };
+		F56C8CFF1C9251E5007B6180 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CFE1C9251E5007B6180 /* SystemConfiguration.framework */; };
+		F56C8D011C9251EC007B6180 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D001C9251EB007B6180 /* CFNetwork.framework */; };
+		F56C8D031C9251F3007B6180 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D021C9251F3007B6180 /* Security.framework */; };
+		F56C8D051C9251F9007B6180 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D041C9251F9007B6180 /* CoreData.framework */; };
+		F56C8D071C925202007B6180 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D061C925202007B6180 /* CoreLocation.framework */; };
+		F56C8D091C925212007B6180 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D081C925212007B6180 /* MessageUI.framework */; };
+		F56C8D0B1C92521D007B6180 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D0A1C92521D007B6180 /* CoreTelephony.framework */; };
+		F56C8D0D1C925225007B6180 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D0C1C925225007B6180 /* MapKit.framework */; };
+		F56C8D0F1C92522E007B6180 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D0E1C92522E007B6180 /* AudioToolbox.framework */; };
+		F56C8D111C925234007B6180 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D101C925234007B6180 /* AVFoundation.framework */; };
+		F56C8D131C92523C007B6180 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D121C92523C007B6180 /* ImageIO.framework */; };
+		F56C8D151C92524C007B6180 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D141C92524C007B6180 /* Foundation.framework */; };
+		F56C8D171C92525F007B6180 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D161C92525F007B6180 /* UIKit.framework */; };
+		F56C8D191C925266007B6180 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D181C925266007B6180 /* MediaPlayer.framework */; };
+		F56C8D1B1C92526F007B6180 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D1A1C92526F007B6180 /* libxml2.2.tbd */; };
+		F56C8D1D1C925278007B6180 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D1C1C925277007B6180 /* libz.tbd */; };
+		F56C8D1F1C92527F007B6180 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D1E1C92527F007B6180 /* libiconv.tbd */; };
+		F56C8D211C925288007B6180 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8D201C925288007B6180 /* libicucore.tbd */; };
+		F56C8D221C925296007B6180 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CDF1C925143007B6180 /* libstdc++.tbd */; };
+		F56C8D231C92529F007B6180 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F56C8CDD1C925138007B6180 /* libsqlite3.0.tbd */; };
+		EB029EEA44A6483F8FB01C0E /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0482D2BE2B4A3EBBFD167F /* CDVLogger.m */; };
+		4DC65AAE410E47FA9F5B2FB4 /* PTBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 775FD446E7A94BF8B8DF5088 /* PTBrowser.m */; };
+		32A3B1EA28F44EBBBD74EA5B /* PTBrowserContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC8FFDAD71A4635846BB9CE /* PTBrowserContainer.m */; };
+		E46814458EA246699C6C9434 /* PTWindowPage.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF09253087F4667853356C4 /* PTWindowPage.m */; };
+		5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97B92A20172A43EBB5682722 /* PTWindowPage.xib */; };
+		84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC45668DC4D4955A831321C /* PTWindowPage+Operation.m */; };
+		2E5AA0D0A03E47CC91802AF5 /* MoreBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 497442E516A64CEA98C75264 /* MoreBrowserViewController.m */; };
+		6641847C1F8C42ACA54F528A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A00A4A64974924AC8FC1E0 /* SecondViewController.m */; };
+		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
+		2365A846BBB24152A4999549 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F9B5645BE84B87BB49C646 /* BrowserViewController.m */; };
+		1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E54EA78D2EF43458556CD33 /* browserImages.bundle */; };
+		832A99F0608E4777B005758D /* PTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 508385259F2E4F9796A403B8 /* PTRequest.m */; };
+		04E3D9A3D5734E108C74F797 /* PTServletRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA84924807D243909765A686 /* PTServletRequest.m */; };
+		EB3F265F0497460E91E461CB /* PTKeyboards.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE17A8735C4A33803660E8 /* PTKeyboards.m */; };
+		44BD0918DE64493A81CA4E83 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C165137472974607A2DB68A6 /* KeyboardViewController.m */; };
+		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
+		1972C91058E2430CB0060987 /* PTUnZipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC52C0365334351808C1146 /* PTUnZipViewController.m */; };
+		58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */; };
+		8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A2C48014A4E8AA7704256 /* PTGuideViewController.m */; };
+		E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F003CD73E34F406E86927A62 /* PTGuideViewController.xib */; };
+		904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */; };
+		A8E4414A79CF44DBB6F6BE16 /* AppDelegate+SideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B00542657640E69CE7293F /* AppDelegate+SideMain.m */; };
+		5AA8E3A262814DB2B56F5CAC /* MainViewController+SideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */; };
+		D709E4CC980D409B82831178 /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15297AAE20FD4BABA2DC160C /* MMLogoView.m */; };
+		4FA2BCBAD27D4331B319BCB7 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */; };
+		F6049A40D4314D5294EBF7B7 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */; };
+		4B1C9B46353E4ED89BA8902E /* MMSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */; };
+		A606A7B33F9E4524B97FFFD2 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */; };
+		B37A2BE7D0434CEAA83101A1 /* PTCenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */; };
+		69709D35A5C149DDBCD61BAD /* PTLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */; };
+		722D7D27732848BBBE366582 /* PTRightSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */; };
+		B36A382B584A44F9B5ECFDB8 /* PTSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */; };
+		DF7B39660A5A4960A6599115 /* PTDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */; };
+		128BD61E5EA44ED081F0B314 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */; };
+		89B958AA42564E51B0BC9ED0 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC170ED16324ACBB9526807 /* MMDrawerController.m */; };
+		E2AF6BBF59354E2B947A1666 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */; };
+		867AD618D7E945D598919056 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1E637095C94426AD531C7E /* MMNavigationController.m */; };
+		83D5F05F27FB475E9EF50D96 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */; };
+		0205E04E7DAA497AB101BEB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B4EEA46B449128DB661C2 /* Icon.png */; };
+		09E9D4BF6B1343D0A85F0438 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D37866D11CA24942B7B3451B /* Icon-72.png */; };
+		4B72C9FBC35C43FF92FA3FB2 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */; };
+		88CAAC436C7A48A283BF97E9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */; };
+		8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A70664DC4374B0E23B20 /* CustomStorage.m */; };
+		52C56CA49C55432896984996 /* StorageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */; };
+		DEB62A38903A4CA8939A0A4C /* StorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AECBE2531E749B1BCAF165F /* StorageViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* CROP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CROP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
+		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* CROP-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CROP-Prefix.pch"; sourceTree = "<group>"; };
+		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* CROP-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CROP-Info.plist"; path = "../CROP-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		95379C0C1D4EEAB5002503B7 /* PTComponentInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTComponentInterface.h; sourceTree = "<group>"; };
+		95379C0E1D4EEABE002503B7 /* PTComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTComponentManager.h; sourceTree = "<group>"; };
+		95379C0F1D4EEABE002503B7 /* PTComponentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTComponentManager.m; sourceTree = "<group>"; };
+		95379C181D4F195D002503B7 /* PTDisplayComponentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDisplayComponentTableView.h; sourceTree = "<group>"; };
+		95379C191D4F195D002503B7 /* PTDisplayComponentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDisplayComponentTableView.m; sourceTree = "<group>"; };
+		953CDD781D4AF8190081DE9A /* PTGuideInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTGuideInterface.h; sourceTree = "<group>"; };
+		953CDD791D4AF8190081DE9A /* PTUnzipInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTUnzipInterface.h; sourceTree = "<group>"; };
+		953CDD7B1D4AF8190081DE9A /* PTViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTViewControllerBase.h; sourceTree = "<group>"; };
+		953CDD7C1D4AF8190081DE9A /* PTViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTViewControllerBase.m; sourceTree = "<group>"; };
+		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F53EADAE1CC0C46B0062161C /* data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = data.zip; sourceTree = "<group>"; };
+		F53EADC81CC0C46B0062161C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F53EADCA1CC0C46B0062161C /* PT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PT.framework; sourceTree = "<group>"; };
+		F53EADCB1CC0C46B0062161C /* PTResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PTResources.bundle; sourceTree = "<group>"; };
+		F53EADCC1CC0C46B0062161C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F53EADE51CC0C4860062161C /* PastryResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PastryResources; sourceTree = "<group>"; };
+		F56C8CDD1C925138007B6180 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F56C8CDF1C925143007B6180 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		F56C8CEE1C9251A4007B6180 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F56C8CF01C9251AD007B6180 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F56C8CF21C9251B4007B6180 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		F56C8CF41C9251BB007B6180 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		F56C8CF61C9251C5007B6180 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F56C8CF81C9251D0007B6180 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F56C8CFA1C9251D8007B6180 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F56C8CFC1C9251DF007B6180 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F56C8CFE1C9251E5007B6180 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F56C8D001C9251EB007B6180 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F56C8D021C9251F3007B6180 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F56C8D041C9251F9007B6180 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F56C8D061C925202007B6180 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F56C8D081C925212007B6180 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F56C8D0A1C92521D007B6180 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F56C8D0C1C925225007B6180 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F56C8D0E1C92522E007B6180 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F56C8D101C925234007B6180 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F56C8D121C92523C007B6180 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F56C8D141C92524C007B6180 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F56C8D161C92525F007B6180 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F56C8D181C925266007B6180 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F56C8D1A1C92526F007B6180 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		F56C8D1C1C925277007B6180 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F56C8D1E1C92527F007B6180 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		F56C8D201C925288007B6180 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "CROP/config.xml"; sourceTree = "<group>"; };
+		9F0482D2BE2B4A3EBBFD167F /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		518690E0D5824440B0A2D1E1 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		775FD446E7A94BF8B8DF5088 /* PTBrowser.m */ = {isa = PBXFileReference; name = "PTBrowser.m"; path = "pastry-plugin-browser/PTBrowser/PTBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BFC8FFDAD71A4635846BB9CE /* PTBrowserContainer.m */ = {isa = PBXFileReference; name = "PTBrowserContainer.m"; path = "pastry-plugin-browser/PTBrowser/UI/PTBrowserContainer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AAF09253087F4667853356C4 /* PTWindowPage.m */ = {isa = PBXFileReference; name = "PTWindowPage.m"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; name = "PTWindowPage.xib"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		8DC45668DC4D4955A831321C /* PTWindowPage+Operation.m */ = {isa = PBXFileReference; name = "PTWindowPage+Operation.m"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage+Operation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		497442E516A64CEA98C75264 /* MoreBrowserViewController.m */ = {isa = PBXFileReference; name = "MoreBrowserViewController.m"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/MoreBrowserViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		07A00A4A64974924AC8FC1E0 /* SecondViewController.m */ = {isa = PBXFileReference; name = "SecondViewController.m"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AA0CC4D602EB4774857BD691 /* SecondViewController.xib */ = {isa = PBXFileReference; name = "SecondViewController.xib"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		03F9B5645BE84B87BB49C646 /* BrowserViewController.m */ = {isa = PBXFileReference; name = "BrowserViewController.m"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/SingleBrowser/BrowserViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		953B2B8CEDEC4A8E92F4A807 /* PTBrowserDelegate.h */ = {isa = PBXFileReference; name = "PTBrowserDelegate.h"; path = "pastry-plugin-browser/PTBrowser/PTBrowserDelegate.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1BFDCC04F03145AA8F964747 /* PTBrowser.h */ = {isa = PBXFileReference; name = "PTBrowser.h"; path = "pastry-plugin-browser/PTBrowser/PTBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0782820AAE2B43E594665508 /* PTBrowserContainer.h */ = {isa = PBXFileReference; name = "PTBrowserContainer.h"; path = "pastry-plugin-browser/PTBrowser/UI/PTBrowserContainer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		37E25E6A298741BE8731D65D /* PTWindowPage.h */ = {isa = PBXFileReference; name = "PTWindowPage.h"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6532906406714FED96D93215 /* PTWindowPage+Operation.h */ = {isa = PBXFileReference; name = "PTWindowPage+Operation.h"; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage+Operation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EE9BB5453F1D48B1942B2947 /* MoreBrowserViewController.h */ = {isa = PBXFileReference; name = "MoreBrowserViewController.h"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/MoreBrowserViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		13C9B68C9E1248B5B028D8AE /* SecondViewController.h */ = {isa = PBXFileReference; name = "SecondViewController.h"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/MoreBrowser/SecondViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EF4929997717403A999C52FD /* BrowserViewController.h */ = {isa = PBXFileReference; name = "BrowserViewController.h"; path = "pastry-plugin-browser/PTBrowser/UI/Demo/SingleBrowser/BrowserViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6E54EA78D2EF43458556CD33 /* browserImages.bundle */ = {isa = PBXFileReference; name = "browserImages.bundle"; path = "browserImages.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		508385259F2E4F9796A403B8 /* PTRequest.m */ = {isa = PBXFileReference; name = "PTRequest.m"; path = "pastry-plugin-request/PTRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BA84924807D243909765A686 /* PTServletRequest.m */ = {isa = PBXFileReference; name = "PTServletRequest.m"; path = "pastry-plugin-request/PTServletRequest.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		85351AA85AE84CD9BB2E0AC5 /* PTRequest.h */ = {isa = PBXFileReference; name = "PTRequest.h"; path = "pastry-plugin-request/PTRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BFE1330B450C4F4E8ADBFDF8 /* PTServletRequest.h */ = {isa = PBXFileReference; name = "PTServletRequest.h"; path = "pastry-plugin-request/PTServletRequest.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		43CE17A8735C4A33803660E8 /* PTKeyboards.m */ = {isa = PBXFileReference; name = "PTKeyboards.m"; path = "pastry-plugin-keyboard/PTKeyboards.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C165137472974607A2DB68A6 /* KeyboardViewController.m */ = {isa = PBXFileReference; name = "KeyboardViewController.m"; path = "pastry-plugin-keyboard/KeyboardViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */ = {isa = PBXFileReference; name = "KeyboardViewController.xib"; path = "pastry-plugin-keyboard/KeyboardViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		81C010695C3B44DF9F9F64B5 /* PTKeyboards.h */ = {isa = PBXFileReference; name = "PTKeyboards.h"; path = "pastry-plugin-keyboard/PTKeyboards.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4C3D4BF56CCE414095CA72E7 /* KeyboardViewController.h */ = {isa = PBXFileReference; name = "KeyboardViewController.h"; path = "pastry-plugin-keyboard/KeyboardViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4EC52C0365334351808C1146 /* PTUnZipViewController.m */ = {isa = PBXFileReference; name = "PTUnZipViewController.m"; path = "pastry-plugin-unzip/PTUnZipViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; name = "PTUnZipViewController.xib"; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		09635613866D4A05A7A3A882 /* PTUnZipViewController.h */ = {isa = PBXFileReference; name = "PTUnZipViewController.h"; path = "pastry-plugin-unzip/PTUnZipViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F63A2C48014A4E8AA7704256 /* PTGuideViewController.m */ = {isa = PBXFileReference; name = "PTGuideViewController.m"; path = "pastry-plugin-guide/PTGuideViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F003CD73E34F406E86927A62 /* PTGuideViewController.xib */ = {isa = PBXFileReference; name = "PTGuideViewController.xib"; path = "pastry-plugin-guide/PTGuideViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		92D29347DA064BE58673843B /* PTGuideViewController.h */ = {isa = PBXFileReference; name = "PTGuideViewController.h"; path = "pastry-plugin-guide/PTGuideViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */ = {isa = PBXFileReference; name = "guideImage.bundle"; path = "guideImage.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		63B00542657640E69CE7293F /* AppDelegate+SideMain.m */ = {isa = PBXFileReference; name = "AppDelegate+SideMain.m"; path = "pastry-plugin-sideMain/AppDelegate+SideMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */ = {isa = PBXFileReference; name = "MainViewController+SideMain.m"; path = "pastry-plugin-sideMain/MainViewController+SideMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		15297AAE20FD4BABA2DC160C /* MMLogoView.m */ = {isa = PBXFileReference; name = "MMLogoView.m"; path = "pastry-plugin-sideMain/ExampleFiles/CustomViews/MMLogoView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */ = {isa = PBXFileReference; name = "MMCenterTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMCenterTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; name = "MMSideDrawerSectionHeaderView.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerSectionHeaderView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */ = {isa = PBXFileReference; name = "MMSideDrawerTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */ = {isa = PBXFileReference; name = "MMTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */ = {isa = PBXFileReference; name = "PTCenterTableViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTCenterTableViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTLeftSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTLeftSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTRightSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTRightSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */ = {isa = PBXFileReference; name = "PTDrawerVisualStateManager.m"; path = "pastry-plugin-sideMain/ExampleFiles/VisualStateManager/PTDrawerVisualStateManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; name = "MMDrawerBarButtonItem.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerBarButtonItem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9CC170ED16324ACBB9526807 /* MMDrawerController.m */ = {isa = PBXFileReference; name = "MMDrawerController.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; name = "MMDrawerVisualState.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerVisualState.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		DF1E637095C94426AD531C7E /* MMNavigationController.m */ = {isa = PBXFileReference; name = "MMNavigationController.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMNavigationController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; name = "UIViewController+MMDrawerController.m"; path = "pastry-plugin-sideMain/MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		910E5E2A57E34D7C9A679BD9 /* AppDelegate+SideMain.h */ = {isa = PBXFileReference; name = "AppDelegate+SideMain.h"; path = "pastry-plugin-sideMain/AppDelegate+SideMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		67ADE8A2E65C4BAEA81DF361 /* MainViewController+SideMain.h */ = {isa = PBXFileReference; name = "MainViewController+SideMain.h"; path = "pastry-plugin-sideMain/MainViewController+SideMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		90165970E1BB461BACCD7BF7 /* MMLogoView.h */ = {isa = PBXFileReference; name = "MMLogoView.h"; path = "pastry-plugin-sideMain/ExampleFiles/CustomViews/MMLogoView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4096526C3A224E398C16EEF2 /* MMCenterTableViewCell.h */ = {isa = PBXFileReference; name = "MMCenterTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMCenterTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9F244D7950204349B0ACBDCA /* MMSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; name = "MMSideDrawerSectionHeaderView.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerSectionHeaderView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		164D9B87604349D09C648FC6 /* MMSideDrawerTableViewCell.h */ = {isa = PBXFileReference; name = "MMSideDrawerTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A52910B59D424474BD3DFFE9 /* MMTableViewCell.h */ = {isa = PBXFileReference; name = "MMTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C5C6F96DF53F45299819053C /* PTCenterTableViewController.h */ = {isa = PBXFileReference; name = "PTCenterTableViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTCenterTableViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0A9A2492ABD74DA298895AFB /* PTLeftSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTLeftSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTLeftSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BCC4CD46CB8E475FA8ED8105 /* PTRightSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTRightSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTRightSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6F9C3F54D39F46C68F34865F /* PTSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1B851A99352D4E019332804E /* PTDrawerVisualStateManager.h */ = {isa = PBXFileReference; name = "PTDrawerVisualStateManager.h"; path = "pastry-plugin-sideMain/ExampleFiles/VisualStateManager/PTDrawerVisualStateManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		899628EB43CC485992C6BADF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; name = "MMDrawerBarButtonItem.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerBarButtonItem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9BF54B27645843B9A1160201 /* MMDrawerController.h */ = {isa = PBXFileReference; name = "MMDrawerController.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E138A40861604D6CA4765740 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; name = "MMDrawerController+Subclass.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		978E768C2B5B4A72BAF6F856 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; name = "MMDrawerVisualState.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerVisualState.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		94AA055142634424A7B16AA0 /* MMNavigationController.h */ = {isa = PBXFileReference; name = "MMNavigationController.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMNavigationController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AF900227839A4E2B80D8424A /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; name = "UIViewController+MMDrawerController.h"; path = "pastry-plugin-sideMain/MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2E9B4EEA46B449128DB661C2 /* Icon.png */ = {isa = PBXFileReference; name = "Icon.png"; path = "Icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D37866D11CA24942B7B3451B /* Icon-72.png */ = {isa = PBXFileReference; name = "Icon-72.png"; path = "Icon-72.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */ = {isa = PBXFileReference; name = "Icon-72@2x.png"; path = "Icon-72@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */ = {isa = PBXFileReference; name = "Icon@2x.png"; path = "Icon@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9D3A70664DC4374B0E23B20 /* CustomStorage.m */ = {isa = PBXFileReference; name = "CustomStorage.m"; path = "pastry-plugin-storageDemo/CustomStorage.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */ = {isa = PBXFileReference; name = "StorageViewController.m"; path = "pastry-plugin-storageDemo/StorageViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0AECBE2531E749B1BCAF165F /* StorageViewController.xib */ = {isa = PBXFileReference; name = "StorageViewController.xib"; path = "pastry-plugin-storageDemo/StorageViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
+		F79C9C3C135C4C9381AC0E1B /* CustomStorage.h */ = {isa = PBXFileReference; name = "CustomStorage.h"; path = "pastry-plugin-storageDemo/CustomStorage.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DBFBD53159CE46C283B3620C /* StorageViewController.h */ = {isa = PBXFileReference; name = "StorageViewController.h"; path = "pastry-plugin-storageDemo/StorageViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F53EADE21CC0C46B0062161C /* PT.framework in Frameworks */,
+				F56C8D231C92529F007B6180 /* libsqlite3.0.tbd in Frameworks */,
+				F56C8D221C925296007B6180 /* libstdc++.tbd in Frameworks */,
+				F56C8D211C925288007B6180 /* libicucore.tbd in Frameworks */,
+				F56C8D1F1C92527F007B6180 /* libiconv.tbd in Frameworks */,
+				F56C8D1D1C925278007B6180 /* libz.tbd in Frameworks */,
+				F56C8D1B1C92526F007B6180 /* libxml2.2.tbd in Frameworks */,
+				F56C8D191C925266007B6180 /* MediaPlayer.framework in Frameworks */,
+				F56C8D171C92525F007B6180 /* UIKit.framework in Frameworks */,
+				F56C8D151C92524C007B6180 /* Foundation.framework in Frameworks */,
+				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
+				F56C8D131C92523C007B6180 /* ImageIO.framework in Frameworks */,
+				F56C8D111C925234007B6180 /* AVFoundation.framework in Frameworks */,
+				F56C8D0F1C92522E007B6180 /* AudioToolbox.framework in Frameworks */,
+				F56C8D0D1C925225007B6180 /* MapKit.framework in Frameworks */,
+				F56C8D0B1C92521D007B6180 /* CoreTelephony.framework in Frameworks */,
+				F56C8D091C925212007B6180 /* MessageUI.framework in Frameworks */,
+				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+				F56C8D071C925202007B6180 /* CoreLocation.framework in Frameworks */,
+				F56C8D051C9251F9007B6180 /* CoreData.framework in Frameworks */,
+				F56C8D031C9251F3007B6180 /* Security.framework in Frameworks */,
+				F56C8D011C9251EC007B6180 /* CFNetwork.framework in Frameworks */,
+				F56C8CFF1C9251E5007B6180 /* SystemConfiguration.framework in Frameworks */,
+				F56C8CFD1C9251DF007B6180 /* OpenGLES.framework in Frameworks */,
+				F56C8CFB1C9251D8007B6180 /* QuartzCore.framework in Frameworks */,
+				F56C8CF91C9251D0007B6180 /* CoreText.framework in Frameworks */,
+				F56C8CF71C9251C5007B6180 /* Accelerate.framework in Frameworks */,
+				F56C8CF51C9251BB007B6180 /* AddressBook.framework in Frameworks */,
+				F56C8CF31C9251B4007B6180 /* CoreMotion.framework in Frameworks */,
+				F56C8CF11C9251AD007B6180 /* CoreMedia.framework in Frameworks */,
+				F56C8CEF1C9251A4007B6180 /* AdSupport.framework in Frameworks */,
+				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				953CDD761D4AF8190081DE9A /* PTBase */,
+				95379C181D4F195D002503B7 /* PTDisplayComponentTableView.h */,
+				95379C191D4F195D002503B7 /* PTDisplayComponentTableView.m */,
+				302D95EE14D2391D003F00A1 /* MainViewController.h */,
+				302D95EF14D2391D003F00A1 /* MainViewController.m */,
+				302D95F014D2391D003F00A1 /* MainViewController.xib */,
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+			);
+			name = Classes;
+			path = "CROP/Classes";
+			sourceTree = SOURCE_ROOT;
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CROP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F840E1F0165FE0F500CFE078 /* config.xml */,
+				301BF56E109A69640062928A /* www */,
+				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				307C750510C5A3420062BCA9 /* Plugins */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				F53EADAD1CC0C46B0062161C /* PastryFramework */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CROP-Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			path = "CROP";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95EAD6771D47099D0034DE05 /* Images.xcassets */,
+				8D1107310486CEB800E47090 /* CROP-Info.plist */,
+				6E54EA78D2EF43458556CD33 /* browserImages.bundle */,
+				A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */,
+				2E9B4EEA46B449128DB661C2 /* Icon.png */,
+				D37866D11CA24942B7B3451B /* Icon-72.png */,
+				45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */,
+				4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */,
+			);
+			name = Resources;
+			path = "CROP/Resources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F56C8D201C925288007B6180 /* libicucore.tbd */,
+				F56C8D1E1C92527F007B6180 /* libiconv.tbd */,
+				F56C8D1C1C925277007B6180 /* libz.tbd */,
+				F56C8D1A1C92526F007B6180 /* libxml2.2.tbd */,
+				F56C8D181C925266007B6180 /* MediaPlayer.framework */,
+				F56C8D161C92525F007B6180 /* UIKit.framework */,
+				F56C8D141C92524C007B6180 /* Foundation.framework */,
+				F56C8D121C92523C007B6180 /* ImageIO.framework */,
+				F56C8D101C925234007B6180 /* AVFoundation.framework */,
+				F56C8D0E1C92522E007B6180 /* AudioToolbox.framework */,
+				F56C8D0C1C925225007B6180 /* MapKit.framework */,
+				F56C8D0A1C92521D007B6180 /* CoreTelephony.framework */,
+				F56C8D081C925212007B6180 /* MessageUI.framework */,
+				F56C8D061C925202007B6180 /* CoreLocation.framework */,
+				F56C8D041C9251F9007B6180 /* CoreData.framework */,
+				F56C8D021C9251F3007B6180 /* Security.framework */,
+				F56C8D001C9251EB007B6180 /* CFNetwork.framework */,
+				F56C8CFE1C9251E5007B6180 /* SystemConfiguration.framework */,
+				F56C8CFC1C9251DF007B6180 /* OpenGLES.framework */,
+				F56C8CFA1C9251D8007B6180 /* QuartzCore.framework */,
+				F56C8CF81C9251D0007B6180 /* CoreText.framework */,
+				F56C8CF61C9251C5007B6180 /* Accelerate.framework */,
+				F56C8CF41C9251BB007B6180 /* AddressBook.framework */,
+				F56C8CF21C9251B4007B6180 /* CoreMotion.framework */,
+				F56C8CF01C9251AD007B6180 /* CoreMedia.framework */,
+				F56C8CEE1C9251A4007B6180 /* AdSupport.framework */,
+				F56C8CDF1C925143007B6180 /* libstdc++.tbd */,
+				F56C8CDD1C925138007B6180 /* libsqlite3.0.tbd */,
+				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		301BF52E109A57CC0062928A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				301BF535109A57CC0062928A /* libCordova.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		307C750510C5A3420062BCA9 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				9F0482D2BE2B4A3EBBFD167F /* CDVLogger.m */,
+				518690E0D5824440B0A2D1E1 /* CDVLogger.h */,
+				775FD446E7A94BF8B8DF5088 /* PTBrowser.m */,
+				BFC8FFDAD71A4635846BB9CE /* PTBrowserContainer.m */,
+				AAF09253087F4667853356C4 /* PTWindowPage.m */,
+				97B92A20172A43EBB5682722 /* PTWindowPage.xib */,
+				8DC45668DC4D4955A831321C /* PTWindowPage+Operation.m */,
+				497442E516A64CEA98C75264 /* MoreBrowserViewController.m */,
+				07A00A4A64974924AC8FC1E0 /* SecondViewController.m */,
+				AA0CC4D602EB4774857BD691 /* SecondViewController.xib */,
+				03F9B5645BE84B87BB49C646 /* BrowserViewController.m */,
+				953B2B8CEDEC4A8E92F4A807 /* PTBrowserDelegate.h */,
+				1BFDCC04F03145AA8F964747 /* PTBrowser.h */,
+				0782820AAE2B43E594665508 /* PTBrowserContainer.h */,
+				37E25E6A298741BE8731D65D /* PTWindowPage.h */,
+				6532906406714FED96D93215 /* PTWindowPage+Operation.h */,
+				EE9BB5453F1D48B1942B2947 /* MoreBrowserViewController.h */,
+				13C9B68C9E1248B5B028D8AE /* SecondViewController.h */,
+				EF4929997717403A999C52FD /* BrowserViewController.h */,
+				508385259F2E4F9796A403B8 /* PTRequest.m */,
+				BA84924807D243909765A686 /* PTServletRequest.m */,
+				85351AA85AE84CD9BB2E0AC5 /* PTRequest.h */,
+				BFE1330B450C4F4E8ADBFDF8 /* PTServletRequest.h */,
+				43CE17A8735C4A33803660E8 /* PTKeyboards.m */,
+				C165137472974607A2DB68A6 /* KeyboardViewController.m */,
+				4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */,
+				81C010695C3B44DF9F9F64B5 /* PTKeyboards.h */,
+				4C3D4BF56CCE414095CA72E7 /* KeyboardViewController.h */,
+				4EC52C0365334351808C1146 /* PTUnZipViewController.m */,
+				98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */,
+				09635613866D4A05A7A3A882 /* PTUnZipViewController.h */,
+				F63A2C48014A4E8AA7704256 /* PTGuideViewController.m */,
+				F003CD73E34F406E86927A62 /* PTGuideViewController.xib */,
+				92D29347DA064BE58673843B /* PTGuideViewController.h */,
+				63B00542657640E69CE7293F /* AppDelegate+SideMain.m */,
+				678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */,
+				15297AAE20FD4BABA2DC160C /* MMLogoView.m */,
+				E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */,
+				C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */,
+				AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */,
+				3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */,
+				C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */,
+				A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */,
+				09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */,
+				D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */,
+				95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */,
+				697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */,
+				9CC170ED16324ACBB9526807 /* MMDrawerController.m */,
+				C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */,
+				DF1E637095C94426AD531C7E /* MMNavigationController.m */,
+				E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */,
+				910E5E2A57E34D7C9A679BD9 /* AppDelegate+SideMain.h */,
+				67ADE8A2E65C4BAEA81DF361 /* MainViewController+SideMain.h */,
+				90165970E1BB461BACCD7BF7 /* MMLogoView.h */,
+				4096526C3A224E398C16EEF2 /* MMCenterTableViewCell.h */,
+				9F244D7950204349B0ACBDCA /* MMSideDrawerSectionHeaderView.h */,
+				164D9B87604349D09C648FC6 /* MMSideDrawerTableViewCell.h */,
+				A52910B59D424474BD3DFFE9 /* MMTableViewCell.h */,
+				C5C6F96DF53F45299819053C /* PTCenterTableViewController.h */,
+				0A9A2492ABD74DA298895AFB /* PTLeftSideDrawerViewController.h */,
+				BCC4CD46CB8E475FA8ED8105 /* PTRightSideDrawerViewController.h */,
+				6F9C3F54D39F46C68F34865F /* PTSideDrawerViewController.h */,
+				1B851A99352D4E019332804E /* PTDrawerVisualStateManager.h */,
+				899628EB43CC485992C6BADF /* MMDrawerBarButtonItem.h */,
+				9BF54B27645843B9A1160201 /* MMDrawerController.h */,
+				E138A40861604D6CA4765740 /* MMDrawerController+Subclass.h */,
+				978E768C2B5B4A72BAF6F856 /* MMDrawerVisualState.h */,
+				94AA055142634424A7B16AA0 /* MMNavigationController.h */,
+				AF900227839A4E2B80D8424A /* UIViewController+MMDrawerController.h */,
+				A9D3A70664DC4374B0E23B20 /* CustomStorage.m */,
+				4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */,
+				0AECBE2531E749B1BCAF165F /* StorageViewController.xib */,
+				F79C9C3C135C4C9381AC0E1B /* CustomStorage.h */,
+				DBFBD53159CE46C283B3620C /* StorageViewController.h */,
+			);
+			name = Plugins;
+			path = "CROP/Plugins";
+			sourceTree = SOURCE_ROOT;
+		};
+		95379C0D1D4EEABE002503B7 /* ComponentBase */ = {
+			isa = PBXGroup;
+			children = (
+				95379C0E1D4EEABE002503B7 /* PTComponentManager.h */,
+				95379C0F1D4EEABE002503B7 /* PTComponentManager.m */,
+			);
+			path = ComponentBase;
+			sourceTree = "<group>";
+		};
+		953CDD761D4AF8190081DE9A /* PTBase */ = {
+			isa = PBXGroup;
+			children = (
+				953CDD771D4AF8190081DE9A /* Interface */,
+				95379C0D1D4EEABE002503B7 /* ComponentBase */,
+				953CDD7A1D4AF8190081DE9A /* ViewControllerBase */,
+			);
+			path = PTBase;
+			sourceTree = "<group>";
+		};
+		953CDD771D4AF8190081DE9A /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				953CDD781D4AF8190081DE9A /* PTGuideInterface.h */,
+				953CDD791D4AF8190081DE9A /* PTUnzipInterface.h */,
+				95379C0C1D4EEAB5002503B7 /* PTComponentInterface.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		953CDD7A1D4AF8190081DE9A /* ViewControllerBase */ = {
+			isa = PBXGroup;
+			children = (
+				953CDD7B1D4AF8190081DE9A /* PTViewControllerBase.h */,
+				953CDD7C1D4AF8190081DE9A /* PTViewControllerBase.m */,
+			);
+			path = ViewControllerBase;
+			sourceTree = "<group>";
+		};
+		F53EADAD1CC0C46B0062161C /* PastryFramework */ = {
+			isa = PBXGroup;
+			children = (
+				F53EADAE1CC0C46B0062161C /* data.zip */,
+				F53EADC81CC0C46B0062161C /* README.md */,
+				F53EADE51CC0C4860062161C /* PastryResources */,
+				F53EADC91CC0C46B0062161C /* Reference */,
+			);
+			name = PastryFramework;
+			path = CROP/PastryFramework;
+			sourceTree = "<group>";
+		};
+		F53EADC91CC0C46B0062161C /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				F53EADCA1CC0C46B0062161C /* PT.framework */,
+				F53EADCB1CC0C46B0062161C /* PTResources.bundle */,
+				F53EADCC1CC0C46B0062161C /* Settings.bundle */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CROP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CROP" */;
+			buildPhases = (
+				304B58A110DAC018002A0835 /* Copy www directory */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				95EAD6811D4721140034DE05 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				301BF551109A68C00062928A /* PBXTargetDependency */,
+			);
+			name = "CROP";
+			productName = "CROP";
+			productReference = 1D6058910D05DD3D006BFB54 /* CROP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 510;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				es,
+				de,
+				se,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CROP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		301BF535109A57CC0062928A /* libCordova.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCordova.a;
+			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				F53EADE31CC0C46B0062161C /* PTResources.bundle in Resources */,
+				95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */,
+				F53EADE61CC0C4860062161C /* PastryResources in Resources */,
+				F53EADCD1CC0C46B0062161C /* data.zip in Resources */,
+				F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */,
+				1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */,
+				904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */,
+				0205E04E7DAA497AB101BEB0 /* Icon.png in Resources */,
+				09E9D4BF6B1343D0A85F0438 /* Icon-72.png in Resources */,
+				4B72C9FBC35C43FF92FA3FB2 /* Icon-72@2x.png in Resources */,
+				88CAAC436C7A48A283BF97E9 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		304B58A110DAC018002A0835 /* Copy www directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy www directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "NODEJS_PATH=/usr/local/bin; NVM_NODE_PATH=~/.nvm/versions/node/`nvm version 2>/dev/null`/bin; N_NODE_PATH=`find /usr/local/n/versions/node/* -maxdepth 0 -type d 2>/dev/null | tail -1`/bin; XCODE_NODE_PATH=`xcode-select --print-path`/usr/share/xcs/Node/bin; PATH=$NODEJS_PATH:$NVM_NODE_PATH:$N_NODE_PATH:$XCODE_NODE_PATH:$PATH && node cordova/lib/copy-www-build-step.js";
+			showEnvVarsInLog = 0;
+		};
+		95EAD6811D4721140034DE05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#检查3002端口是否被占用，如果占用输出1，如果没有被占用输入0\npIDa=`/usr/sbin/lsof -i :3002|grep -v \"PID\" | awk '{print $2}'`\necho $pIDa\nif [ \"$pIDa\" != \"\" ];\nthen\necho \"1\"\nelse\necho \"0\"\nopen ../../pastry-fo-nodejs/bin/test-server\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
+				F53EADE11CC0C46B0062161C /* README.md in Sources */,
+				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				953CDD7D1D4AF8190081DE9A /* PTViewControllerBase.m in Sources */,
+				95379C101D4EEABE002503B7 /* PTComponentManager.m in Sources */,
+				95379C1A1D4F195D002503B7 /* PTDisplayComponentTableView.m in Sources */,
+				EB029EEA44A6483F8FB01C0E /* CDVLogger.m in Sources */,
+				4DC65AAE410E47FA9F5B2FB4 /* PTBrowser.m in Sources */,
+				32A3B1EA28F44EBBBD74EA5B /* PTBrowserContainer.m in Sources */,
+				E46814458EA246699C6C9434 /* PTWindowPage.m in Sources */,
+				5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Resources */,
+				84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */,
+				2E5AA0D0A03E47CC91802AF5 /* MoreBrowserViewController.m in Sources */,
+				6641847C1F8C42ACA54F528A /* SecondViewController.m in Sources */,
+				B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Resources */,
+				2365A846BBB24152A4999549 /* BrowserViewController.m in Sources */,
+				832A99F0608E4777B005758D /* PTRequest.m in Sources */,
+				04E3D9A3D5734E108C74F797 /* PTServletRequest.m in Sources */,
+				EB3F265F0497460E91E461CB /* PTKeyboards.m in Sources */,
+				44BD0918DE64493A81CA4E83 /* KeyboardViewController.m in Sources */,
+				AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Resources */,
+				1972C91058E2430CB0060987 /* PTUnZipViewController.m in Sources */,
+				58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Resources */,
+				8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */,
+				E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Resources */,
+				A8E4414A79CF44DBB6F6BE16 /* AppDelegate+SideMain.m in Sources */,
+				5AA8E3A262814DB2B56F5CAC /* MainViewController+SideMain.m in Sources */,
+				D709E4CC980D409B82831178 /* MMLogoView.m in Sources */,
+				4FA2BCBAD27D4331B319BCB7 /* MMCenterTableViewCell.m in Sources */,
+				F6049A40D4314D5294EBF7B7 /* MMSideDrawerSectionHeaderView.m in Sources */,
+				4B1C9B46353E4ED89BA8902E /* MMSideDrawerTableViewCell.m in Sources */,
+				A606A7B33F9E4524B97FFFD2 /* MMTableViewCell.m in Sources */,
+				B37A2BE7D0434CEAA83101A1 /* PTCenterTableViewController.m in Sources */,
+				69709D35A5C149DDBCD61BAD /* PTLeftSideDrawerViewController.m in Sources */,
+				722D7D27732848BBBE366582 /* PTRightSideDrawerViewController.m in Sources */,
+				B36A382B584A44F9B5ECFDB8 /* PTSideDrawerViewController.m in Sources */,
+				DF7B39660A5A4960A6599115 /* PTDrawerVisualStateManager.m in Sources */,
+				128BD61E5EA44ED081F0B314 /* MMDrawerBarButtonItem.m in Sources */,
+				89B958AA42564E51B0BC9ED0 /* MMDrawerController.m in Sources */,
+				E2AF6BBF59354E2B947A1666 /* MMDrawerVisualState.m in Sources */,
+				867AD618D7E945D598919056 /* MMNavigationController.m in Sources */,
+				83D5F05F27FB475E9EF50D96 /* UIViewController+MMDrawerController.m in Sources */,
+				8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */,
+				52C56CA49C55432896984996 /* StorageViewController.m in Sources */,
+				DEB62A38903A4CA8939A0A4C /* StorageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		301BF551109A68C00062928A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CROP/PastryFramework",
+					"$(PROJECT_DIR)/CROP/PastryFramework/PastryResources/debug",
+					"$(PROJECT_DIR)/CROP/PastryFramework/PastryResources/release",
+					"$(PROJECT_DIR)/CROP/PastryFramework/Reference",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CROP/CROP-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "CROP/CROP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "CROP";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CROP/PastryFramework",
+					"$(PROJECT_DIR)/CROP/PastryFramework/PastryResources/debug",
+					"$(PROJECT_DIR)/CROP/PastryFramework/PastryResources/release",
+					"$(PROJECT_DIR)/CROP/PastryFramework/Reference",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CROP/CROP-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "CROP/CROP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "CROP";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"\"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
+				);
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CROP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

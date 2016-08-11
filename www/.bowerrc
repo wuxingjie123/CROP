@@ -1,0 +1,9 @@
+{
+"directory":"components",
+"scripts": {
+       "preinstall":  "",
+       "postinstall": "node  bowerScript/postinstall.js  % ",
+	   "preuninstall": "node bowerScript/preuninstall.js %",
+	   "postuninstall": ""   
+    }
+}

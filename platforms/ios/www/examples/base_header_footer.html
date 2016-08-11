@@ -1,0 +1,93 @@
+<!--
+name:Header_Footer
+platform:all
+group:base
+desc:页头与页脚
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Header&Footer</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="titlebar" data-keep-script
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="data-browser-header">
+    <div style="float:left;">
+        <input type="button" class="btn" value="返回" data-back-button="back_id">
+        <span data-title></span>
+        <input type="button" value="第二页" data-submit-button="page2">
+        <input type="button" value="第三页" data-submit-button="page3">
+    </div>
+    <div style="float:right;" data-menu></div>
+    <div style="clear: both;"></div>
+</script>
+
+<script type="text/template" id="data-browser-footer" >
+    <input type="button" class="btn" value="按钮1" data-submit-button="action1">
+    <input type="button" class="btn" value="按钮2" data-submit-button="action2">
+</script>
+
+<script type="text/template" id="HomePage" data-component="HomePage" data-title="Header&Footer1" data-menu-button="search1|btn btn-success">
+    Hello HomePage!
+</script>
+
+<script type="text/template" id="SecondPage" data-component="SecondPage" data-title="Header&Footer2" data-menu-button="search2|btn btn-danger|框2,action2|btn btn-danger|功2">
+    Hello SecondPage!
+</script>
+
+<script type="text/template" id="ThirdPage" data-component="ThirdPage" data-title="Header&Footer3" data-menu-button="search3|btn btn-primary|框3,action3|btn btn-primary|功3">
+    Hello ThirdPage!
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+
+        Component.BrowserHeader = Component.BrowserHeader.extend({
+            onBack: function (event) {
+                var id = event.id;
+                alert("onback："+id);
+                this._super(id,event);
+            },
+            onMenu: function (event) {
+                var id = event.id;
+                alert("onmenu："+id);
+            },
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                if(submitId === "page2")
+                    Browser.history_goto("SecondPage");
+                else if(submitId === "page3")
+                    Browser.history_goto("ThirdPage");
+            }
+        });
+
+        Component.HomePage = Component.Page.extend({
+
+        });
+        Component.SecondPage = Component.Page.extend({
+
+        });
+        Component.ThirdPage = Component.Page.extend({
+
+        });
+        Browser.history_goto("tp_HomePage");
+    });
+</script>

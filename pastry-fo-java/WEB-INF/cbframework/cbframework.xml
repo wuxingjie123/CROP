@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <!--   <CompileConfig srcdir="WEB-INF/cbframework/data/com.citicbank.cbframework.demojs/"/> -->
+    
+	<FrameworkServletConfig>
+		<Handler
+		    frameworkex	="com.citicbank.cbframework.servlet.actionhandler.CBManifestHandler"
+			handshake	="com.citicbank.cbframework.servlet.actionhandler.CBHandshakeHandler"
+			login		="com.citicbank.cbframework.servlet.actionhandler.CBLoginHandler"
+			logout		="com.citicbank.cbframework.servlet.actionhandler.CBLogoutHandler" />
+	</FrameworkServletConfig>
+</config>

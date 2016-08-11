@@ -1,0 +1,26 @@
+{
+  "name": "com.citic.asp.pastry-fo-nodejs",
+  "version": "1.0.0",
+  "description": "FO 服务器 NodeJS版",
+  "main": "main.js",
+  "repository": "http://",
+  "author": "pastryTeam",
+  "license": "MIT",
+  "scripts": {
+    "coffee": "coffee -bc lib wwwroot/mockdata"
+  },
+  "devDependencies": {
+    "coffee-script": "1.9.3"
+  },
+  "dependencies": {
+    "argparse": "1.0.2",
+    "body-parser": "1.13.3",
+    "cookie-parser": "1.4.1",
+    "express": "4.13.1",
+    "express-session": "1.13.0",
+    "fs-extra": "0.26.3",
+    "requirejs": "2.2.0",
+    "serve-favicon": "2.2.1",
+    "underscore": "1.8.3"
+  }
+}

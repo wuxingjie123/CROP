@@ -1,0 +1,86 @@
+<!--
+name:Dispatcher
+platform:all
+group:data
+desc:分发
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dispatcher</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata,@simbridge"
+            data-component="checkbox,popupselect"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Dispatcher">
+    <span data-component="Label" data-name="LABEL"></span>
+    <div data-component="List" id='list' data-item-template="[%=item.id%]:[%=item.title%]<br/>" data-name="LIST"></div>
+    <select data-component="Select" id='select' data-name="SELECT"></select>
+    <input type="button" class="btn" value="提交" data-submit-button/>
+</script>
+
+<script type="text/template" id="tp_ListItem">
+    <%=item.id%>:<%=item.title%><br/>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Model = this.Model;
+        var Component = this.Component;
+        var api = this.api;
+
+        api.setModels({
+            'homePage': new Model.Request(null, {
+                url: 'helloworld.do?act=getAllData',
+                dispatcher: function (data) {
+                    this.dispatch({
+//                        label: {
+//                            LABEL: data.labelData
+//                        },
+                        list: {
+                            list:data.listData.list
+                        },
+                        select:{
+                            select:data.selectData.select
+                        }
+                    });
+                },
+                filter:function(data){
+                    return {LABEL:data.labelData};
+                }
+            })
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data));
+            }
+        });
+
+        var option = {
+            refresh: {
+
+            }
+        };
+
+        Browser.history_goto("tp_HomePage", option);
+    });
+</script>

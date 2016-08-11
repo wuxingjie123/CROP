@@ -1,0 +1,107 @@
+<!--
+name:Scrollview
+platform:all
+group:ex
+desc:滚动视图
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrollview</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:scrollview"
+            ></script>
+</head>
+<body>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="Scrollview">
+    <div data-component="ScrollView" id="ScrollView" data-height="200" data-fix-height="60">
+        <div data-component="MyList" id="mylist" data-template="#tp_List"></div>
+    </div>
+</script>
+<script type="text/template" id="tp_List">
+    <% for(var i=0,len=data.list.length;i < len;i++){ %>
+    <%var item=data.list[i];%>
+    <div data-list-item='<%=i%>'>
+        <%=item.id%>|<span data-list-item="<%=i%>"><%=item.title%></span><br/>
+    </div>
+    <% } %>
+
+    <%if(data.hasMoreData){%>
+    <div class='clear loadingMessage' data-refresh-button='up' style="text-align: center">向上滑动查看更多</div>
+    <%}else{%>
+    <div class='clear loadingMessage' style="text-align: center">已经加载全部</div>
+    <% } %>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+        var api = this.api;
+        var Model = this.Model;
+       var  i=1;
+
+        api.setModels({
+            mylist:new Model.Request({
+
+            },{
+                url:'helloworld.do?act=getList',
+                filter:function(data){
+                    var oldVal = this.getData();
+                    data.list = _.isUndefined(oldVal) ? data.list : oldVal.concat(data.list);
+                    if(data.list.length < data.SUMCOUNT){
+                        data.hasMoreData = true
+                    }else{
+                        data.hasMoreData = false
+                        //data.timestamp = new Date().getTime()
+                        /*var self = this
+                        setTimeout(function(){
+                            self.component.render()
+                            api.getComponent('scrollview').iScroll.refresh()
+                        },200);*/
+                    }
+                    return data
+                }
+            })
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data));
+            }
+        });
+
+        Component.MyList = Component.List.extend({
+            onDragRefresh:function(direction){
+                var option={
+                    param:{
+                        page:2
+                    }
+                }
+                this.refresh(option);
+            }
+        })
+
+        var option={
+            refresh:{
+                id:"mylist",
+                param:{
+                    page:1
+                }
+            }
+        }
+        Browser.history_goto("tp_HomePage",option);
+    });
+</script>

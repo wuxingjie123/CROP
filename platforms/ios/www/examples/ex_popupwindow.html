@@ -1,0 +1,87 @@
+<!--
+name:PopupWindow
+platform:all
+group:ex
+desc:弹出窗口
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PopupWindow</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:popupwindow"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+<script type="text/template" id="HomePage" data-component="HomePage" data-title="popupwindow">
+    <input type="button" class="btn" value="显示弹出层" data-submit-button />
+</script>
+
+<script type="text/template" id="tp_myPopup">
+    <div style="width:300px;height:300px;position:absolute;margin-left:-150px;margin-top: -150px;top:50%;left:50%;background: #fff;">
+        <input type="button" style="position:absolute;right:0;width:20px;" data-close-button value="X" data-tooltip-text="点我">
+        <% for(var i=0;i< data.list.length;i++){ %>
+        <%= data.list[i].name%><br>
+        <%}%>
+    </div>
+</script>
+
+<script type="text/javascript">
+    $(function (paramData) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+        var api = this.api;
+        var Model = this.Model;
+
+        api.setModels({
+            "myPopup":new Model.Request(
+                    null,{
+                        url:"MBMultidemo.do?act=MULTIDEMO_3"
+                    }
+            )
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (obj) {
+                var data = obj.data,submitId = obj.id;
+                new Component.MyPopupWindow({
+                    template:"#tp_myPopup",
+                    id:"myPopup"
+                }).show();
+            }
+        });
+
+        Component.MyPopupWindow = Component.PopupWindow.extend({
+            onResult: function (data) {
+                alert(JSON.stringify(data));
+            },
+            onCancel: function(){
+                alert('弹出窗被取消');
+            }
+        });
+
+        var option={
+            refresh:[
+                {
+                    id:"myPopup",
+                    initVal:{"list":[{name:123}]}
+                }
+            ]
+        };
+        Browser.history_goto("HomePage",option);
+    });
+</script>
+</html>

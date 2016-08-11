@@ -1,0 +1,139 @@
+﻿<!--
+name:Tree
+platform:all
+group:ex
+desc:树状图
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:tree"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_Person">
+    <%=data.text%><%=data.type%><%=data.custom%>
+    <div class="customBottom"></div>
+</script>
+
+<script type="text/template" id="homePage" data-component="Page" data-title="Tree">
+    <div id="filetree" data-component="MyTree" data-empty-template="数据为空"
+         style="height: 480px; overflow: auto;">
+        <div class="form-group">
+            <div class="col-sm-8">
+                <input type="text" class="form-control" size="30" data-search-input/>
+            </div>
+            <div class="col-sm-4">
+                <input type="button" class="form-control btn btn-default" value="搜索" data-search-button/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div data-tree></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/javascript">
+    $(function (param) {
+        var Component = this.Component;
+        var Browser = this.Browser;
+        var Model = this.Model;
+        var api = this.api;
+
+        api.setModels({
+            "filetree": new Model.Request(null, {
+                url: "server.do?act=getList"
+            })
+        });
+
+        Component.MyTree = Component.Tree.extend({
+            types: {
+                person: {icon: "jstree-file", template: "#tp_Person"}
+            },
+            wholerow: {},
+            themes: {
+                //"name": "test",
+                "dots": false
+            },
+            onTreeItemClick: function (event) {
+                console.log(222222222)
+                if (event.node.children && event.node.children.length == 0) {//如果有节点这不再添加
+                    var self = this;
+
+                    /*/
+                     this.jstree.disable_node(event.node);
+                     var dom = this.jstree.get_node(event.node, true);
+                     dom.addClass("jstree-loading").attr('aria-busy',true);
+                     setTimeout(function(){
+                     self.addNode({
+                     ref:event.node,
+                     data:[
+                     {text:'1',type:'person'},
+                     {text:'2',type:'person'},
+                     {text:'3',type:'person'}
+                     ],
+                     //data:[],
+                     position:"before",
+                     callback:function(data){
+                     this.jstree.open_node(event.node);
+                     this.jstree.enable_node(event.node);
+                     dom.removeClass("jstree-loading").attr('aria-busy',false);
+                     console.log("complete!!");
+                     console.log(data)
+                     }
+                     });
+                     },1000);
+                     //*/
+
+                    //*/
+                    this.addNode({
+                        ref: event.node,
+                        data: function (cb) {
+                            new Model.Request(null, {
+                                url: "server.do?act=getList",
+                                filter: function (data) {
+                                    cb(data.data);
+                                    //cb({text:"gggg"})
+                                }
+                            }).refresh();
+                        },
+                        position: "after",
+                        callback: function (data) {
+                            self = this;
+                            this.jstree.open_node(event.node);
+                            _.map(data, function (k) {
+                                self.jstree.open_node(k)
+                            });
+                            console.log(data)
+                        }
+                    });
+                    //*/
+                }
+            }
+        });
+        var option = {
+            refresh: {
+                id: "filetree"
+            }
+        };
+        Browser.history_goto("homePage", option);
+    });
+</script>

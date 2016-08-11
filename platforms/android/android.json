@@ -1,0 +1,129 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PTBrowser\"><param name=\"android-package\" value=\"asp.citic.ptframework.plugin.browser.PTBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PTRequest\"><param name=\"android-package\" value=\"asp.citic.ptframework.plugin.request.PTRequest\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PTKeyboards\"><param name=\"android-package\" value=\"asp.citic.ptframework.plugin.keyboards.PTKeyboards\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"example\"><param name=\"android-package\" value=\"package.example\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*/application": [
+                        {
+                            "xml": "<activity android:name=\"asp.citic.ptframework.plugin.browser.PTWebView1\" android:theme=\"@android:style/Theme.Wallpaper.NoTitleBar\" android:windowSoftInputMode=\"adjustResize\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"asp.citic.ptframework.plugin.browser.PTWebView2\" android:theme=\"@android:style/Theme.Wallpaper.NoTitleBar\" android:windowSoftInputMode=\"adjustResize\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"asp.citic.ptframework.plugin.browser.PTWebView3\" android:theme=\"@android:style/Theme.Wallpaper.NoTitleBar\" android:windowSoftInputMode=\"adjustResize\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-browser": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-request": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-keyboard": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-unzip": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-guide": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-sideMain": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        },
+        "pastry-plugin-storageDemo": {
+            "PACKAGE_NAME": "com.mobilebank.develop"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+            "id": "cordova-plugin-whitelist.whitelist",
+            "pluginId": "cordova-plugin-whitelist",
+            "runs": true
+        },
+        {
+            "file": "plugins/pastry-plugin-sideMain/www/example.js",
+            "id": "pastry-plugin-sideMain.example",
+            "pluginId": "pastry-plugin-sideMain",
+            "clobbers": [
+                "example"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.1",
+        "cordova-plugin-console": "1.0.3-dev",
+        "pastry-plugin-browser": "1.0.0",
+        "pastry-plugin-request": "1.0.0",
+        "pastry-plugin-keyboard": "1.0.0",
+        "pastry-plugin-unzip": "1.0.0",
+        "pastry-plugin-guide": "1.0.0",
+        "pastry-plugin-sideMain": "1.0.0",
+        "pastry-plugin-storageDemo": "1.0.0"
+    }
+}

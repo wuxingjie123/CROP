@@ -1,0 +1,113 @@
+<!--
+name:PopupSelect
+platform:all
+group:ex
+desc:弹出选择
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PopupSelect</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <!--引入框架-->
+    <script type="text/javascript" src="../pastry/main.js"
+            data-debug="mockdata"
+            data-components="C:popupselect"
+            ></script>
+</head>
+<body>
+<!--设置加载页-->
+<div data-page-loading>
+    Loading...
+</div>
+</body>
+</html>
+
+<script type="text/template" id="tp_HomePage" data-component="HomePage" data-title="PopupSelect">
+    <div id="popupSelect" data-component="MyPopupSelect" data-name="POPUPSELECT" data-template="#tp_ps"
+         data-text="选择..."
+         data-show-cancel="true"
+         data-cancel-text="取消"></div>
+
+    <input type="button" class="btn" value="提交" data-submit-button/>
+</script>
+
+<script type="text/template" id="tp_ps">
+    <%if(data.selected>-1){%>
+    <%=data.items[data.selected].title%>
+    <%}else{%>
+    <%=data.text%>
+    <%}%>
+</script>
+
+<script type="text/template" id="tp_pw">
+    <div class="popupselect-popup">
+        <% for(var i=0,n=data.items.length;i<n;i++){ %>
+        <input class="popupselect-item" type="button" value="<%=data.items[i].title%>" data-select-item="<%=i%>"/>
+        <%}%>
+        <%if(data.showCancel){%>
+        <input class="popupselect-item" type="button" value="<%=data.cancelText%>" data-select-item/>
+        <%}%>
+        </div>
+</script>
+
+<script type="text/javascript">
+    $(function (param) {
+        var Browser = this.Browser;
+        var Model = this.Model;
+        var Component = this.Component;
+        var api = this.api;
+
+        api.setModels({
+            'popupSelect': new Model.Request({
+                items: [
+                    {id: '1', title: 'itemX'},
+                    {id: '2', title: 'itemY'}
+                ]
+            }, {
+                url: 'helloworld.do?act=getPopupSelect'
+            })
+        });
+
+        Component.MyPopupSelect = Component.PopupSelect.extend({
+            onSelectChange: function (event) {
+                var item = event.item,index = event.index;
+                alert(JSON.stringify(item) + ',' + index);
+            },
+            onCancel: function () {
+                alert('选择被取消...');
+                this.reset();
+            },
+            onShow: function () {
+                alert('show');
+            },
+            onClose: function () {
+                alert('close');
+            }
+        });
+
+        Component.HomePage = Component.Page.extend({
+            onSubmit: function (event) {
+                var data = event.data,submitId = event.id;
+                alert('onSubmitId:' + submitId + '\n' + JSON.stringify(data));
+            }
+        });
+
+        var option = {
+            refresh: {
+                id: 'popupSelect',
+                keepOldVal:true,
+                initVal: {
+
+                }
+            }
+        };
+
+        Browser.history_goto("tp_HomePage", option);
+    });
+</script>

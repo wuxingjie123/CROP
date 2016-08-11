@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <item name="version_new" value="1.0.0.0.0.0"/>
+    
+    <item name="keep_debug" value="true"/>
+    <item name="force" value="false"/>
+    	
+    <item name="signtype" value="RSA"/>
+	<item name="encrypttype" value="3DES"/>
+	<item name="hashtype_filename" value="MD5"/>
+	<item name="hashtype_sign" value="MD5"/>
+    
+    <item name="dir_out" value="ptframework"/>
+	<item name="dir_data" value="data"/>
+	<item name="dir_zip" value="datazip"/>
+
+	<item name="file_datazip" value="data.zip"/>
+    <item name="file_menu_src" value="menu.xml"/>
+	<item name="file_menu_out" value="menu.xml"/>
+	<item name="file_business_manifest_src" value="business.xml"/>
+	<item name="file_business_manifest_out" value="business.json"/>
+	<item name="file_resource_manifest_src" value="resource.xml"/>
+	<item name="file_resource_manifest_out" value="resource.json"/>
+	
+	<item name="file_manifest" value="manifest.json"/>
+		
+    <item name="pattern_template" value="html\\|.*\.html"/>
+    <item name="pattern_packet" value="htmlzip\\|.*\.zip"/>
+	
+	<terminals>
+		<item name="Android" value="android" enable="true"/>
+		<item name="aPad" value="apad" enable="false"/>
+		<item name="iPhone" value="iphone" enable="true"/>
+		<item name="iPod Touch" value="ipod_touch" enable="false"/>
+		<item name="iPad" value="ipad" enable="false"/>
+		<item name="winPhone" value="winphone" enable="false"/>
+		<item name="html" value="html" enable="false"/>
+	</terminals>
+
+	<ignore>
+	    <item pattern=".*/mockdata"/>
+        <item pattern=".*/bowerScript"/>
+	    <item pattern=".*/pastry/debug"/>
+	    <item pattern=".*/emulator.html"/>
+	    <item pattern=".*/\.idea"/>
+	    <item pattern=".*/\.svn"/>
+	    <item pattern=".*/CVS"/>
+	    <item pattern=".*/\.DS_Store"/>
+		<item pattern=".*/pastry/plugins/codemirror"/>
+	</ignore>
+	
+	<resourceCompileCfg>
+        <item pattern="simdata/.*"/>
+        
+        <item pattern="pastry/core/.*\.js" compress="JS" sign="true" sign_prefix="//" sign_suffix=""/>
+        <item pattern="pastry/debug/.*\.js" compress="JS" sign="true" sign_prefix="//" sign_suffix=""/>
+        <item pattern=".*\.js" compress="JS" sign="true" sign_prefix="//" sign_suffix=""/>
+        <item pattern=".*\.css" compress="CSS" sign="true" sign_prefix="/*" sign_suffix="*/"/>
+        
+        <item pattern="image/client/.*\.png" />
+        
+        <item pattern=".*\.jpg" sign="true" />
+        <item pattern=".*\.png" sign="true" />
+        <item pattern=".*\.gif" sign="true" />
+
+        <!--
+	    <item pattern=".*\.js" sign="true" sign_prefix="//" sign_suffix=""/>
+	    <item pattern=".*\.css" compress="CSS" sign="true" sign_prefix="/*" sign_suffix="*/"/>
+	    <item pattern=".*\.jpg" sign="true"/>
+	    <item pattern=".*\.png" sign="true"/>
+	    <item pattern=".*\.gif" sign="true"/>
+	    -->
+	</resourceCompileCfg>
+	
+	<resourceManifestCfg>
+	    <priority>
+	        <item pattern="pastry/main.js"/>
+	
+	        <item pattern=".*\.js"/>
+	        <item pattern=".*\.css"/>
+	        <item pattern=".*\.png"/>
+	        <item pattern=".*\.gif"/>
+	        <item pattern=".*\.jpg"/>
+	
+			<item pattern="pastry/image/.*"/>
+	        <item pattern="image/.*"/>
+	
+	    </priority>
+	</resourceManifestCfg>
+</config>
