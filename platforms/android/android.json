@@ -91,10 +91,10 @@
         "pastry-plugin-guide": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         },
-        "pastry-plugin-sideMain": {
+        "pastry-plugin-storageDemo": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         },
-        "pastry-plugin-storageDemo": {
+        "pastry-plugin-tabMain": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         }
     },
@@ -107,9 +107,9 @@
             "runs": true
         },
         {
-            "file": "plugins/pastry-plugin-sideMain/www/example.js",
-            "id": "pastry-plugin-sideMain.example",
-            "pluginId": "pastry-plugin-sideMain",
+            "file": "plugins/pastry-plugin-tabMain/www/example.js",
+            "id": "pastry-plugin-tabMain.example",
+            "pluginId": "pastry-plugin-tabMain",
             "clobbers": [
                 "example"
             ]
@@ -123,7 +123,7 @@
         "pastry-plugin-keyboard": "1.0.0",
         "pastry-plugin-unzip": "1.0.0",
         "pastry-plugin-guide": "1.0.0",
-        "pastry-plugin-sideMain": "1.0.0",
-        "pastry-plugin-storageDemo": "1.0.0"
+        "pastry-plugin-storageDemo": "1.0.0",
+        "pastry-plugin-tabMain": "1.0.0"
     }
 }

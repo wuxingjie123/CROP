@@ -7,9 +7,9 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/pastry-plugin-sideMain/www/example.js",
-        "id": "pastry-plugin-sideMain.example",
-        "pluginId": "pastry-plugin-sideMain",
+        "file": "plugins/pastry-plugin-tabMain/www/example.js",
+        "id": "pastry-plugin-tabMain.example",
+        "pluginId": "pastry-plugin-tabMain",
         "clobbers": [
             "example"
         ]
@@ -25,8 +25,8 @@ module.exports.metadata =
     "pastry-plugin-keyboard": "1.0.0",
     "pastry-plugin-unzip": "1.0.0",
     "pastry-plugin-guide": "1.0.0",
-    "pastry-plugin-sideMain": "1.0.0",
-    "pastry-plugin-storageDemo": "1.0.0"
+    "pastry-plugin-storageDemo": "1.0.0",
+    "pastry-plugin-tabMain": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

@@ -55,18 +55,18 @@
         "is_top_level": true,
         "variables": {}
     },
-    "pastry-plugin-sideMain": {
-        "source": {
-            "type": "local",
-            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-sideMain"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "pastry-plugin-storageDemo": {
         "source": {
             "type": "local",
             "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-storageDemo"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "pastry-plugin-tabMain": {
+        "source": {
+            "type": "local",
+            "path": "/Users/gengyuanchao/Desktop/pastry/tools/common_data/plugins/pastry-plugin-tabMain"
         },
         "is_top_level": true,
         "variables": {}

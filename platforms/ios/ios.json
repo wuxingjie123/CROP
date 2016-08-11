@@ -51,10 +51,10 @@
         "pastry-plugin-guide": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         },
-        "pastry-plugin-sideMain": {
+        "pastry-plugin-storageDemo": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         },
-        "pastry-plugin-storageDemo": {
+        "pastry-plugin-tabMain": {
             "PACKAGE_NAME": "com.mobilebank.develop"
         }
     },

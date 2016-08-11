@@ -73,30 +73,11 @@
 		8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A2C48014A4E8AA7704256 /* PTGuideViewController.m */; };
 		E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F003CD73E34F406E86927A62 /* PTGuideViewController.xib */; };
 		904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */; };
-		A8E4414A79CF44DBB6F6BE16 /* AppDelegate+SideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B00542657640E69CE7293F /* AppDelegate+SideMain.m */; };
-		5AA8E3A262814DB2B56F5CAC /* MainViewController+SideMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */; };
-		D709E4CC980D409B82831178 /* MMLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15297AAE20FD4BABA2DC160C /* MMLogoView.m */; };
-		4FA2BCBAD27D4331B319BCB7 /* MMCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */; };
-		F6049A40D4314D5294EBF7B7 /* MMSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */; };
-		4B1C9B46353E4ED89BA8902E /* MMSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */; };
-		A606A7B33F9E4524B97FFFD2 /* MMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */; };
-		B37A2BE7D0434CEAA83101A1 /* PTCenterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */; };
-		69709D35A5C149DDBCD61BAD /* PTLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */; };
-		722D7D27732848BBBE366582 /* PTRightSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */; };
-		B36A382B584A44F9B5ECFDB8 /* PTSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */; };
-		DF7B39660A5A4960A6599115 /* PTDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */; };
-		128BD61E5EA44ED081F0B314 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */; };
-		89B958AA42564E51B0BC9ED0 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC170ED16324ACBB9526807 /* MMDrawerController.m */; };
-		E2AF6BBF59354E2B947A1666 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */; };
-		867AD618D7E945D598919056 /* MMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1E637095C94426AD531C7E /* MMNavigationController.m */; };
-		83D5F05F27FB475E9EF50D96 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */; };
-		0205E04E7DAA497AB101BEB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9B4EEA46B449128DB661C2 /* Icon.png */; };
-		09E9D4BF6B1343D0A85F0438 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D37866D11CA24942B7B3451B /* Icon-72.png */; };
-		4B72C9FBC35C43FF92FA3FB2 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */; };
-		88CAAC436C7A48A283BF97E9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */; };
 		8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A70664DC4374B0E23B20 /* CustomStorage.m */; };
 		52C56CA49C55432896984996 /* StorageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */; };
 		DEB62A38903A4CA8939A0A4C /* StorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AECBE2531E749B1BCAF165F /* StorageViewController.xib */; };
+		723BEB02B49D4DF9905D51B8 /* AppDelegate+TabMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F732FA73F1451EB523BB59 /* AppDelegate+TabMain.m */; };
+		1BD28B26234F4BB5A94C2939 /* MainViewController+TabMain.m in Sources */ = {isa = PBXBuildFile; fileRef = C1738444A7FE4D16A73905C7 /* MainViewController+TabMain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,50 +193,15 @@
 		F003CD73E34F406E86927A62 /* PTGuideViewController.xib */ = {isa = PBXFileReference; name = "PTGuideViewController.xib"; path = "pastry-plugin-guide/PTGuideViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
 		92D29347DA064BE58673843B /* PTGuideViewController.h */ = {isa = PBXFileReference; name = "PTGuideViewController.h"; path = "pastry-plugin-guide/PTGuideViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */ = {isa = PBXFileReference; name = "guideImage.bundle"; path = "guideImage.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
-		63B00542657640E69CE7293F /* AppDelegate+SideMain.m */ = {isa = PBXFileReference; name = "AppDelegate+SideMain.m"; path = "pastry-plugin-sideMain/AppDelegate+SideMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */ = {isa = PBXFileReference; name = "MainViewController+SideMain.m"; path = "pastry-plugin-sideMain/MainViewController+SideMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		15297AAE20FD4BABA2DC160C /* MMLogoView.m */ = {isa = PBXFileReference; name = "MMLogoView.m"; path = "pastry-plugin-sideMain/ExampleFiles/CustomViews/MMLogoView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */ = {isa = PBXFileReference; name = "MMCenterTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMCenterTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; name = "MMSideDrawerSectionHeaderView.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerSectionHeaderView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */ = {isa = PBXFileReference; name = "MMSideDrawerTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */ = {isa = PBXFileReference; name = "MMTableViewCell.m"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMTableViewCell.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */ = {isa = PBXFileReference; name = "PTCenterTableViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTCenterTableViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTLeftSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTLeftSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTRightSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTRightSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */ = {isa = PBXFileReference; name = "PTSideDrawerViewController.m"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTSideDrawerViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */ = {isa = PBXFileReference; name = "PTDrawerVisualStateManager.m"; path = "pastry-plugin-sideMain/ExampleFiles/VisualStateManager/PTDrawerVisualStateManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; name = "MMDrawerBarButtonItem.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerBarButtonItem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		9CC170ED16324ACBB9526807 /* MMDrawerController.m */ = {isa = PBXFileReference; name = "MMDrawerController.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; name = "MMDrawerVisualState.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerVisualState.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		DF1E637095C94426AD531C7E /* MMNavigationController.m */ = {isa = PBXFileReference; name = "MMNavigationController.m"; path = "pastry-plugin-sideMain/MMDrawerController/MMNavigationController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; name = "UIViewController+MMDrawerController.m"; path = "pastry-plugin-sideMain/MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		910E5E2A57E34D7C9A679BD9 /* AppDelegate+SideMain.h */ = {isa = PBXFileReference; name = "AppDelegate+SideMain.h"; path = "pastry-plugin-sideMain/AppDelegate+SideMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		67ADE8A2E65C4BAEA81DF361 /* MainViewController+SideMain.h */ = {isa = PBXFileReference; name = "MainViewController+SideMain.h"; path = "pastry-plugin-sideMain/MainViewController+SideMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		90165970E1BB461BACCD7BF7 /* MMLogoView.h */ = {isa = PBXFileReference; name = "MMLogoView.h"; path = "pastry-plugin-sideMain/ExampleFiles/CustomViews/MMLogoView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		4096526C3A224E398C16EEF2 /* MMCenterTableViewCell.h */ = {isa = PBXFileReference; name = "MMCenterTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMCenterTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		9F244D7950204349B0ACBDCA /* MMSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; name = "MMSideDrawerSectionHeaderView.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerSectionHeaderView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		164D9B87604349D09C648FC6 /* MMSideDrawerTableViewCell.h */ = {isa = PBXFileReference; name = "MMSideDrawerTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMSideDrawerTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		A52910B59D424474BD3DFFE9 /* MMTableViewCell.h */ = {isa = PBXFileReference; name = "MMTableViewCell.h"; path = "pastry-plugin-sideMain/ExampleFiles/TableViewHelpers/MMTableViewCell.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		C5C6F96DF53F45299819053C /* PTCenterTableViewController.h */ = {isa = PBXFileReference; name = "PTCenterTableViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTCenterTableViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		0A9A2492ABD74DA298895AFB /* PTLeftSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTLeftSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTLeftSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		BCC4CD46CB8E475FA8ED8105 /* PTRightSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTRightSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTRightSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		6F9C3F54D39F46C68F34865F /* PTSideDrawerViewController.h */ = {isa = PBXFileReference; name = "PTSideDrawerViewController.h"; path = "pastry-plugin-sideMain/ExampleFiles/ViewControllers/PTSideDrawerViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		1B851A99352D4E019332804E /* PTDrawerVisualStateManager.h */ = {isa = PBXFileReference; name = "PTDrawerVisualStateManager.h"; path = "pastry-plugin-sideMain/ExampleFiles/VisualStateManager/PTDrawerVisualStateManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		899628EB43CC485992C6BADF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; name = "MMDrawerBarButtonItem.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerBarButtonItem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		9BF54B27645843B9A1160201 /* MMDrawerController.h */ = {isa = PBXFileReference; name = "MMDrawerController.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		E138A40861604D6CA4765740 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; name = "MMDrawerController+Subclass.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		978E768C2B5B4A72BAF6F856 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; name = "MMDrawerVisualState.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMDrawerVisualState.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		94AA055142634424A7B16AA0 /* MMNavigationController.h */ = {isa = PBXFileReference; name = "MMNavigationController.h"; path = "pastry-plugin-sideMain/MMDrawerController/MMNavigationController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		AF900227839A4E2B80D8424A /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; name = "UIViewController+MMDrawerController.h"; path = "pastry-plugin-sideMain/MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		2E9B4EEA46B449128DB661C2 /* Icon.png */ = {isa = PBXFileReference; name = "Icon.png"; path = "Icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D37866D11CA24942B7B3451B /* Icon-72.png */ = {isa = PBXFileReference; name = "Icon-72.png"; path = "Icon-72.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */ = {isa = PBXFileReference; name = "Icon-72@2x.png"; path = "Icon-72@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */ = {isa = PBXFileReference; name = "Icon@2x.png"; path = "Icon@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A9D3A70664DC4374B0E23B20 /* CustomStorage.m */ = {isa = PBXFileReference; name = "CustomStorage.m"; path = "pastry-plugin-storageDemo/CustomStorage.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */ = {isa = PBXFileReference; name = "StorageViewController.m"; path = "pastry-plugin-storageDemo/StorageViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		0AECBE2531E749B1BCAF165F /* StorageViewController.xib */ = {isa = PBXFileReference; name = "StorageViewController.xib"; path = "pastry-plugin-storageDemo/StorageViewController.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
 		F79C9C3C135C4C9381AC0E1B /* CustomStorage.h */ = {isa = PBXFileReference; name = "CustomStorage.h"; path = "pastry-plugin-storageDemo/CustomStorage.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		DBFBD53159CE46C283B3620C /* StorageViewController.h */ = {isa = PBXFileReference; name = "StorageViewController.h"; path = "pastry-plugin-storageDemo/StorageViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		54F732FA73F1451EB523BB59 /* AppDelegate+TabMain.m */ = {isa = PBXFileReference; name = "AppDelegate+TabMain.m"; path = "pastry-plugin-tabMain/AppDelegate+TabMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C1738444A7FE4D16A73905C7 /* MainViewController+TabMain.m */ = {isa = PBXFileReference; name = "MainViewController+TabMain.m"; path = "pastry-plugin-tabMain/MainViewController+TabMain.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B42394C2E5B54AB9A34405C2 /* AppDelegate+TabMain.h */ = {isa = PBXFileReference; name = "AppDelegate+TabMain.h"; path = "pastry-plugin-tabMain/AppDelegate+TabMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E8A011863F324AE1AA01D684 /* MainViewController+TabMain.h */ = {isa = PBXFileReference; name = "MainViewController+TabMain.h"; path = "pastry-plugin-tabMain/MainViewController+TabMain.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,10 +307,6 @@
 				8D1107310486CEB800E47090 /* CROP-Info.plist */,
 				6E54EA78D2EF43458556CD33 /* browserImages.bundle */,
 				A28DFC080C2C4C9FB9BBDAA2 /* guideImage.bundle */,
-				2E9B4EEA46B449128DB661C2 /* Icon.png */,
-				D37866D11CA24942B7B3451B /* Icon-72.png */,
-				45B18E937CC74F88B5BB83F9 /* Icon-72@2x.png */,
-				4AE46CE1C3EF430A8A762B0F /* Icon@2x.png */,
 			);
 			name = Resources;
 			path = "CROP/Resources";
@@ -453,46 +395,15 @@
 				F63A2C48014A4E8AA7704256 /* PTGuideViewController.m */,
 				F003CD73E34F406E86927A62 /* PTGuideViewController.xib */,
 				92D29347DA064BE58673843B /* PTGuideViewController.h */,
-				63B00542657640E69CE7293F /* AppDelegate+SideMain.m */,
-				678D6CAE70A34CAA8D579802 /* MainViewController+SideMain.m */,
-				15297AAE20FD4BABA2DC160C /* MMLogoView.m */,
-				E3D1EE8509F5423D8A96635C /* MMCenterTableViewCell.m */,
-				C7A7AA1F343541B0BB0AAEF8 /* MMSideDrawerSectionHeaderView.m */,
-				AAA8C3EE0874463AB726CE3D /* MMSideDrawerTableViewCell.m */,
-				3BFE3702BFEA4039AB177DD0 /* MMTableViewCell.m */,
-				C90D71776A184BDCA6F3FB51 /* PTCenterTableViewController.m */,
-				A0B9076FF0A44486B9F5FE73 /* PTLeftSideDrawerViewController.m */,
-				09F7B2B9690D476A9D1382CB /* PTRightSideDrawerViewController.m */,
-				D6B21CA3E7D84DE983D065FE /* PTSideDrawerViewController.m */,
-				95790F94BB8F4DDE82D2797A /* PTDrawerVisualStateManager.m */,
-				697AEFF67C4F4575933DA3A8 /* MMDrawerBarButtonItem.m */,
-				9CC170ED16324ACBB9526807 /* MMDrawerController.m */,
-				C2CAD1E5CD704FC2AC27D6E0 /* MMDrawerVisualState.m */,
-				DF1E637095C94426AD531C7E /* MMNavigationController.m */,
-				E0A97FE4FAE043108DD7700C /* UIViewController+MMDrawerController.m */,
-				910E5E2A57E34D7C9A679BD9 /* AppDelegate+SideMain.h */,
-				67ADE8A2E65C4BAEA81DF361 /* MainViewController+SideMain.h */,
-				90165970E1BB461BACCD7BF7 /* MMLogoView.h */,
-				4096526C3A224E398C16EEF2 /* MMCenterTableViewCell.h */,
-				9F244D7950204349B0ACBDCA /* MMSideDrawerSectionHeaderView.h */,
-				164D9B87604349D09C648FC6 /* MMSideDrawerTableViewCell.h */,
-				A52910B59D424474BD3DFFE9 /* MMTableViewCell.h */,
-				C5C6F96DF53F45299819053C /* PTCenterTableViewController.h */,
-				0A9A2492ABD74DA298895AFB /* PTLeftSideDrawerViewController.h */,
-				BCC4CD46CB8E475FA8ED8105 /* PTRightSideDrawerViewController.h */,
-				6F9C3F54D39F46C68F34865F /* PTSideDrawerViewController.h */,
-				1B851A99352D4E019332804E /* PTDrawerVisualStateManager.h */,
-				899628EB43CC485992C6BADF /* MMDrawerBarButtonItem.h */,
-				9BF54B27645843B9A1160201 /* MMDrawerController.h */,
-				E138A40861604D6CA4765740 /* MMDrawerController+Subclass.h */,
-				978E768C2B5B4A72BAF6F856 /* MMDrawerVisualState.h */,
-				94AA055142634424A7B16AA0 /* MMNavigationController.h */,
-				AF900227839A4E2B80D8424A /* UIViewController+MMDrawerController.h */,
 				A9D3A70664DC4374B0E23B20 /* CustomStorage.m */,
 				4CBD6FD69B1E45ECA072D868 /* StorageViewController.m */,
 				0AECBE2531E749B1BCAF165F /* StorageViewController.xib */,
 				F79C9C3C135C4C9381AC0E1B /* CustomStorage.h */,
 				DBFBD53159CE46C283B3620C /* StorageViewController.h */,
+				54F732FA73F1451EB523BB59 /* AppDelegate+TabMain.m */,
+				C1738444A7FE4D16A73905C7 /* MainViewController+TabMain.m */,
+				B42394C2E5B54AB9A34405C2 /* AppDelegate+TabMain.h */,
+				E8A011863F324AE1AA01D684 /* MainViewController+TabMain.h */,
 			);
 			name = Plugins;
 			path = "CROP/Plugins";
@@ -641,10 +552,6 @@
 				F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */,
 				1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */,
 				904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */,
-				0205E04E7DAA497AB101BEB0 /* Icon.png in Resources */,
-				09E9D4BF6B1343D0A85F0438 /* Icon-72.png in Resources */,
-				4B72C9FBC35C43FF92FA3FB2 /* Icon-72@2x.png in Resources */,
-				88CAAC436C7A48A283BF97E9 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,26 +619,11 @@
 				58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Resources */,
 				8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */,
 				E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Resources */,
-				A8E4414A79CF44DBB6F6BE16 /* AppDelegate+SideMain.m in Sources */,
-				5AA8E3A262814DB2B56F5CAC /* MainViewController+SideMain.m in Sources */,
-				D709E4CC980D409B82831178 /* MMLogoView.m in Sources */,
-				4FA2BCBAD27D4331B319BCB7 /* MMCenterTableViewCell.m in Sources */,
-				F6049A40D4314D5294EBF7B7 /* MMSideDrawerSectionHeaderView.m in Sources */,
-				4B1C9B46353E4ED89BA8902E /* MMSideDrawerTableViewCell.m in Sources */,
-				A606A7B33F9E4524B97FFFD2 /* MMTableViewCell.m in Sources */,
-				B37A2BE7D0434CEAA83101A1 /* PTCenterTableViewController.m in Sources */,
-				69709D35A5C149DDBCD61BAD /* PTLeftSideDrawerViewController.m in Sources */,
-				722D7D27732848BBBE366582 /* PTRightSideDrawerViewController.m in Sources */,
-				B36A382B584A44F9B5ECFDB8 /* PTSideDrawerViewController.m in Sources */,
-				DF7B39660A5A4960A6599115 /* PTDrawerVisualStateManager.m in Sources */,
-				128BD61E5EA44ED081F0B314 /* MMDrawerBarButtonItem.m in Sources */,
-				89B958AA42564E51B0BC9ED0 /* MMDrawerController.m in Sources */,
-				E2AF6BBF59354E2B947A1666 /* MMDrawerVisualState.m in Sources */,
-				867AD618D7E945D598919056 /* MMNavigationController.m in Sources */,
-				83D5F05F27FB475E9EF50D96 /* UIViewController+MMDrawerController.m in Sources */,
 				8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */,
 				52C56CA49C55432896984996 /* StorageViewController.m in Sources */,
 				DEB62A38903A4CA8939A0A4C /* StorageViewController.xib in Resources */,
+				723BEB02B49D4DF9905D51B8 /* AppDelegate+TabMain.m in Sources */,
+				1BD28B26234F4BB5A94C2939 /* MainViewController+TabMain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
