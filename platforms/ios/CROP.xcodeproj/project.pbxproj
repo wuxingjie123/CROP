@@ -66,6 +66,11 @@
 		95B88CD31D5C4E210012F2D5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CCB1D5C4E210012F2D5 /* FMDatabaseQueue.m */; };
 		95B88CD41D5C4E210012F2D5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CCE1D5C4E210012F2D5 /* FMResultSet.m */; };
 		95B88CD51D5C4E210012F2D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95B88CCF1D5C4E210012F2D5 /* Info.plist */; };
+		95B88CE31D5C50CB0012F2D5 /* LKDB+Mapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CDA1D5C50CB0012F2D5 /* LKDB+Mapping.m */; };
+		95B88CE41D5C50CB0012F2D5 /* LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CDC1D5C50CB0012F2D5 /* LKDBHelper.m */; };
+		95B88CE51D5C50CB0012F2D5 /* LKDBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CDE1D5C50CB0012F2D5 /* LKDBUtils.m */; };
+		95B88CE61D5C50CB0012F2D5 /* NSObject+LKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CE01D5C50CB0012F2D5 /* NSObject+LKDBHelper.m */; };
+		95B88CE71D5C50CC0012F2D5 /* NSObject+LKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88CE21D5C50CB0012F2D5 /* NSObject+LKModel.m */; };
 		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
 		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
 		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
@@ -228,6 +233,16 @@
 		95B88CCD1D5C4E210012F2D5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		95B88CCE1D5C4E210012F2D5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		95B88CCF1D5C4E210012F2D5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95B88CD91D5C50CB0012F2D5 /* LKDB+Mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LKDB+Mapping.h"; sourceTree = "<group>"; };
+		95B88CDA1D5C50CB0012F2D5 /* LKDB+Mapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LKDB+Mapping.m"; sourceTree = "<group>"; };
+		95B88CDB1D5C50CB0012F2D5 /* LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBHelper.h; sourceTree = "<group>"; };
+		95B88CDC1D5C50CB0012F2D5 /* LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBHelper.m; sourceTree = "<group>"; };
+		95B88CDD1D5C50CB0012F2D5 /* LKDBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKDBUtils.h; sourceTree = "<group>"; };
+		95B88CDE1D5C50CB0012F2D5 /* LKDBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKDBUtils.m; sourceTree = "<group>"; };
+		95B88CDF1D5C50CB0012F2D5 /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
+		95B88CE01D5C50CB0012F2D5 /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
+		95B88CE11D5C50CB0012F2D5 /* NSObject+LKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKModel.h"; sourceTree = "<group>"; };
+		95B88CE21D5C50CB0012F2D5 /* NSObject+LKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKModel.m"; sourceTree = "<group>"; };
 		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTWindowPage.xib; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; };
 		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTUnZipViewController.xib; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; };
@@ -651,6 +666,7 @@
 			isa = PBXGroup;
 			children = (
 				95B88CC11D5C4E210012F2D5 /* fmdb-2.6.2 */,
+				95B88CD61D5C50CB0012F2D5 /* LKDBHelper-SQLite-ORM-2.3.2 */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -755,6 +771,39 @@
 				95B88CCF1D5C4E210012F2D5 /* Info.plist */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		95B88CD61D5C50CB0012F2D5 /* LKDBHelper-SQLite-ORM-2.3.2 */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CD71D5C50CB0012F2D5 /* LKDBHelper */,
+			);
+			path = "LKDBHelper-SQLite-ORM-2.3.2";
+			sourceTree = "<group>";
+		};
+		95B88CD71D5C50CB0012F2D5 /* LKDBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CD81D5C50CB0012F2D5 /* Helper */,
+			);
+			path = LKDBHelper;
+			sourceTree = "<group>";
+		};
+		95B88CD81D5C50CB0012F2D5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				95B88CD91D5C50CB0012F2D5 /* LKDB+Mapping.h */,
+				95B88CDA1D5C50CB0012F2D5 /* LKDB+Mapping.m */,
+				95B88CDB1D5C50CB0012F2D5 /* LKDBHelper.h */,
+				95B88CDC1D5C50CB0012F2D5 /* LKDBHelper.m */,
+				95B88CDD1D5C50CB0012F2D5 /* LKDBUtils.h */,
+				95B88CDE1D5C50CB0012F2D5 /* LKDBUtils.m */,
+				95B88CDF1D5C50CB0012F2D5 /* NSObject+LKDBHelper.h */,
+				95B88CE01D5C50CB0012F2D5 /* NSObject+LKDBHelper.m */,
+				95B88CE11D5C50CB0012F2D5 /* NSObject+LKModel.h */,
+				95B88CE21D5C50CB0012F2D5 /* NSObject+LKModel.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		F53EADAD1CC0C46B0062161C /* PastryFramework */ = {
@@ -922,12 +971,15 @@
 				95379C101D4EEABE002503B7 /* PTComponentManager.m in Sources */,
 				95B88CD01D5C4E210012F2D5 /* FMDatabase.m in Sources */,
 				95379C1A1D4F195D002503B7 /* PTDisplayComponentTableView.m in Sources */,
+				95B88CE61D5C50CB0012F2D5 /* NSObject+LKDBHelper.m in Sources */,
+				95B88CE51D5C50CB0012F2D5 /* LKDBUtils.m in Sources */,
 				95B88CD41D5C4E210012F2D5 /* FMResultSet.m in Sources */,
 				EB029EEA44A6483F8FB01C0E /* CDVLogger.m in Sources */,
 				95B88C0F1D5C31100012F2D5 /* PTGestureUnlockViewController.m in Sources */,
 				4DC65AAE410E47FA9F5B2FB4 /* PTBrowser.m in Sources */,
 				32A3B1EA28F44EBBBD74EA5B /* PTBrowserContainer.m in Sources */,
 				95B88CD21D5C4E210012F2D5 /* FMDatabasePool.m in Sources */,
+				95B88CE71D5C50CC0012F2D5 /* NSObject+LKModel.m in Sources */,
 				95B88CD31D5C4E210012F2D5 /* FMDatabaseQueue.m in Sources */,
 				E46814458EA246699C6C9434 /* PTWindowPage.m in Sources */,
 				5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Sources */,
@@ -950,9 +1002,11 @@
 				95B88C8D1D5C3E8B0012F2D5 /* GestureVerifyViewController.m in Sources */,
 				AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */,
 				1972C91058E2430CB0060987 /* PTUnZipViewController.m in Sources */,
+				95B88CE41D5C50CB0012F2D5 /* LKDBHelper.m in Sources */,
 				58BE2A0960C1469085061567 /* PTUnZipViewController.xib in Sources */,
 				95B88C911D5C3E8B0012F2D5 /* PCCircleView.m in Sources */,
 				8538D67A9ABF4734840E9718 /* PTGuideViewController.m in Sources */,
+				95B88CE31D5C50CB0012F2D5 /* LKDB+Mapping.m in Sources */,
 				95B88C741D5C3C5B0012F2D5 /* PTOtherViewController.m in Sources */,
 				E537D9F4E6D2467182C9695B /* PTGuideViewController.xib in Sources */,
 				8471B586B6F74783ADE5C1EE /* CustomStorage.m in Sources */,
