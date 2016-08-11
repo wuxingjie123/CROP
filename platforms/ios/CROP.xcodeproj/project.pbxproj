@@ -81,6 +81,12 @@
 		95B88D061D5C9F540012F2D5 /* PTTrankListComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88D051D5C9F540012F2D5 /* PTTrankListComponent.xib */; };
 		95B88D081D5CA0D60012F2D5 /* PTRankComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88D071D5CA0D60012F2D5 /* PTRankComponent.xib */; };
 		95B88D0B1D5CA0E40012F2D5 /* PTRankComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88D0A1D5CA0E40012F2D5 /* PTRankComponent.m */; };
+		95B88D0E1D5CA86C0012F2D5 /* PTBarComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88D0D1D5CA86C0012F2D5 /* PTBarComponent.m */; };
+		95B88D101D5CA87A0012F2D5 /* PTBarComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88D0F1D5CA87A0012F2D5 /* PTBarComponent.xib */; };
+		95B88D121D5CA8DE0012F2D5 /* PTLadderComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88D111D5CA8DE0012F2D5 /* PTLadderComponent.xib */; };
+		95B88D151D5CA8EF0012F2D5 /* PTLadderComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88D141D5CA8EF0012F2D5 /* PTLadderComponent.m */; };
+		95B88D181D5CA9360012F2D5 /* PTTargetComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B88D171D5CA9360012F2D5 /* PTTargetComponent.m */; };
+		95B88D1A1D5CA9440012F2D5 /* PTTargetComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95B88D191D5CA9440012F2D5 /* PTTargetComponent.xib */; };
 		95EAD6781D47099D0034DE05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EAD6771D47099D0034DE05 /* Images.xcassets */; };
 		AC35449ADBE04A47A93629C7 /* KeyboardViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CA192C15F40AAA1499CDA /* KeyboardViewController.xib */; };
 		B16677E718DF4E2F8E19D71F /* SecondViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = AA0CC4D602EB4774857BD691 /* SecondViewController.xib */; };
@@ -267,6 +273,15 @@
 		95B88D071D5CA0D60012F2D5 /* PTRankComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTRankComponent.xib; sourceTree = "<group>"; };
 		95B88D091D5CA0E40012F2D5 /* PTRankComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRankComponent.h; sourceTree = "<group>"; };
 		95B88D0A1D5CA0E40012F2D5 /* PTRankComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRankComponent.m; sourceTree = "<group>"; };
+		95B88D0C1D5CA86C0012F2D5 /* PTBarComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTBarComponent.h; sourceTree = "<group>"; };
+		95B88D0D1D5CA86C0012F2D5 /* PTBarComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTBarComponent.m; sourceTree = "<group>"; };
+		95B88D0F1D5CA87A0012F2D5 /* PTBarComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTBarComponent.xib; sourceTree = "<group>"; };
+		95B88D111D5CA8DE0012F2D5 /* PTLadderComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTLadderComponent.xib; sourceTree = "<group>"; };
+		95B88D131D5CA8EF0012F2D5 /* PTLadderComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTLadderComponent.h; sourceTree = "<group>"; };
+		95B88D141D5CA8EF0012F2D5 /* PTLadderComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTLadderComponent.m; sourceTree = "<group>"; };
+		95B88D161D5CA9360012F2D5 /* PTTargetComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTTargetComponent.h; sourceTree = "<group>"; };
+		95B88D171D5CA9360012F2D5 /* PTTargetComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTTargetComponent.m; sourceTree = "<group>"; };
+		95B88D191D5CA9440012F2D5 /* PTTargetComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PTTargetComponent.xib; sourceTree = "<group>"; };
 		95EAD6771D47099D0034DE05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		97B92A20172A43EBB5682722 /* PTWindowPage.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTWindowPage.xib; path = "pastry-plugin-browser/PTBrowser/UI/PTWindowPage.xib"; sourceTree = "<group>"; };
 		98ABFBA7B5E844BA8C50A5EF /* PTUnZipViewController.xib */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file.xib; name = PTUnZipViewController.xib; path = "pastry-plugin-unzip/PTUnZipViewController.xib"; sourceTree = "<group>"; };
@@ -858,6 +873,15 @@
 				95B88D091D5CA0E40012F2D5 /* PTRankComponent.h */,
 				95B88D0A1D5CA0E40012F2D5 /* PTRankComponent.m */,
 				95B88D071D5CA0D60012F2D5 /* PTRankComponent.xib */,
+				95B88D0C1D5CA86C0012F2D5 /* PTBarComponent.h */,
+				95B88D0D1D5CA86C0012F2D5 /* PTBarComponent.m */,
+				95B88D0F1D5CA87A0012F2D5 /* PTBarComponent.xib */,
+				95B88D131D5CA8EF0012F2D5 /* PTLadderComponent.h */,
+				95B88D141D5CA8EF0012F2D5 /* PTLadderComponent.m */,
+				95B88D111D5CA8DE0012F2D5 /* PTLadderComponent.xib */,
+				95B88D161D5CA9360012F2D5 /* PTTargetComponent.h */,
+				95B88D171D5CA9360012F2D5 /* PTTargetComponent.m */,
+				95B88D191D5CA9440012F2D5 /* PTTargetComponent.xib */,
 			);
 			name = subComponents;
 			path = CROP/Classes/PTTabs/Home/components/menuComponent/subComponents;
@@ -972,6 +996,9 @@
 				95B88CD51D5C4E210012F2D5 /* Info.plist in Resources */,
 				F53EADCD1CC0C46B0062161C /* data.zip in Resources */,
 				F53EADE41CC0C46B0062161C /* Settings.bundle in Resources */,
+				95B88D101D5CA87A0012F2D5 /* PTBarComponent.xib in Resources */,
+				95B88D1A1D5CA9440012F2D5 /* PTTargetComponent.xib in Resources */,
+				95B88D121D5CA8DE0012F2D5 /* PTLadderComponent.xib in Resources */,
 				1E978AF86BEE4F6FBF858E7F /* browserImages.bundle in Resources */,
 				95B88C6B1D5C3C3C0012F2D5 /* PTCustomerViewController.xib in Resources */,
 				904487A842674DCDA6F17CD0 /* guideImage.bundle in Resources */,
@@ -1044,6 +1071,7 @@
 				95B88CD21D5C4E210012F2D5 /* FMDatabasePool.m in Sources */,
 				95B88CE71D5C50CC0012F2D5 /* NSObject+LKModel.m in Sources */,
 				95B88CD31D5C4E210012F2D5 /* FMDatabaseQueue.m in Sources */,
+				95B88D0E1D5CA86C0012F2D5 /* PTBarComponent.m in Sources */,
 				E46814458EA246699C6C9434 /* PTWindowPage.m in Sources */,
 				5C9F8E716F15416386294AF6 /* PTWindowPage.xib in Sources */,
 				84A9C2507B1947CBB1577261 /* PTWindowPage+Operation.m in Sources */,
@@ -1059,8 +1087,10 @@
 				95B88C921D5C3E8B0012F2D5 /* PCCircleViewConst.m in Sources */,
 				04E3D9A3D5734E108C74F797 /* PTServletRequest.m in Sources */,
 				95B88C5C1D5C3ADB0012F2D5 /* PTMenuComponent.m in Sources */,
+				95B88D151D5CA8EF0012F2D5 /* PTLadderComponent.m in Sources */,
 				95B88CD11D5C4E210012F2D5 /* FMDatabaseAdditions.m in Sources */,
 				95B88C6A1D5C3C3C0012F2D5 /* PTCustomerViewController.m in Sources */,
+				95B88D181D5CA9360012F2D5 /* PTTargetComponent.m in Sources */,
 				95B88C651D5C3BD40012F2D5 /* PTLoginViewController.m in Sources */,
 				EB3F265F0497460E91E461CB /* PTKeyboards.m in Sources */,
 				44BD0918DE64493A81CA4E83 /* KeyboardViewController.m in Sources */,
