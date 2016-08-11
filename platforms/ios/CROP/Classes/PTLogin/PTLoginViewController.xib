@@ -118,6 +118,9 @@
                             <include reference="mbC-lg-RMh"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="loginClick:" destination="-1" eventType="touchUpInside" id="hrX-Vi-es9"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -147,6 +150,12 @@
                     <exclude reference="9F1-Ts-QUf"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="V1s-iE-fxS"/>
+                    <exclude reference="qRF-J0-pQQ"/>
+                    <exclude reference="ahu-JK-Ftj"/>
+                    <exclude reference="y6h-Pl-PdU"/>
+                    <exclude reference="i02-ib-UBG"/>
+                    <exclude reference="obu-1e-Spf"/>
                     <exclude reference="27E-gA-2BV"/>
                     <exclude reference="K4w-xe-UE1"/>
                     <exclude reference="zWv-2O-Vhc"/>
@@ -155,12 +164,6 @@
                     <exclude reference="Wau-Yp-ELd"/>
                     <exclude reference="jqm-sc-Kig"/>
                     <exclude reference="oBH-ve-e7i"/>
-                    <exclude reference="ahu-JK-Ftj"/>
-                    <exclude reference="y6h-Pl-PdU"/>
-                    <exclude reference="V1s-iE-fxS"/>
-                    <exclude reference="qRF-J0-pQQ"/>
-                    <exclude reference="i02-ib-UBG"/>
-                    <exclude reference="obu-1e-Spf"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -172,6 +175,12 @@
                     <include reference="9F1-Ts-QUf"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="V1s-iE-fxS"/>
+                    <include reference="qRF-J0-pQQ"/>
+                    <include reference="ahu-JK-Ftj"/>
+                    <include reference="y6h-Pl-PdU"/>
+                    <include reference="i02-ib-UBG"/>
+                    <include reference="obu-1e-Spf"/>
                     <include reference="27E-gA-2BV"/>
                     <include reference="K4w-xe-UE1"/>
                     <include reference="zWv-2O-Vhc"/>
@@ -180,12 +189,6 @@
                     <include reference="Wau-Yp-ELd"/>
                     <include reference="jqm-sc-Kig"/>
                     <exclude reference="oBH-ve-e7i"/>
-                    <include reference="ahu-JK-Ftj"/>
-                    <include reference="y6h-Pl-PdU"/>
-                    <include reference="V1s-iE-fxS"/>
-                    <include reference="qRF-J0-pQQ"/>
-                    <include reference="i02-ib-UBG"/>
-                    <include reference="obu-1e-Spf"/>
                 </mask>
             </variation>
         </view>

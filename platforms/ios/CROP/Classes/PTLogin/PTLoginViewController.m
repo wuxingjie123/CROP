@@ -54,4 +54,13 @@
 //    }
 }
 
+#pragma mark 按钮点击事件
+- (IBAction)loginClick:(id)sender {
+    
+    if (_completeBlock) {
+        _completeBlock(nil);
+    }
+}
+
+
 @end
