@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PTLoopComponent">
             <connections>
+                <outlet property="pageControl" destination="GaY-go-uwO" id="SHA-18-15K"/>
+                <outlet property="scrollViewer" destination="me0-aT-VBq" id="Phy-g5-M0Z"/>
                 <outlet property="view" destination="iN0-l3-epB" id="QoF-WG-ESq"/>
             </connections>
         </placeholder>
@@ -41,14 +43,14 @@
                     <exclude reference="GaY-go-uwO"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="CsR-PD-o5H"/>
-                    <exclude reference="HpY-9B-TWo"/>
-                    <exclude reference="Yez-7y-WFf"/>
-                    <exclude reference="zVD-r4-kfi"/>
                     <exclude reference="LWo-vI-7TK"/>
                     <exclude reference="MfV-7h-JV5"/>
                     <exclude reference="Ruv-ds-wOe"/>
                     <exclude reference="qjA-IF-SRz"/>
+                    <exclude reference="CsR-PD-o5H"/>
+                    <exclude reference="HpY-9B-TWo"/>
+                    <exclude reference="Yez-7y-WFf"/>
+                    <exclude reference="zVD-r4-kfi"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -57,14 +59,14 @@
                     <include reference="GaY-go-uwO"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="CsR-PD-o5H"/>
-                    <include reference="HpY-9B-TWo"/>
-                    <include reference="Yez-7y-WFf"/>
-                    <include reference="zVD-r4-kfi"/>
                     <include reference="LWo-vI-7TK"/>
                     <include reference="MfV-7h-JV5"/>
                     <include reference="Ruv-ds-wOe"/>
                     <include reference="qjA-IF-SRz"/>
+                    <include reference="CsR-PD-o5H"/>
+                    <include reference="HpY-9B-TWo"/>
+                    <include reference="Yez-7y-WFf"/>
+                    <include reference="zVD-r4-kfi"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="137" y="-664"/>

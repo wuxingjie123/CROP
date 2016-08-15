@@ -7,6 +7,7 @@
 //
 
 #import "PTADComponent.h"
+#import "UIImageView+WebCache.h"
 
 @implementation PTADComponent
 
@@ -31,6 +32,13 @@
     }
     
     return self;
+}
+
+#pragma mark 对外方法
+- (void)setImageUrl:(NSString *)url {
+//    self.adImage
+    [self.adImage sd_setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
+                      placeholderImage:[UIImage imageNamed:@"blue"]];
 }
 
 @end

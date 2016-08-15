@@ -8,6 +8,8 @@
 
 #import "PTLoopComponent.h"
 
+//#import "PTADComponent.h"
+
 @interface PTLoopComponent() {
     
     // 传递 url ;
@@ -18,6 +20,8 @@
     PTComponentCallbackBlock _completeBlock;
 }
 @property (weak, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewer;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
 
@@ -40,6 +44,10 @@
         [[[NSBundle mainBundle] loadNibNamed:className owner:self options:nil] firstObject];
         self.view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         [self addSubview:self.view];
+        
+//        PTADComponent *adComponent = [[PTADComponent alloc] initWithCoder:aDecoder];
+//        adComponent.backgroundColor = [UIColor redColor];
+//        [self.scrollViewer addSubview:adComponent];
     }
     
     return self;
