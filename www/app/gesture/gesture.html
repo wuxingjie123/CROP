@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>H5lock</title>
+<style>
+body{
+	background: #305066;
+	text-align: center;
+}
+canvas{
+	background: #305066;
+	display: inline-block;
+	margin:15px;
+}
+#updatePassword{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: #fff;
+	font-size: 10px;
+	display: none;
+}
+.title{
+	color: #22C3AA;
+}
+</style>
+</head>
+<body>
+	<!-- <h4 id="title" class="title">绘制解锁图案</h4>
+	<a href="javascript:;" id="updataPassword">重置密码</a>
+	<canvas id="canvas" width="300" height="300"></canvas> -->
+	<script src="../../lib/gesture.js"></script>
+	<script>
+		new H5lock({
+			chooseType:4
+		}).init();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
