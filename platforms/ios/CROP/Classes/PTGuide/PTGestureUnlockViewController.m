@@ -125,8 +125,8 @@
 #pragma mark - 界面相同部分生成器
 - (void)setupSameUI
 {
-    // 创建导航栏右边按钮
-    self.navigationItem.rightBarButtonItem = [self itemWithTitle:@"重设" target:self action:@selector(didClickBtn:) tag:buttonTagReset];
+    
+    
     
     // 解锁界面
     PCCircleView *lockView = [[PCCircleView alloc] init];
@@ -139,6 +139,23 @@
     msgLabel.center = CGPointMake(kScreenW/2, CGRectGetMinY(lockView.frame) - 30);
     self.msgLabel = msgLabel;
     [self.view addSubview:msgLabel];
+    
+    
+    
+    // 创建导航栏右边按钮
+    if (self.navigationController) {
+        
+        self.navigationItem.rightBarButtonItem = [self itemWithTitle:@"重设" target:self action:@selector(didClickBtn:) tag:buttonTagReset];
+    }
+    else {
+        
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-50-8, 20+7, 50, 30)];
+        [button addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:@"重设" forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:button];
+    }
 }
 
 #pragma mark - 设置手势密码界面
@@ -166,16 +183,16 @@
     UIImageView  *imageView = [[UIImageView alloc] init];
     imageView.frame = CGRectMake(0, 0, 65, 65);
     imageView.center = CGPointMake(kScreenW/2, kScreenH/5);
-    [imageView setImage:[UIImage imageNamed:@"head"]];
+    [imageView setImage:[UIImage imageNamed:@"account"]];
     [self.view addSubview:imageView];
     
-    // 管理手势密码
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self creatButton:leftBtn frame:CGRectMake(CircleViewEdgeMargin + 20, kScreenH - 60, kScreenW/2, 20) title:@"管理手势密码" alignment:UIControlContentHorizontalAlignmentLeft tag:buttonTagManager];
-    
-    // 登录其他账户
-    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self creatButton:rightBtn frame:CGRectMake(kScreenW/2 - CircleViewEdgeMargin - 20, kScreenH - 60, kScreenW/2, 20) title:@"登陆其他账户" alignment:UIControlContentHorizontalAlignmentRight tag:buttonTagForget];
+//    // 管理手势密码
+//    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self creatButton:leftBtn frame:CGRectMake(CircleViewEdgeMargin + 20, kScreenH - 60, kScreenW/2, 20) title:@"管理手势密码" alignment:UIControlContentHorizontalAlignmentLeft tag:buttonTagManager];
+//    
+//    // 登录其他账户
+//    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self creatButton:rightBtn frame:CGRectMake(kScreenW/2 - CircleViewEdgeMargin - 20, kScreenH - 60, kScreenW/2, 20) title:@"登陆其他账户" alignment:UIControlContentHorizontalAlignmentRight tag:buttonTagForget];
 }
 
 #pragma mark - 创建UIButton
@@ -265,6 +282,9 @@
 //        [self.navigationController popToRootViewControllerAnimated:YES];
         if (_completeBlock) {
             _completeBlock(nil);
+        } else {
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     } else {
@@ -287,6 +307,8 @@
             if (_completeBlock) {
                 _completeBlock(nil);
             }
+            
+            
         } else {
             NSLog(@"密码错误！");
             [self.msgLabel showWarnMsgAndShake:gestureTextGestureVerifyError];

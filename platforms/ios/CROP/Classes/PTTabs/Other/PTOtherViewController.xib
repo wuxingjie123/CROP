@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PTOtherViewController">
             <connections>
+                <outlet property="otherTableView" destination="ptN-CZ-wbE" id="STc-YS-7Q6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,73 +16,53 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-s4-YzO">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="s5t-1z-A9e"/>
-                    </constraints>
-                    <items>
-                        <navigationItem title="其他" id="ktM-uf-SbU"/>
-                    </items>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="s5t-1z-A9e"/>
-                        </mask>
-                    </variation>
-                    <variation key="widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="s5t-1z-A9e"/>
-                        </mask>
-                    </variation>
-                </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrP-32-gKT">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="61" width="600" height="539"/>
+                    </variation>
                 </view>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-NR-ddm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="KuP-GG-FNe"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="其他" id="Ii3-OL-WMC"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptN-CZ-wbE">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5cU-MP-v9B"/>
+                        <outlet property="delegate" destination="-1" id="8ew-St-Vng"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.91170302013422821" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="fWg-s4-YzO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4jA-mC-OnQ"/>
-                <constraint firstAttribute="trailing" secondItem="OrP-32-gKT" secondAttribute="trailing" id="AmR-qs-cm4"/>
-                <constraint firstAttribute="bottom" secondItem="OrP-32-gKT" secondAttribute="bottom" id="Gw5-Ab-WUL"/>
-                <constraint firstItem="OrP-32-gKT" firstAttribute="top" secondItem="fWg-s4-YzO" secondAttribute="bottom" id="IME-IJ-iNP">
-                    <variation key="widthClass=compact" constant="1"/>
-                </constraint>
-                <constraint firstItem="fWg-s4-YzO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bsm-Wa-iQ1"/>
-                <constraint firstItem="OrP-32-gKT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dnN-cR-WyL"/>
-                <constraint firstAttribute="trailing" secondItem="fWg-s4-YzO" secondAttribute="trailing" id="gEr-LZ-WCL"/>
+                <constraint firstAttribute="bottom" secondItem="ptN-CZ-wbE" secondAttribute="bottom" id="6GM-av-e8H"/>
+                <constraint firstItem="bsU-NR-ddm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Jkr-T1-EwO"/>
+                <constraint firstItem="bsU-NR-ddm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KPK-DY-xl4"/>
+                <constraint firstAttribute="trailing" secondItem="bsU-NR-ddm" secondAttribute="trailing" id="VCO-YS-tDY"/>
+                <constraint firstAttribute="trailing" secondItem="ptN-CZ-wbE" secondAttribute="trailing" id="W4L-AJ-El2"/>
+                <constraint firstItem="ptN-CZ-wbE" firstAttribute="top" secondItem="bsU-NR-ddm" secondAttribute="bottom" id="bM3-xW-6Df"/>
+                <constraint firstItem="ptN-CZ-wbE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="szI-zR-4HL"/>
             </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="fWg-s4-YzO"/>
                     <exclude reference="OrP-32-gKT"/>
-                </mask>
-                <mask key="constraints">
-                    <exclude reference="4jA-mC-OnQ"/>
-                    <exclude reference="bsm-Wa-iQ1"/>
-                    <exclude reference="gEr-LZ-WCL"/>
-                    <exclude reference="AmR-qs-cm4"/>
-                    <exclude reference="Gw5-Ab-WUL"/>
-                    <exclude reference="IME-IJ-iNP"/>
-                    <exclude reference="dnN-cR-WyL"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
                 <mask key="subviews">
-                    <include reference="fWg-s4-YzO"/>
                     <include reference="OrP-32-gKT"/>
                 </mask>
-                <mask key="constraints">
-                    <include reference="4jA-mC-OnQ"/>
-                    <include reference="bsm-Wa-iQ1"/>
-                    <include reference="gEr-LZ-WCL"/>
-                    <include reference="AmR-qs-cm4"/>
-                    <include reference="Gw5-Ab-WUL"/>
-                    <include reference="IME-IJ-iNP"/>
-                    <include reference="dnN-cR-WyL"/>
-                </mask>
             </variation>
+            <point key="canvasLocation" x="136.5" y="56.5"/>
         </view>
     </objects>
 </document>

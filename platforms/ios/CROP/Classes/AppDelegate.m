@@ -73,6 +73,7 @@
     Class guideComponentClass = NSClassFromString(@"PTGestureUnlockViewController");
     NSString *guideNibName = @"PTGestureUnlockViewController";
     id<PTGuideInterface> guideComponent = [[guideComponentClass alloc] initWithNibName:guideNibName bundle:nil];
+
     if (guideComponent == nil) {
         
         NSString *tipStr =
@@ -99,6 +100,7 @@
     Class loginComponentClass = NSClassFromString(@"PTLoginViewController");
     NSString *loginNibName = @"PTLoginViewController";
     id<PTLoginInterface> loginComponent = [[loginComponentClass alloc] initWithNibName:loginNibName bundle:nil];
+    
     if (loginComponent == nil) {
         
         NSString *tipStr =

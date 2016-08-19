@@ -7,8 +7,17 @@
 //
 
 #import "PTHomeViewController.h"
+#import "OnlyBoxView.h"
+#import "OnlyScrollView.h"
 
 @interface PTHomeViewController ()
+
+
+@property (weak, nonatomic) IBOutlet OnlyBoxView *onlyBoxView;
+
+
+@property (weak, nonatomic) IBOutlet OnlyScrollView *scrollView;
+
 
 @end
 
@@ -16,6 +25,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    [self.scrollView updateAllDatas:nil];
+    
+    
+    
+    NSMutableArray *aaa = [NSMutableArray arrayWithCapacity:5];
+    for (int i=0; i<10; i++) {
+        
+        NSDictionary *dic = @{@"title": @"aaaaaa"};
+        [aaa addObject:dic];
+    }
+    
+    [_onlyBoxView setRowType:BoxScrollViewTypeFour];
+    [_onlyBoxView updateAllDatas:aaa];
+    
+    [_onlyBoxView addBoxView:@{@"title": @"aaaaaa"}];
+    
+    
+     [_onlyBoxView addClickItemActionAtIndex:^(NSInteger index) {
+        
+         NSLog(@"第%ld个视图",index);
+     }];
     // Do any additional setup after loading the view from its nib.
 }
 

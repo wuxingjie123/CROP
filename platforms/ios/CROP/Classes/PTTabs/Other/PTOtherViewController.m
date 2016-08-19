@@ -7,8 +7,18 @@
 //
 
 #import "PTOtherViewController.h"
+#import "OtherTableViewCell.h"
+#import "PTGestureUnlockViewController.h"
 
-@interface PTOtherViewController ()
+static NSString *idne = @"cell_other";
+
+@interface PTOtherViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+
+@property (weak, nonatomic) IBOutlet UITableView *otherTableView;
+
+
+
 
 @end
 
@@ -16,22 +26,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    [self.otherTableView registerNib:[UINib nibWithNibName:@"OtherTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:idne];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    
+    return 2;
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSArray *aa = @[@"账号管理", @"手势密码设置"];
+    NSArray *aaa = @[@"account", @""];
+    
+    OtherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idne forIndexPath:indexPath];
+    [cell updateTitle:aa[indexPath.row] withImageName:aaa[indexPath.row]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+    
+    
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+
+        PTGestureUnlockViewController *gestureVc = [[PTGestureUnlockViewController alloc] init];
+        gestureVc.type = 0;
+        [self presentViewController:gestureVc animated:YES completion:nil];
+
+    }
+}
+
+
+
+
 
 @end
