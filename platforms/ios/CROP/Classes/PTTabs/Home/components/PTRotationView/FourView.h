@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseView.h"
+@class PTChartView;
 @interface FourView : BaseView
+
+
+@property (weak, nonatomic) IBOutlet PTChartView *chartView;
+
+
 
 @end

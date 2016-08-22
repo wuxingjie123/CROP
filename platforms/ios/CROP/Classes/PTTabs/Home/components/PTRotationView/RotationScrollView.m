@@ -94,7 +94,7 @@
     }
     self.scrollView.contentOffset = CGPointMake(width, 0);
     
-    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, height*.8, width, 10)];
+    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, height*.9, width, 10)];
     pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
     pageControl.pageIndicatorTintColor = [UIColor redColor];
     [self addSubview:pageControl];
