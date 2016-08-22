@@ -142,8 +142,6 @@
 //定时器事件
 - (void)timerAction
 {
-    
-    NSLog(@"aaaaaaaaaaaaaa");
     CGFloat width = self.bounds.size.width;
     CGFloat awith = self.scrollView.contentOffset.x;
     CGFloat myWith = awith == width*(allViews.count-2)?width:awith+width;
