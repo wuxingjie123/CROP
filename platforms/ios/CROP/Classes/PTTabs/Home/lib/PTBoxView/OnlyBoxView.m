@@ -48,11 +48,7 @@
         
         [aview addTheClickAction:^{
             
-            if (self.block) {
-             
-                self.block(i);
-            }
-            
+            self.block(i);
             
         }];
      }
@@ -97,7 +93,7 @@
 
 - (void)addClickItemActionAtIndex:(ClickItemViewBlock)block
 {
-        self.block = block;
+    self.block = block;
 }
 
 
