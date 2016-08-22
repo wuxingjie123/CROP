@@ -15,11 +15,14 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-UA-wdQ">
+                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bh-UA-wdQ" customClass="PTNavigationBar">
                     <rect key="frame" x="-38" y="238" width="600" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="g5v-U1-9qL"/>
                     </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="客户" id="kUI-1W-SI2"/>
                     </items>

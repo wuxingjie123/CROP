@@ -28,11 +28,14 @@
                     <rect key="frame" x="0.0" y="222" width="375" height="445"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-Cz-SdU">
+                <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hF-Cz-SdU" customClass="PTNavigationBar">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="PU2-G6-A2w"/>
                     </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
                     <items>
                         <navigationItem title="首页" id="2cK-4w-tXc"/>
                     </items>
@@ -53,7 +56,7 @@
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="409.5" y="329.5"/>
+            <point key="canvasLocation" x="214.5" y="204.5"/>
         </view>
     </objects>
 </document>

@@ -47,13 +47,18 @@
 
 - (IBAction)clickActon:(UIButton *)sender {
     
-    self.clickAction();
+    if (self.clickAction) {
+        
+        self.clickAction();
+    }
+    
     
 }
 
 - (void)addTheClickAction:(ClickActionBlock)clickAction
 {
     self.clickAction = clickAction;
+   
 }
 
 
