@@ -9,6 +9,7 @@
 #import "PTHomeViewController.h"
 #import "OnlyBoxView.h"
 #import "OnlyScrollView.h"
+#import "UIViewController+TabBar.h"
 
 @interface PTHomeViewController ()
 
@@ -47,9 +48,27 @@
      [_onlyBoxView addClickItemActionAtIndex:^(NSInteger index) {
         
          NSLog(@"第%ld个视图",index);
+         if (index == 0) {
+             
+             [self hiddenTabBar];
+         }
+         if (index == 1) {
+             
+             [self showTabBar];
+         }
+         
+         
+         
      }];
-    // Do any additional setup after loading the view from its nib.
+    
 }
+
+
+- (void)didStopAnimation
+{
+    NSLog(@"动画执行完毕");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
