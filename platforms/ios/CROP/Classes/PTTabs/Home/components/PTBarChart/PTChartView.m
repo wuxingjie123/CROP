@@ -46,7 +46,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-        NSLog(@"aaaaaaaaaaaaa");
     }
     return self;
 }
@@ -91,6 +90,11 @@
     NSArray *bons1 = (self.scalesLeft && self.scalesLeft.count>=5)?self.scalesLeft:@[@(80), @(60), @(56), @(45), @(75)];
     NSArray *bons2 = (self.scalesRight && self.scalesRight.count>=5)?self.scalesRight:@[@(90), @(24), @(54), @(80), @(34)];
     
+    NSInteger max1 = [self findMaxNumber:bons1];
+    NSInteger max2 = [self findMaxNumber:bons2];
+    CGFloat max = max1>max2?max1:max2;
+    
+    
     //下边人名
     NSArray *names = (self.names && self.names.count>=5)?self.names:@[@"李产权", @"李产权", @"李产权", @"李产权", @"李产权"];
     UIColor *colorLeft = self.colorLeft?self.colorLeft:[UIColor grayColor];
@@ -100,7 +104,7 @@
     for (int i=0; i<bons1.count; i++) {
         
         NSInteger plat = [bons1[i] integerValue];
-        CGFloat bon1 = plat/100.0f;
+        CGFloat bon1 = plat/max;
         
         CGFloat pointX = xph+width*(2*i+.5)+mtbr*(i+1);
         CGFloat pointY1 = yph+(1-bon1)*height;
@@ -142,7 +146,7 @@
     for (int i=0; i<bons2.count; i++) {
         
         NSInteger plat = [bons2[i] integerValue];
-        CGFloat bon2 = plat/100.0f;
+        CGFloat bon2 = plat/max;
         
         CGFloat pointX = xph+width*(2*i+1.5)+mtbr*(i+1);
         CGFloat pointY1 = yph+(1-bon2)*height;
@@ -192,14 +196,23 @@
         NSString *string = names[i];
         [string drawInRect:CGRectMake(xph+mtbr*.9+(width*2.0+mtbr)*i, yph+height+5, width*2.0+mtbr, 20) withAttributes:@{NSFontAttributeName: font}];
     }
+
     
+}
+
+- (NSInteger)findMaxNumber:(NSArray *)arr
+{
     
+    NSInteger max = 0;
+    for (NSNumber *number in arr) {
+        
+        NSInteger num = [number integerValue];
+        max = max>num?max:num;
+        
+    }
+    max = (max/10+1)*10;
     
-    NSLog(@"bbbbbbb");
-    
-    
-    
-    
+    return max;
 }
 
 

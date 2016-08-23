@@ -17,14 +17,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-SM-2Ts" customClass="OnlyScrollView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-SM-2Ts" customClass="PTLoopScrollView">
                     <rect key="frame" x="0.0" y="64" width="375" height="150"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="Z83-cc-nEv"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsH-H3-GOp" customClass="OnlyBoxView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsH-H3-GOp" customClass="BoxComponentView">
                     <rect key="frame" x="0.0" y="222" width="375" height="445"/>
                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

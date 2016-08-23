@@ -6,10 +6,10 @@
 //  Copyright © 2016年 zhongxinwangke. All rights reserved.
 //
 
-#import "OnlyBoxView.h"
+#import "BoxComponentView.h"
 #import "BoxView.h"
 
-@interface OnlyBoxView ()
+@interface BoxComponentView ()
 
 @property (nonatomic,copy)ClickItemViewBlock block;
 
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation OnlyBoxView
+@implementation BoxComponentView
 
 - (instancetype)initWithFrame:(CGRect)frame withType:(BoxScrollViewType)type withDatas:(NSArray *)datas
 {

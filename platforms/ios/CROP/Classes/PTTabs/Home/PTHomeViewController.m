@@ -7,17 +7,17 @@
 //
 
 #import "PTHomeViewController.h"
-#import "OnlyBoxView.h"
-#import "OnlyScrollView.h"
+#import "BoxComponentView.h"
+#import "PTLoopScrollView.h"
 #import "UIViewController+TabBar.h"
 
 @interface PTHomeViewController ()
 
 
-@property (weak, nonatomic) IBOutlet OnlyBoxView *onlyBoxView;
+@property (weak, nonatomic) IBOutlet BoxComponentView *onlyBoxView;
 
 
-@property (weak, nonatomic) IBOutlet OnlyScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet PTLoopScrollView *scrollView;
 
 
 @end
@@ -26,28 +26,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    //加载轮播图
     [self.scrollView updateAllDatas:nil];
-    
-    
-    
+//加载九宫格
     NSMutableArray *aaa = [NSMutableArray arrayWithCapacity:5];
     for (int i=0; i<10; i++) {
         
         NSDictionary *dic = @{@"title": @"aaaaaa"};
         [aaa addObject:dic];
     }
-    
     [_onlyBoxView setRowType:BoxScrollViewTypeFour];
     [_onlyBoxView updateAllDatas:aaa];
-    
     [_onlyBoxView addBoxView:@{@"title": @"aaaaaa"}];
-    
-    
-     [_onlyBoxView addClickItemActionAtIndex:^(NSInteger index) {
+    [_onlyBoxView addClickItemActionAtIndex:^(NSInteger index) {
         
-         NSLog(@"第%ld个视图",index);
+         PTLogDebug(@"第%ld个视图",index);
          if (index == 0) {
              
              [self hiddenTabBar];
@@ -56,9 +49,6 @@
              
              [self showTabBar];
          }
-         
-         
-         
      }];
     
 }
@@ -66,7 +56,7 @@
 
 - (void)didStopAnimation
 {
-    NSLog(@"动画执行完毕");
+    PTLogDebug(@"动画执行完毕");
 }
 
 

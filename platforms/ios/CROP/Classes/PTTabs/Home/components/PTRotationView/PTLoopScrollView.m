@@ -6,7 +6,7 @@
 //  Copyright © 2016年 zhongxinwangke. All rights reserved.
 //
 
-#import "OnlyScrollView.h"
+#import "PTLoopScrollView.h"
 #import "FirstView.h"
 #import "SecondView.h"
 #import "ThreeView.h"
@@ -15,14 +15,14 @@
 #import "SixView.h"
 #import "BaseView.h"
 
-@interface OnlyScrollView ()
+@interface PTLoopScrollView ()
 
 @property (nonatomic,copy)ClickRotationViewBlock block;
 @property (nonatomic, strong)NSArray *datas;
 
 @end
 
-@implementation OnlyScrollView
+@implementation PTLoopScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame withDatas:(NSArray *)datas
 {

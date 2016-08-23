@@ -11,7 +11,7 @@
 typedef void(^ClickRotationViewBlock)(NSInteger index);
 
 
-@interface OnlyScrollView : RotationScrollView
+@interface PTLoopScrollView : RotationScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame withDatas:(NSArray *)datas;
 

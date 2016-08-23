@@ -11,7 +11,7 @@ typedef void(^ClickItemViewBlock)(NSInteger index);
 
 
 
-@interface OnlyBoxView : BoxScrollView
+@interface BoxComponentView : BoxScrollView
 
 - (instancetype)initWithFrame:(CGRect)frame withType:(BoxScrollViewType)type withDatas:(NSArray *)datas;
 
